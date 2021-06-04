@@ -4,10 +4,15 @@ public class PrekidacSP extends SpojnoPolje{
 	public String stanje;
 	public boolean upravljanje;
 	
-	public void isklop() {
+	public void uklop(PrekidacSP prek) {
+		
+		prek.stanje = "on";
 		
 	}
-	public void uklop() {
+	
+	public void isklop(PrekidacSP prek) {
+		
+		prek.stanje = "off";
 		
 	}
 	

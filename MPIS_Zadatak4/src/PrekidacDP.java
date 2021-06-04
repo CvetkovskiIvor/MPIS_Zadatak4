@@ -4,10 +4,15 @@ public class PrekidacDP extends DalekovodnoPolje{
 	public String stanje;
 	public boolean upravljanje;
 	
-	public void isklop() {
+	public void uklop(PrekidacDP prek) {
+		
+		prek.stanje = "on";
 		
 	}
-	public void uklop() {
+	
+	public void isklop(PrekidacDP prek) {
+		
+		prek.stanje = "off";
 		
 	}
 	

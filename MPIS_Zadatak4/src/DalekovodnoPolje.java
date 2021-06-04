@@ -1,5 +1,6 @@
 
 public class DalekovodnoPolje {
+	
 	private boolean SF6_N2_ulje_blokada;
 	private boolean gubitak_N2_blokada;
 	private boolean	gubitak_SF6_upozorenje;
@@ -25,5 +26,42 @@ public class DalekovodnoPolje {
     private boolean preopterecenje_iskljucenje;
     private boolean relej_kvar;
     private boolean alarm;
+    
+    public void uklop(RastavljacUzemljenjaDP rastUz, SabirnickiRastavljacDP rast, PrekidacDP prekidac, String sabirnica) {
+		///
+		/// 
+		///
+    	
+    	rastUz.stanje = "off";
+    	rast.uklop(rast, sabirnica);
+    	
+    	// TODO linijski rastavljac
+		
+    	prekidac.uklop(prekidac);
+		
+	}
+	
+	public void isklop(RastavljacUzemljenjaDP rastUz, SabirnickiRastavljacDP rast, PrekidacDP prekidac){
+		///
+		/// 
+		///
+		
+		prekidac.isklop(prekidac);
+		
+		// TODO linijski rastavljac
+		
+		rast.isklop(rast);
+		rastUz.stanje = "on";
+		
+	}
+	
+	public void prespoji(){
+		///
+		/// 
+		///
+		
+		SpojnoPolje.uklop(null, null, null);
+		
+	}
 	
 }
