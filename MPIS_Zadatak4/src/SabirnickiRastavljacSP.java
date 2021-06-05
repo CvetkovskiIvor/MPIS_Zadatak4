@@ -3,14 +3,17 @@ public class SabirnickiRastavljacSP extends RastavljacSP{
 	
 	SabirnickiRastavljacSP(String ID) {
 		super(ID);
-		// TODO Auto-generated constructor stub
 	}
 
-	public void uklop() {
+	public void uklop(SabirnickiRastavljacSP rast) {
+		
+		rast.stanje = "on";
 		
 	}
 	
-	public void isklop() {
+	public void isklop(SabirnickiRastavljacSP rast) {
+		
+		rast.stanje = "off";
 		
 	}
 }
