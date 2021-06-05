@@ -72,7 +72,6 @@ public class StartScr implements ActionListener{
 		// TODO Auto-generated method stub
 		DalekovodnoScr dalekovodnoScr = new DalekovodnoScr();
 		if (e.getActionCommand() == "Dalekovodno") {
-			System.out.println("dalekovodno");
 			if(dalekovodnoScr.vidljivost() == true) {
 				System.out.println("vidljiv sam!");
 			}else
@@ -80,8 +79,6 @@ public class StartScr implements ActionListener{
 		}
 		
 		if (e.getActionCommand() == "Spojno") {
-			System.out.println("spojno");
-			
 			SpojnoScr spojnoScr = new SpojnoScr();
 			if(spojnoScr.vidljivost() == true) {
 				System.out.println("vidljiv sam!");
