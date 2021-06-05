@@ -8,8 +8,27 @@ import javax.swing.JPanel;
 
 public class StartScr implements ActionListener{
 	
-	DalekovodnoScr dalekovodno = new DalekovodnoScr();
-	SpojnoScr spojno = new SpojnoScr();
+	SpojnoPolje sp = new SpojnoPolje();
+	DalekovodnoPolje dp = new DalekovodnoPolje();
+	
+	APU apu = new APU("APU");
+	Brojilo brojilo = new Brojilo("brojilo");
+	DistantnaZastita DZ = new DistantnaZastita("distantna zastita");
+	IzlazniRastavljacDP izlazniRastavljacDP = new IzlazniRastavljacDP("izlazni rastavljac");
+	NadstrujnaZastita nadstrujnaZastita = new NadstrujnaZastita("nadstrujna zastita");
+	Napajanje napajanje = new Napajanje("napajanje");
+	PrekidacDP prekidacDP = new PrekidacDP("prekidac");
+	RastavljacUzemljenjaDP rastavljacUzemljenjaDP = new RastavljacUzemljenjaDP("rastavljac uzemljenja");
+	SabirnickiRastavljacDP sabirnickiRastavljacDPS1 = new SabirnickiRastavljacDP("sabirnicki rastavljac S1");
+	SabirnickiRastavljacDP sabirnickiRastavljacDPS2 = new SabirnickiRastavljacDP("sabirnicki rastavljac S2");
+	Voltmetar voltmetar = new Voltmetar("voltmetar");
+	Watmetar watmetar = new Watmetar("watmetar");
+	
+	IzlazniRastavljacSP izlazniRastavljacSP = new IzlazniRastavljacSP("izlazni rastavljac");
+	PrekidacSP prekidacSP = new PrekidacSP("prekidac");
+	RastavljacUzemljenjaSP rastavljacUzemljenjaSP = new RastavljacUzemljenjaSP("rastavljac uzemljenja");
+	SabirnickiRastavljacSP sabirnickiRastavljacSPS1 = new SabirnickiRastavljacSP("sabirnicki rastavljac S1");
+	SabirnickiRastavljacSP sabirnickiRastavljacSPS2 = new SabirnickiRastavljacSP("sabirnicki rastavljac S2");
 	
 	public void startScr() {
 		
@@ -51,21 +70,23 @@ public class StartScr implements ActionListener{
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
-		
+		DalekovodnoScr dalekovodnoScr = new DalekovodnoScr();
 		if (e.getActionCommand() == "Dalekovodno") {
 			System.out.println("dalekovodno");
-			if(dalekovodno.vidljivost() == true) {
+			if(dalekovodnoScr.vidljivost() == true) {
 				System.out.println("vidljiv sam!");
 			}else
-				dalekovodno.startScr();
+				dalekovodnoScr.dalekovodnoScr();
 		}
 		
 		if (e.getActionCommand() == "Spojno") {
 			System.out.println("spojno");
-			if(spojno.vidljivost() == true) {
+			
+			SpojnoScr spojnoScr = new SpojnoScr();
+			if(spojnoScr.vidljivost() == true) {
 				System.out.println("vidljiv sam!");
 			}else
-				spojno.startScr();
+				spojnoScr.spojnoScr();
 		}
 	}
 	

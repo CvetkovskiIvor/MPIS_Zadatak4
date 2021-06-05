@@ -11,7 +11,7 @@ public class DalekovodnoPolje {
 	private boolean APU_blokada;
 	private boolean gubitak_ulje_blokada;
 	private boolean grijanje_kvar;
-	private boolean iskljuèenje;
+	private boolean iskljucenje;
 	private boolean stupanj2_iskljucenje;
 	private boolean stupanj3_iskljucenje;
 	private boolean stupanj4_iskljucenje;
@@ -27,13 +27,13 @@ public class DalekovodnoPolje {
     private boolean relej_kvar;
     private boolean alarm;
     
-    public void uklop(RastavljacUzemljenjaDP rastUz, SabirnickiRastavljacDP rast, PrekidacDP prekidac, String sabirnica) {
+    public static void uklop(RastavljacUzemljenjaDP rastUz, SabirnickiRastavljacDP rast, PrekidacDP prekidac) {
 		///
 		/// 
 		///
     	
     	rastUz.stanje = "off";
-    	rast.uklop(rast, sabirnica);
+    	rast.uklop(rast);
     	
     	// TODO linijski rastavljac
 		
@@ -41,7 +41,7 @@ public class DalekovodnoPolje {
 		
 	}
 	
-	public void isklop(RastavljacUzemljenjaDP rastUz, SabirnickiRastavljacDP rast, PrekidacDP prekidac){
+	public static void isklop(RastavljacUzemljenjaDP rastUz, SabirnickiRastavljacDP rast, PrekidacDP prekidac){
 		///
 		/// 
 		///
@@ -52,15 +52,6 @@ public class DalekovodnoPolje {
 		
 		rast.isklop(rast);
 		rastUz.stanje = "on";
-		
-	}
-	
-	public void prespoji(){
-		///
-		/// 
-		///
-		
-		SpojnoPolje.uklop(null, null, null);
 		
 	}
 	
