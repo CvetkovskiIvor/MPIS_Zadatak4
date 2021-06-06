@@ -1,4 +1,5 @@
 
+
 public class DalekovodnoPolje {
 	
 	private boolean SF6_N2_ulje_blokada;
@@ -32,7 +33,7 @@ public class DalekovodnoPolje {
 		/// 
 		///
     	
-    	rastUz.stanje = "off";
+    	rastUz.setStanje("off");
     	rast.uklop(rast);
     	
     	// TODO linijski rastavljac
@@ -51,8 +52,57 @@ public class DalekovodnoPolje {
 		// TODO linijski rastavljac
 		
 		rast.isklop(rast);
-		rastUz.stanje = "on";
+		rastUz.setStanje("on");
 		
+	}
+	
+	public static boolean provjeri(DalekovodnoPolje dp, Zastita zastita, PrekidacDP prekidac, SabirnickiRastavljacDP rast, Napajanje rastUzNapajanje, Napajanje rastNapajanje, Napajanje prekidacNapajanje) {
+		
+		//provjera zastite
+		
+		if(zastita.getStanje() == "prorada") {
+			return false;
+		}
+		
+		//provjera napajanja
+		
+		if(rastUzNapajanje.getStanje() == "OFF"  || rastNapajanje.getStanje() == "OFF" || prekidacNapajanje.getStanje() == "OFF") {
+			
+			System.out.println("tu se dogodila greska");
+			return false;
+		}
+		
+		//provjera sigurne razine plina SF6
+		
+		
+		if(dp.isGubitak_SF6_upozorenje() || dp.isGubitak_SF6_blokada()) {
+			return false;
+		}
+		
+		//provjera stanja sklopnih uredaja
+		
+		if(prekidac.getStanje() == "nepoznato" || rast.getStanje() == "nepoznato") {
+			return false;
+		}
+		
+		return true;
+		
+	}
+
+	public boolean isGubitak_SF6_upozorenje() {
+		return gubitak_SF6_upozorenje;
+	}
+
+	public void setGubitak_SF6_upozorenje(boolean gubitak_SF6_upozorenje) {
+		this.gubitak_SF6_upozorenje = gubitak_SF6_upozorenje;
+	}
+
+	public boolean isGubitak_SF6_blokada() {
+		return gubitak_SF6_blokada;
+	}
+
+	public void setGubitak_SF6_blokada(boolean gubitak_SF6_blokada) {
+		this.gubitak_SF6_blokada = gubitak_SF6_blokada;
 	}
 	
 }

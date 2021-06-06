@@ -7,13 +7,13 @@ public class SabirnickiRastavljacDP extends RastavljacDP{
 
 	public void uklop(SabirnickiRastavljacDP rast) {
 		
-		rast.stanje = "on";
+		rast.setStanje("on");
 		
 	}
 	
 	public void isklop(SabirnickiRastavljacDP rast) {
 		
-		rast.stanje = "off";
+		rast.setStanje("off");
 		
 	}
 	

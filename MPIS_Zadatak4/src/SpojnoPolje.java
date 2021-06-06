@@ -34,4 +34,10 @@ public class SpojnoPolje {
 		
 	}
 	
+	public static boolean provjeri() {
+	
+		return false;
+		
+	}
+	
 }

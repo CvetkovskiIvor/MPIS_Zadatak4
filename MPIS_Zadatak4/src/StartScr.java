@@ -8,12 +8,12 @@ import javax.swing.JPanel;
 
 public class StartScr implements ActionListener{
 	
-	SpojnoPolje sp = new SpojnoPolje();
 	DalekovodnoPolje dp = new DalekovodnoPolje();
+	SpojnoPolje sp = new SpojnoPolje();
 	
 	APU apu = new APU("APU");
 	Brojilo brojilo = new Brojilo("brojilo");
-	DistantnaZastita DZ = new DistantnaZastita("distantna zastita");
+	DistantnaZastita distantnaZastita = new DistantnaZastita("distantna zastita");
 	IzlazniRastavljacDP izlazniRastavljacDP = new IzlazniRastavljacDP("izlazni rastavljac");
 	NadstrujnaZastita nadstrujnaZastita = new NadstrujnaZastita("nadstrujna zastita");
 	Napajanje napajanje = new Napajanje("napajanje");
@@ -30,9 +30,28 @@ public class StartScr implements ActionListener{
 	SabirnickiRastavljacSP sabirnickiRastavljacSPS1 = new SabirnickiRastavljacSP("sabirnicki rastavljac S1");
 	SabirnickiRastavljacSP sabirnickiRastavljacSPS2 = new SabirnickiRastavljacSP("sabirnicki rastavljac S2");
 	
+	Napajanje napajanjeAPU = new Napajanje("napajanje APU");
+	Napajanje napajanjeBrojilo = new Napajanje("napajanje brojilo");
+	Napajanje napajanjeDistantnaZastita = new Napajanje("napajanje distantna zastita");
+	Napajanje napajanjeIzlazniRastavljacDP = new Napajanje("napajanje izlazni rastavljac DP");
+	Napajanje napajanjeIzlazniRastavljacSP = new Napajanje("napajanje izlazni rastavljac SP");
+	Napajanje napajanjeNadstrujnaZastita = new Napajanje("napajanje nadstrujna zastita");
+	Napajanje napajanjePrekidacDP = new Napajanje("napajanje prekidac DP");
+	Napajanje napajanjePrekidacSP = new Napajanje("napajanje prekidac SP");
+	Napajanje napajanjeRastavljacUzemljenjaDP = new Napajanje("napajanje rastavljac uzemljenja DP");
+	Napajanje napajanjeRastavljacUzemljenjaSP = new Napajanje("napajanje rastavljac uzemljenja SP");
+	Napajanje napajanjeSabirnickiRastavljacDPS1 = new Napajanje("napajanje sabirnicki rastavljac DP S1");
+	Napajanje napajanjeSabirnickiRastavljacDPS2 = new Napajanje("napajanje sabirnicki rastavljac DP S2");
+	Napajanje napajanjeSabirnickiRastavljacSPS1 = new Napajanje("napajanje sabirnicki rastavljac SP S1");
+	Napajanje napajanjeSabirnickiRastavljacSPS2 = new Napajanje("napajanje sabirnicki rastavljac SP S2");
+	Napajanje napajanjeVoltmetar = new Napajanje("napajanje voltmetar");
+	Napajanje napajanjeWatmetar = new Napajanje("napajanje watmetar");
+	
+	
+	
 	public void startScr() {
 		
-		JFrame frame = new JFrame("Testni frame");
+		JFrame frame = new JFrame("Start");
 		JPanel panel = new JPanel();
 		
 		frame.setSize(800, 600);
@@ -49,6 +68,10 @@ public class StartScr implements ActionListener{
 		spojnoLbl.setBounds(10, 60, 80, 25);
 		panel.add(spojnoLbl);
 		
+		JLabel uredajiLbl = new JLabel("uredaji");
+		uredajiLbl.setBounds(10, 100, 80, 25);
+		panel.add(uredajiLbl);
+		
 		JButton dalekovodnoBtn = new JButton("Dalekovodno");
 		dalekovodnoBtn.setBounds(100, 20, 80, 25);
 		dalekovodnoBtn.setSize(125, 30);
@@ -60,6 +83,12 @@ public class StartScr implements ActionListener{
 		spojnoBtn.setSize(125, 30);
 		spojnoBtn.addActionListener(new StartScr());
 		panel.add(spojnoBtn);
+		
+		JButton uredajiBtn = new JButton("Uredaji");
+		uredajiBtn.setBounds(100, 100, 80, 25);
+		uredajiBtn.setSize(125, 30);
+		uredajiBtn.addActionListener(new StartScr());
+		panel.add(uredajiBtn);
 		
 		
 		

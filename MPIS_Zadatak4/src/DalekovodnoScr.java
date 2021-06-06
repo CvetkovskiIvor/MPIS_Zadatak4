@@ -8,23 +8,7 @@ import javax.swing.JPanel;
 
 public class DalekovodnoScr extends StartScr implements ActionListener{
 	
-	JFrame frame = new JFrame("Testni frame");
-	
-	/*SpojnoPolje sp = new SpojnoPolje();
-	DalekovodnoPolje dp = new DalekovodnoPolje();
-	
-	APU apu = new APU("APU");
-	Brojilo brojilo = new Brojilo("brojilo");
-	DistantnaZastita DZ = new DistantnaZastita("distantna zastita");
-	IzlazniRastavljacDP izlazniRastavljac = new IzlazniRastavljacDP("izlazni rastavljac");
-	NadstrujnaZastita nadstrujnaZastita = new NadstrujnaZastita("nadstrujna zastita");
-	Napajanje napajanje = new Napajanje("napajanje");
-	PrekidacDP prekidac = new PrekidacDP("prekidac");
-	RastavljacUzemljenjaDP rastavljacUzemljenja = new RastavljacUzemljenjaDP("rastavljac uzemljenja");
-	SabirnickiRastavljacDP sabirnickiRastavljacS1 = new SabirnickiRastavljacDP("sabirnicki rastavljac");
-	SabirnickiRastavljacDP sabirnickiRastavljacS2 = new SabirnickiRastavljacDP("sabirnicki rastavljac");
-	Voltmetar voltmetar = new Voltmetar("voltmetar");
-	Watmetar watmetar = new Watmetar("watmetar");*/
+	JFrame frame = new JFrame("Dalekovodno");
 	
 	public void dalekovodnoScr() {
 		
@@ -97,57 +81,79 @@ public class DalekovodnoScr extends StartScr implements ActionListener{
 		
 		if (e.getActionCommand() == "Iskljuci sa S1") {
 			
-			System.out.println("Polje se iskljucuje");
-			DalekovodnoPolje.isklop(rastavljacUzemljenjaDP, sabirnickiRastavljacDPS1, prekidacDP);
-			//System.out.println(sabirnickiRastavljac.stanje);
-			System.out.println(sabirnickiRastavljacDPS1.stanje);
+			//napajanjeRastavljacUzemljenjaDP.setStanje("OFF");
+			//napajanjeSabirnickiRastavljacDPS1.setStanje("OFF");
+			
+			if(DalekovodnoPolje.provjeri(dp, distantnaZastita, prekidacDP, sabirnickiRastavljacDPS1, napajanjeRastavljacUzemljenjaDP, napajanjeSabirnickiRastavljacDPS1, napajanjePrekidacDP)) {
+				System.out.println("Polje se iskljucuje");
+				DalekovodnoPolje.isklop(rastavljacUzemljenjaDP, sabirnickiRastavljacDPS1, prekidacDP);
+				//System.out.println(sabirnickiRastavljac.stanje);
+				//System.out.println(sabirnickiRastavljacDPS1.getStanje());
+			}else
+				System.out.println("dogodila se greska");
+			
+			
 		}
 		
 		if (e.getActionCommand() == "Iskljuci sa S2") {
 			
-			System.out.println("Polje se iskljucuje");
-			DalekovodnoPolje.isklop(rastavljacUzemljenjaDP, sabirnickiRastavljacDPS2, prekidacDP);
-			//System.out.println(sabirnickiRastavljac.stanje + sabirnickiRastavljac.sabirnica);
-			System.out.println(sabirnickiRastavljacDPS2.stanje);
+			if(DalekovodnoPolje.provjeri(dp, distantnaZastita, prekidacDP, sabirnickiRastavljacDPS2, napajanjeRastavljacUzemljenjaDP, napajanjeSabirnickiRastavljacDPS1, napajanjePrekidacDP)) {
+				System.out.println("Polje se iskljucuje");
+				DalekovodnoPolje.isklop(rastavljacUzemljenjaDP, sabirnickiRastavljacDPS2, prekidacDP);
+				//System.out.println(sabirnickiRastavljac.stanje + sabirnickiRastavljac.sabirnica);
+				System.out.println(sabirnickiRastavljacDPS2.getStanje());
+			}else
+				System.out.println("dogodila se greska");
 		}
 		
 		if (e.getActionCommand() == "Ukljuci na S1") {
 			
-			System.out.println("Polje se iskljucuje");
-			DalekovodnoPolje.uklop(rastavljacUzemljenjaDP, sabirnickiRastavljacDPS1, prekidacDP);
-			System.out.println(sabirnickiRastavljacDPS1.stanje);
+			if(DalekovodnoPolje.provjeri(dp, distantnaZastita, prekidacDP, sabirnickiRastavljacDPS1, napajanjeRastavljacUzemljenjaDP, napajanjeSabirnickiRastavljacDPS1, napajanjePrekidacDP)) {
+				System.out.println("Polje se iskljucuje");
+				DalekovodnoPolje.uklop(rastavljacUzemljenjaDP, sabirnickiRastavljacDPS1, prekidacDP);
+				System.out.println(sabirnickiRastavljacDPS1.getStanje());
+			}else
+				System.out.println("dogodila se greska");
 		}
 		
 		if (e.getActionCommand() == "Ukljuci na S2") {
 			
-			System.out.println("Polje se iskljucuje");
-			DalekovodnoPolje.uklop(rastavljacUzemljenjaDP, sabirnickiRastavljacDPS2, prekidacDP);
-			System.out.println(sabirnickiRastavljacDPS2.stanje);
+			if(DalekovodnoPolje.provjeri(dp, distantnaZastita, prekidacDP, sabirnickiRastavljacDPS2, napajanjeRastavljacUzemljenjaDP, napajanjeSabirnickiRastavljacDPS1, napajanjePrekidacDP)) {
+				System.out.println("Polje se iskljucuje");
+				DalekovodnoPolje.uklop(rastavljacUzemljenjaDP, sabirnickiRastavljacDPS2, prekidacDP);
+				System.out.println(sabirnickiRastavljacDPS2.getStanje());
+			}else
+				System.out.println("dogodila se greska");
 		}
 		
 		if (e.getActionCommand() == "Prespoji na S1") {
 			
-			System.out.println("Polje se prespaja na S1");
-			
-			SpojnoPolje.uklop(sabirnickiRastavljacSPS1, sabirnickiRastavljacSPS2, prekidacSP);
-			
-			DalekovodnoPolje.uklop(rastavljacUzemljenjaDP, sabirnickiRastavljacDPS1, prekidacDP);
-			DalekovodnoPolje.isklop(rastavljacUzemljenjaDP, sabirnickiRastavljacDPS2, prekidacDP);
-			
-			SpojnoPolje.isklop(sabirnickiRastavljacSPS1, sabirnickiRastavljacSPS2, prekidacSP);
+			if(DalekovodnoPolje.provjeri(dp, distantnaZastita, prekidacDP, sabirnickiRastavljacDPS1, napajanjeRastavljacUzemljenjaDP, napajanjeSabirnickiRastavljacDPS1, napajanjePrekidacDP)) {
+				System.out.println("Polje se prespaja na S1");
+				
+				SpojnoPolje.uklop(sabirnickiRastavljacSPS1, sabirnickiRastavljacSPS2, prekidacSP);
+				
+				DalekovodnoPolje.uklop(rastavljacUzemljenjaDP, sabirnickiRastavljacDPS1, prekidacDP);
+				DalekovodnoPolje.isklop(rastavljacUzemljenjaDP, sabirnickiRastavljacDPS2, prekidacDP);
+				
+				SpojnoPolje.isklop(sabirnickiRastavljacSPS1, sabirnickiRastavljacSPS2, prekidacSP);
+			}else
+				System.out.println("dogodila se greska");
 		}
 		
 		if (e.getActionCommand() == "Prespoji na S2") {
 			
-			System.out.println("Polje se prespaja na S2");
-			
-			SpojnoPolje.uklop(sabirnickiRastavljacSPS1, sabirnickiRastavljacSPS2, prekidacSP);
-			
-			DalekovodnoPolje.uklop(rastavljacUzemljenjaDP, sabirnickiRastavljacDPS2, prekidacDP);
-			DalekovodnoPolje.isklop(rastavljacUzemljenjaDP, sabirnickiRastavljacDPS1, prekidacDP);
-			
-			SpojnoPolje.isklop(sabirnickiRastavljacSPS1, sabirnickiRastavljacSPS2, prekidacSP);
-			
+			if(DalekovodnoPolje.provjeri(dp, distantnaZastita, prekidacDP, sabirnickiRastavljacDPS1, napajanjeRastavljacUzemljenjaDP, napajanjeSabirnickiRastavljacDPS1, napajanjePrekidacDP)) {
+				System.out.println("Polje se prespaja na S2");
+				
+				SpojnoPolje.uklop(sabirnickiRastavljacSPS1, sabirnickiRastavljacSPS2, prekidacSP);
+				
+				DalekovodnoPolje.uklop(rastavljacUzemljenjaDP, sabirnickiRastavljacDPS2, prekidacDP);
+				DalekovodnoPolje.isklop(rastavljacUzemljenjaDP, sabirnickiRastavljacDPS1, prekidacDP);
+				
+				SpojnoPolje.isklop(sabirnickiRastavljacSPS1, sabirnickiRastavljacSPS2, prekidacSP);
+			}else
+				System.out.println("dogodila se greska");
 		}
 		
 	}
