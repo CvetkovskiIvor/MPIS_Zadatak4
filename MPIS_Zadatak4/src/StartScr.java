@@ -33,17 +33,11 @@ public class StartScr implements ActionListener{
 	Napajanje napajanjeAPU = new Napajanje("napajanje APU");
 	Napajanje napajanjeBrojilo = new Napajanje("napajanje brojilo");
 	Napajanje napajanjeDistantnaZastita = new Napajanje("napajanje distantna zastita");
-	Napajanje napajanjeIzlazniRastavljacDP = new Napajanje("napajanje izlazni rastavljac DP");
-	Napajanje napajanjeIzlazniRastavljacSP = new Napajanje("napajanje izlazni rastavljac SP");
+	Napajanje napajanjeRastavljacDP = new Napajanje("napajanjerastavljac DP");
+	Napajanje napajanjeRastavljacSP = new Napajanje("napajanjerastavljac SP");
 	Napajanje napajanjeNadstrujnaZastita = new Napajanje("napajanje nadstrujna zastita");
 	Napajanje napajanjePrekidacDP = new Napajanje("napajanje prekidac DP");
 	Napajanje napajanjePrekidacSP = new Napajanje("napajanje prekidac SP");
-	Napajanje napajanjeRastavljacUzemljenjaDP = new Napajanje("napajanje rastavljac uzemljenja DP");
-	Napajanje napajanjeRastavljacUzemljenjaSP = new Napajanje("napajanje rastavljac uzemljenja SP");
-	Napajanje napajanjeSabirnickiRastavljacDPS1 = new Napajanje("napajanje sabirnicki rastavljac DP S1");
-	Napajanje napajanjeSabirnickiRastavljacDPS2 = new Napajanje("napajanje sabirnicki rastavljac DP S2");
-	Napajanje napajanjeSabirnickiRastavljacSPS1 = new Napajanje("napajanje sabirnicki rastavljac SP S1");
-	Napajanje napajanjeSabirnickiRastavljacSPS2 = new Napajanje("napajanje sabirnicki rastavljac SP S2");
 	Napajanje napajanjeVoltmetar = new Napajanje("napajanje voltmetar");
 	Napajanje napajanjeWatmetar = new Napajanje("napajanje watmetar");
 	

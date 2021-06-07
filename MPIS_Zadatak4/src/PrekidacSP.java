@@ -2,7 +2,7 @@
 public class PrekidacSP extends SpojnoPolje{
 	private final String ID;
 	private String stanje;
-	private boolean upravljanje;
+	private String upravljanje;
 	
 	public void uklop(PrekidacSP prek) {
 		
@@ -32,15 +32,15 @@ public class PrekidacSP extends SpojnoPolje{
 		this.stanje = stanje;
 	}
 
-	public boolean isUpravljanje() {
+	public String getID() {
+		return ID;
+	}
+
+	public String getUpravljanje() {
 		return upravljanje;
 	}
 
-	public void setUpravljanje(boolean upravljanje) {
+	public void setUpravljanje(String upravljanje) {
 		this.upravljanje = upravljanje;
-	}
-
-	public String getID() {
-		return ID;
 	}
 }

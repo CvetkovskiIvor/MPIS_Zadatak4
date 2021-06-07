@@ -7,8 +7,10 @@ public class RastavljacDP extends DalekovodnoPolje{
 		this.ID = ID;
 	}
 	
-	public String provjera_stanja() {
-		return "";
+	public String provjera_stanja(PrekidacDP prekidac) {
+		
+		return prekidac.getStanje();
+		
 	}
 
 	public String getStanje() {

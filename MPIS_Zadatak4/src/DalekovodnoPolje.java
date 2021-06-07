@@ -56,39 +56,79 @@ public class DalekovodnoPolje {
 		
 	}
 	
-	public static boolean provjeri(DalekovodnoPolje dp, Zastita zastita, PrekidacDP prekidac, SabirnickiRastavljacDP rast, Napajanje rastUzNapajanje, Napajanje rastNapajanje, Napajanje prekidacNapajanje) {
+	public static boolean provjeri(DalekovodnoPolje dp, Zastita zastita, PrekidacDP prekidac, RastavljacUzemljenjaDP rastUz, Napajanje rastNapajanje, Napajanje prekidacNapajanje) {
 		
-		//provjera zastite
+		// provjera zastite
 		
 		if(zastita.getStanje() == "prorada") {
+			
 			return false;
+			
 		}
 		
-		//provjera napajanja
+		// provjera napajanja
 		
-		if(rastUzNapajanje.getStanje() == "OFF"  || rastNapajanje.getStanje() == "OFF" || prekidacNapajanje.getStanje() == "OFF") {
+		if(rastNapajanje.provjera_stanjaRastavljacDP(rastNapajanje) == "OFF"  || prekidacNapajanje.provjera_stanjaPrekidacDP(prekidacNapajanje) == "OFF") {
 			
 			System.out.println("tu se dogodila greska");
 			return false;
+			
 		}
 		
-		//provjera sigurne razine plina SF6
-		
+		// provjera sigurne razine plina SF6
 		
 		if(dp.isGubitak_SF6_upozorenje() || dp.isGubitak_SF6_blokada()) {
+			
 			return false;
+			
 		}
 		
-		//provjera stanja sklopnih uredaja
+		// provjera daljinskog upravljanja na prekidacu
 		
-		if(prekidac.getStanje() == "nepoznato" || rast.getStanje() == "nepoznato") {
+		if(prekidac.getUpravljanje() != "Daljinsko") {
+			
 			return false;
+			
+		}
+		
+		// provjera stanja sklopnih uredaja
+		
+		if(prekidac.getStanje() == "nepoznato" || rastUz.getStanje() == "nepoznato") {
+			
+			return false;
+			
 		}
 		
 		return true;
 		
 	}
-
+	
+	/*public static boolean provjeriRastS1(SabirnickiRastavljacDP rastS1, Napajanje napajanjeRastS1) {
+		
+		if(rastS1.getStanje() == "nepoznato") {
+			return false;
+		}
+		
+		if(napajanjeRastS1.getStanje() == "OFF") {
+			return false;
+		}
+		
+		return true;
+	}
+	
+	public static boolean provjeriRastS2(SabirnickiRastavljacDP rastS2, Napajanje napajanjeRastS2) {
+		
+		if(rastS2.getStanje() == "nepoznato") {
+			return false;
+		}
+		
+		if(napajanjeRastS2.getStanje() == "OFF") {
+			return false;
+		}
+		
+		return true;
+	}*/
+	
 	public boolean isGubitak_SF6_upozorenje() {
 		return gubitak_SF6_upozorenje;
 	}

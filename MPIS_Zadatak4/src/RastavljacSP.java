@@ -3,8 +3,10 @@ public class RastavljacSP extends SpojnoPolje{
 	private final String ID;
 	private String stanje;
 	
-	public String provjera_stanja() {
-		return "";
+	public String provjera_stanja(PrekidacSP prekidac) {
+		
+		return prekidac.getStanje();
+		
 	}
 	
 	RastavljacSP (String ID){

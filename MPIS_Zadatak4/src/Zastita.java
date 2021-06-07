@@ -3,7 +3,9 @@ public class Zastita {
 	private final String ID;
 	private String stanje;
 	
-	public void iskljuèi() {
+	public void iskljuèi(PrekidacDP prekidac) {
+		
+		prekidac.setStanje("OFF");
 		
 	}
 	
