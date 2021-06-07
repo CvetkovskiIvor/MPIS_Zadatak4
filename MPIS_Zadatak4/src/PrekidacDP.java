@@ -2,7 +2,7 @@
 public class PrekidacDP extends DalekovodnoPolje{
 	private final String ID;
 	private String stanje;
-	private boolean upravljanje;
+	private String upravljanje;
 	
 	public void uklop(PrekidacDP prek) {
 		
@@ -16,9 +16,7 @@ public class PrekidacDP extends DalekovodnoPolje{
 		
 	}
 	
-	public String provjera_stanja() {
-		return "";
-	}
+	
 	
 	public PrekidacDP(String ID){
 		this.ID = ID;
@@ -32,15 +30,15 @@ public class PrekidacDP extends DalekovodnoPolje{
 		this.stanje = stanje;
 	}
 
-	public boolean isUpravljanje() {
+	public String getID() {
+		return ID;
+	}
+
+	public String getUpravljanje() {
 		return upravljanje;
 	}
 
-	public void setUpravljanje(boolean upravljanje) {
+	public void setUpravljanje(String upravljanje) {
 		this.upravljanje = upravljanje;
-	}
-
-	public String getID() {
-		return ID;
 	}
 }

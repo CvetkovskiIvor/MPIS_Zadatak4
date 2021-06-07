@@ -55,16 +55,30 @@ public class SpojnoScr extends StartScr implements ActionListener{
 		
 		if (e.getActionCommand() == "Iskljuci polje") {
 			
-			System.out.println("Polje se iskljucuje");
-			SpojnoPolje.isklop(sabirnickiRastavljacSPS1, sabirnickiRastavljacSPS2, prekidacSP);
-			//System.out.println(sabirnickiRastavljac.stanje);
+			if(SpojnoPolje.provjeri(sp, prekidacSP, rastavljacUzemljenjaSP, napajanjeRastavljacSP, napajanjePrekidacSP)) {
+				
+				System.out.println("Polje se iskljucuje");
+				SpojnoPolje.isklop(sabirnickiRastavljacSPS1, sabirnickiRastavljacSPS2, prekidacSP);
+				//System.out.println(sabirnickiRastavljac.stanje);
+				
+			}else
+				
+				System.out.println("ups");
+			
 		}
 		
 		if (e.getActionCommand() == "Ukljuci polje") {
 			
-			System.out.println("Polje se ukljucuje");
-			SpojnoPolje.uklop(sabirnickiRastavljacSPS1, sabirnickiRastavljacSPS2, prekidacSP);
-			//System.out.println(sabirnickiRastavljac.stanje);
+			if(SpojnoPolje.provjeri(sp, prekidacSP, rastavljacUzemljenjaSP, napajanjeRastavljacSP, napajanjePrekidacSP)) {
+				
+				System.out.println("Polje se ukljucuje");
+				SpojnoPolje.uklop(sabirnickiRastavljacSPS1, sabirnickiRastavljacSPS2, prekidacSP);
+				//System.out.println(sabirnickiRastavljac.stanje);
+				
+			}else 
+				
+				System.out.println("ups");
+			
 		}
 	}
 }

@@ -7,7 +7,9 @@ public class APU {
 	private boolean APU_3p;
 	private boolean APU_blokada;
 	
-	public void ukljuèi() {
+	public void ukljuèi(PrekidacDP prekidac) {
+		
+		prekidac.setStanje("ON");
 		
 	}
 	

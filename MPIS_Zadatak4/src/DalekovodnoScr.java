@@ -64,8 +64,6 @@ public class DalekovodnoScr extends StartScr implements ActionListener{
 		prespojiS2Btn.addActionListener(new DalekovodnoScr());
 		panel.add(prespojiS2Btn);
 		
-		
-		
 		frame.setVisible(true);
 	}
 	
@@ -75,60 +73,70 @@ public class DalekovodnoScr extends StartScr implements ActionListener{
 	}
 	
 	public void actionPerformed(ActionEvent e) {
-		// TODO Auto-generated method stub
 		
-		//prespoji
+		// prespoji
 		
 		if (e.getActionCommand() == "Iskljuci sa S1") {
 			
 			//napajanjeRastavljacUzemljenjaDP.setStanje("OFF");
 			//napajanjeSabirnickiRastavljacDPS1.setStanje("OFF");
 			
-			if(DalekovodnoPolje.provjeri(dp, distantnaZastita, prekidacDP, sabirnickiRastavljacDPS1, napajanjeRastavljacUzemljenjaDP, napajanjeSabirnickiRastavljacDPS1, napajanjePrekidacDP)) {
+			if(DalekovodnoPolje.provjeri(dp, distantnaZastita, prekidacDP, rastavljacUzemljenjaDP, napajanjeRastavljacDP, napajanjePrekidacDP)) {
+				
 				System.out.println("Polje se iskljucuje");
 				DalekovodnoPolje.isklop(rastavljacUzemljenjaDP, sabirnickiRastavljacDPS1, prekidacDP);
 				//System.out.println(sabirnickiRastavljac.stanje);
 				//System.out.println(sabirnickiRastavljacDPS1.getStanje());
-			}else
-				System.out.println("dogodila se greska");
 			
+			}else
+				
+				System.out.println("dogodila se greska");
 			
 		}
 		
 		if (e.getActionCommand() == "Iskljuci sa S2") {
 			
-			if(DalekovodnoPolje.provjeri(dp, distantnaZastita, prekidacDP, sabirnickiRastavljacDPS2, napajanjeRastavljacUzemljenjaDP, napajanjeSabirnickiRastavljacDPS1, napajanjePrekidacDP)) {
+			if(DalekovodnoPolje.provjeri(dp, distantnaZastita, prekidacDP, rastavljacUzemljenjaDP, napajanjeRastavljacDP, napajanjePrekidacDP)) {
+				
 				System.out.println("Polje se iskljucuje");
 				DalekovodnoPolje.isklop(rastavljacUzemljenjaDP, sabirnickiRastavljacDPS2, prekidacDP);
 				//System.out.println(sabirnickiRastavljac.stanje + sabirnickiRastavljac.sabirnica);
 				System.out.println(sabirnickiRastavljacDPS2.getStanje());
+			
 			}else
+				
 				System.out.println("dogodila se greska");
 		}
 		
 		if (e.getActionCommand() == "Ukljuci na S1") {
 			
-			if(DalekovodnoPolje.provjeri(dp, distantnaZastita, prekidacDP, sabirnickiRastavljacDPS1, napajanjeRastavljacUzemljenjaDP, napajanjeSabirnickiRastavljacDPS1, napajanjePrekidacDP)) {
+			if(DalekovodnoPolje.provjeri(dp, distantnaZastita, prekidacDP, rastavljacUzemljenjaDP, napajanjeRastavljacDP, napajanjePrekidacDP)) {
+				
 				System.out.println("Polje se iskljucuje");
 				DalekovodnoPolje.uklop(rastavljacUzemljenjaDP, sabirnickiRastavljacDPS1, prekidacDP);
 				System.out.println(sabirnickiRastavljacDPS1.getStanje());
+			
 			}else
+				
 				System.out.println("dogodila se greska");
 		}
 		
 		if (e.getActionCommand() == "Ukljuci na S2") {
 			
-			if(DalekovodnoPolje.provjeri(dp, distantnaZastita, prekidacDP, sabirnickiRastavljacDPS2, napajanjeRastavljacUzemljenjaDP, napajanjeSabirnickiRastavljacDPS1, napajanjePrekidacDP)) {
+			if(DalekovodnoPolje.provjeri(dp, distantnaZastita, prekidacDP, rastavljacUzemljenjaDP, napajanjeRastavljacDP, napajanjePrekidacDP)) {
 				System.out.println("Polje se iskljucuje");
 				DalekovodnoPolje.uklop(rastavljacUzemljenjaDP, sabirnickiRastavljacDPS2, prekidacDP);
 				System.out.println(sabirnickiRastavljacDPS2.getStanje());
+			
 			}else
+				
 				System.out.println("dogodila se greska");
 		}
 		
 		if (e.getActionCommand() == "Prespoji na S1") {
 			
-			if(DalekovodnoPolje.provjeri(dp, distantnaZastita, prekidacDP, sabirnickiRastavljacDPS1, napajanjeRastavljacUzemljenjaDP, napajanjeSabirnickiRastavljacDPS1, napajanjePrekidacDP)) {
+			if(DalekovodnoPolje.provjeri(dp, distantnaZastita, prekidacDP, rastavljacUzemljenjaDP, napajanjeRastavljacDP, napajanjePrekidacDP)) {
+				
 				System.out.println("Polje se prespaja na S1");
 				
 				SpojnoPolje.uklop(sabirnickiRastavljacSPS1, sabirnickiRastavljacSPS2, prekidacSP);
@@ -137,13 +145,16 @@ public class DalekovodnoScr extends StartScr implements ActionListener{
 				DalekovodnoPolje.isklop(rastavljacUzemljenjaDP, sabirnickiRastavljacDPS2, prekidacDP);
 				
 				SpojnoPolje.isklop(sabirnickiRastavljacSPS1, sabirnickiRastavljacSPS2, prekidacSP);
+			
 			}else
+				
 				System.out.println("dogodila se greska");
 		}
 		
 		if (e.getActionCommand() == "Prespoji na S2") {
 			
-			if(DalekovodnoPolje.provjeri(dp, distantnaZastita, prekidacDP, sabirnickiRastavljacDPS1, napajanjeRastavljacUzemljenjaDP, napajanjeSabirnickiRastavljacDPS1, napajanjePrekidacDP)) {
+			if(DalekovodnoPolje.provjeri(dp, distantnaZastita, prekidacDP, rastavljacUzemljenjaDP, napajanjeRastavljacDP, napajanjePrekidacDP)) {
+				
 				System.out.println("Polje se prespaja na S2");
 				
 				SpojnoPolje.uklop(sabirnickiRastavljacSPS1, sabirnickiRastavljacSPS2, prekidacSP);
@@ -152,8 +163,11 @@ public class DalekovodnoScr extends StartScr implements ActionListener{
 				DalekovodnoPolje.isklop(rastavljacUzemljenjaDP, sabirnickiRastavljacDPS1, prekidacDP);
 				
 				SpojnoPolje.isklop(sabirnickiRastavljacSPS1, sabirnickiRastavljacSPS2, prekidacSP);
+			
 			}else
+				
 				System.out.println("dogodila se greska");
+			
 		}
 		
 	}
