@@ -5,4 +5,8 @@ public class Mjerenje {
 	public Mjerenje (String ID) {
 		this.ID = ID;
 	}
+
+	public String getID() {
+		return ID;
+	}
 }

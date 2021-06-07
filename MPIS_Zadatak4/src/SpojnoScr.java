@@ -8,23 +8,7 @@ import javax.swing.JPanel;
 
 public class SpojnoScr extends StartScr implements ActionListener{
 	
-	JFrame frame = new JFrame("Testni frame");
-	
-	//SpojnoScr spojnoScr = new SpojnoScr();
-	
-	//DalekovodnoPolje dp = new DalekovodnoPolje();
-	//APU apu = new APU("APU");
-	//Brojilo brojilo = new Brojilo("brojilo");
-	//DistantnaZastita DZ = new DistantnaZastita("distantna zastita");
-	//IzlazniRastavljacSP izlazniRastavljac = new IzlazniRastavljacSP("izlazni rastavljac");
-	//NadstrujnaZastita nadstrujnaZastita = new NadstrujnaZastita("nadstrujna zastita");
-	//Napajanje napajanje = new Napajanje("napajanje");
-	//PrekidacSP prekidac = new PrekidacSP("prekidac");
-	//RastavljacUzemljenjaSP rastavljacUzemljenja = new RastavljacUzemljenjaSP("rastavljac uzemljenja");
-	//SabirnickiRastavljacSP sabirnickiRastavljacS1 = new SabirnickiRastavljacSP("sabirnicki rastavljac");
-	//SabirnickiRastavljacSP sabirnickiRastavljacS2 = new SabirnickiRastavljacSP("sabirnicki rastavljac");
-	//Voltmetar voltmetar = new Voltmetar("voltmetar");
-	//Watmetar watmetar = new Watmetar("watmetar");
+	JFrame frame = new JFrame("Spojno");
 	
 	public void spojnoScr() {
 		
