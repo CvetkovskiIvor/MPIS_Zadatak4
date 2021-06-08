@@ -14,52 +14,53 @@ public class DalekovodnoScr extends StartScr implements ActionListener{
 		
 		JPanel panel = new JPanel();
 		
-		frame.setSize(800, 600);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setSize(800, 300);
+		frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 		frame.add(panel);
 		
 		panel.setLayout(null);
 		
-		JLabel dalekovodnoLbl = new JLabel("iskljuci");
-		dalekovodnoLbl.setBounds(10, 20, 80, 25);
+		JLabel dalekovodnoLbl = new JLabel("S1");
+		dalekovodnoLbl.setBounds(250, 20, 80, 25);
 		panel.add(dalekovodnoLbl);
 		
-		JLabel spojnoLbl = new JLabel("ukljuci");
-		spojnoLbl.setBounds(10, 60, 80, 25);
+		JLabel spojnoLbl = new JLabel("S2");
+		spojnoLbl.setBounds(550, 20, 80, 25);
 		panel.add(spojnoLbl);
 		
-		JButton iskljuciS1Btn = new JButton("Iskljuci sa S1");
-		iskljuciS1Btn.setBounds(100, 20, 80, 25);
+		
+		JButton iskljuciS1Btn = new JButton("Iskljuci S1");
+		iskljuciS1Btn.setBounds(195, 80, 80, 25);
 		iskljuciS1Btn.setSize(125, 30);
 		iskljuciS1Btn.addActionListener(new DalekovodnoScr());
 		panel.add(iskljuciS1Btn);
 		
-		JButton iskljuciS2Btn = new JButton("Iskljuci sa S2");
-		iskljuciS2Btn.setBounds(100, 60, 80, 25);
+		JButton iskljuciS2Btn = new JButton("Iskljuci S2");
+		iskljuciS2Btn.setBounds(495, 80, 80, 25);
 		iskljuciS2Btn.setSize(125, 30);
 		iskljuciS2Btn.addActionListener(new DalekovodnoScr());
 		panel.add(iskljuciS2Btn);
 		
-		JButton ukljuciS1Btn = new JButton("Ukljuci na S1");
-		ukljuciS1Btn.setBounds(100, 100, 80, 25);
+		JButton ukljuciS1Btn = new JButton("Ukljuci S1");
+		ukljuciS1Btn.setBounds(195, 130, 80, 25);
 		ukljuciS1Btn.setSize(125, 30);
 		ukljuciS1Btn.addActionListener(new DalekovodnoScr());
 		panel.add(ukljuciS1Btn);
 		
-		JButton ukljuciS2Btn = new JButton("Ukljuci na S2");
-		ukljuciS2Btn.setBounds(100, 140, 80, 25);
+		JButton ukljuciS2Btn = new JButton("Ukljuci S2");
+		ukljuciS2Btn.setBounds(495, 130, 80, 25);
 		ukljuciS2Btn.setSize(125, 30);
 		ukljuciS2Btn.addActionListener(new DalekovodnoScr());
 		panel.add(ukljuciS2Btn);
 		
-		JButton prespojiS1Btn = new JButton("Prespoji na S1");
-		prespojiS1Btn.setBounds(100, 180, 80, 25);
+		JButton prespojiS1Btn = new JButton("Prespoji S1");
+		prespojiS1Btn.setBounds(195, 180, 80, 25);
 		prespojiS1Btn.setSize(125, 30);
 		prespojiS1Btn.addActionListener(new DalekovodnoScr());
 		panel.add(prespojiS1Btn);
 		
-		JButton prespojiS2Btn = new JButton("Prespoji na S2");
-		prespojiS2Btn.setBounds(100, 220, 80, 25);
+		JButton prespojiS2Btn = new JButton("Prespoji S2");
+		prespojiS2Btn.setBounds(495, 180, 80, 25);
 		prespojiS2Btn.setSize(125, 30);
 		prespojiS2Btn.addActionListener(new DalekovodnoScr());
 		panel.add(prespojiS2Btn);

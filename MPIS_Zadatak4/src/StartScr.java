@@ -1,5 +1,6 @@
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.Color;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -48,39 +49,44 @@ public class StartScr implements ActionListener{
 		JFrame frame = new JFrame("Start");
 		JPanel panel = new JPanel();
 		
-		frame.setSize(800, 600);
+		frame.setSize(800, 400);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.add(panel);
 		
 		panel.setLayout(null);
 		
-		JLabel dalekovodnoLbl = new JLabel("dalekovodno");
-		dalekovodnoLbl.setBounds(10, 20, 80, 25);
+		JLabel dalekovodnoLbl = new JLabel("         Polje");
+		dalekovodnoLbl.setBounds(360, 50, 80, 25);
+		dalekovodnoLbl.setForeground(Color.blue);
+		dalekovodnoLbl.setBackground(Color.lightGray);
+		dalekovodnoLbl.setOpaque(true);
 		panel.add(dalekovodnoLbl);
 		
-		JLabel spojnoLbl = new JLabel("spojno");
+		
+		/*JLabel spojnoLbl = new JLabel("Spojno polje");
 		spojnoLbl.setBounds(10, 60, 80, 25);
 		panel.add(spojnoLbl);
+		*/
 		
-		JLabel uredajiLbl = new JLabel("uredaji");
-		uredajiLbl.setBounds(10, 100, 80, 25);
+		JLabel uredajiLbl = new JLabel("Uredaji");
+		uredajiLbl.setBounds(380, 200, 80, 25);
 		panel.add(uredajiLbl);
 		
 		JButton dalekovodnoBtn = new JButton("Dalekovodno");
-		dalekovodnoBtn.setBounds(100, 20, 80, 25);
-		dalekovodnoBtn.setSize(125, 30);
+		dalekovodnoBtn.setBounds(230, 90, 80, 25);
+		dalekovodnoBtn.setSize(150, 30);
 		dalekovodnoBtn.addActionListener(new StartScr());
 		panel.add(dalekovodnoBtn);
 		
 		JButton spojnoBtn = new JButton("Spojno");
-		spojnoBtn.setBounds(100, 60, 80, 25);
-		spojnoBtn.setSize(125, 30);
+		spojnoBtn.setBounds(420, 90, 80, 25);
+		spojnoBtn.setSize(150, 30);
 		spojnoBtn.addActionListener(new StartScr());
 		panel.add(spojnoBtn);
 		
-		JButton uredajiBtn = new JButton("Uredaji");
-		uredajiBtn.setBounds(100, 100, 80, 25);
-		uredajiBtn.setSize(125, 30);
+		JButton uredajiBtn = new JButton("Lista Uredaja");
+		uredajiBtn.setBounds(340, 230, 80, 25);
+		uredajiBtn.setSize(120, 30);
 		uredajiBtn.addActionListener(new StartScr());
 		panel.add(uredajiBtn);
 		
