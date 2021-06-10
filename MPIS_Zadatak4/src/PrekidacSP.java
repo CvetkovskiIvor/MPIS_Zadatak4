@@ -2,7 +2,7 @@
 public class PrekidacSP extends SpojnoPolje{
 	private final String ID;
 	private String stanje;
-	private String upravljanje;
+	private String upravljanje = "Daljinsko";
 	
 	public void uklop(PrekidacSP prek) {
 		

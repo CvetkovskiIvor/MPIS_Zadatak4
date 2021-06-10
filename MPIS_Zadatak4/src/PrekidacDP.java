@@ -2,7 +2,7 @@
 public class PrekidacDP extends DalekovodnoPolje{
 	private final String ID;
 	private String stanje;
-	private String upravljanje;
+	private String upravljanje = "Daljinsko";
 	
 	public void uklop(PrekidacDP prek) {
 		

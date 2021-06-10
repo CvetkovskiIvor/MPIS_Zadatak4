@@ -8,9 +8,9 @@ import javax.swing.JPanel;
 
 public class SpojnoScr extends StartScr implements ActionListener{
 	
-	JFrame frame = new JFrame("Spojno");
+	static JFrame frame = new JFrame("Spojno");
 	
-	public void spojnoScr() {
+	public static void spojnoScr() {
 		
 		JPanel panel = new JPanel();
 		
@@ -45,7 +45,7 @@ public class SpojnoScr extends StartScr implements ActionListener{
 		
 	}
 	
-	public boolean vidljivost() {
+	public static boolean vidljivost() {
 		
 		return frame.isShowing();
 	}

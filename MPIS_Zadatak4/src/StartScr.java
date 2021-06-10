@@ -11,6 +11,8 @@ public class StartScr implements ActionListener{
 	
 	DalekovodnoPolje dp = new DalekovodnoPolje();
 	SpojnoPolje sp = new SpojnoPolje();
+	//DalekovodnoScr dalekovodnoScr = new DalekovodnoScr();
+	//SpojnoScr spojnoScr = new SpojnoScr();
 	
 	APU apu = new APU("APU");
 	Brojilo brojilo = new Brojilo("brojilo");
@@ -94,25 +96,27 @@ public class StartScr implements ActionListener{
 		
 		frame.setVisible(true);
 		
+		System.out.println(frame.isShowing());
+		
 	}
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
-		DalekovodnoScr dalekovodnoScr = new DalekovodnoScr();
+		
 		if (e.getActionCommand() == "Dalekovodno") {
-			if(dalekovodnoScr.vidljivost() == true) {
+			if(DalekovodnoScr.vidljivost() == true) {
 				System.out.println("vidljiv sam!");
 			}else
-				dalekovodnoScr.dalekovodnoScr();
+				DalekovodnoScr.dalekovodnoScr();
 		}
 		
 		if (e.getActionCommand() == "Spojno") {
-			SpojnoScr spojnoScr = new SpojnoScr();
-			if(spojnoScr.vidljivost() == true) {
+			
+			if(SpojnoScr.vidljivost() == true) {
 				System.out.println("vidljiv sam!");
 			}else
-				spojnoScr.spojnoScr();
+				SpojnoScr.spojnoScr();
 		}
 	}
 	

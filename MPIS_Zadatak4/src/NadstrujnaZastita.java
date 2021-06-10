@@ -6,7 +6,7 @@ public class NadstrujnaZastita extends Zastita{
 		// TODO Auto-generated constructor stub
 	}
 	
-	public void iskljuèi() {
+	public void iskljuci() {
 		
 	}
 	
