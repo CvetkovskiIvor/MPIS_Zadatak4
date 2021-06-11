@@ -87,7 +87,7 @@ public class StartScr implements ActionListener{
 		spojnoBtn.addActionListener(new StartScr());
 		panel.add(spojnoBtn);
 		
-		JButton uredajiBtn = new JButton("Lista Uredaja");
+		JButton uredajiBtn = new JButton("Lista uredaja");
 		uredajiBtn.setBounds(340, 230, 80, 25);
 		uredajiBtn.setSize(120, 30);
 		uredajiBtn.addActionListener(new StartScr());
@@ -116,6 +116,11 @@ public class StartScr implements ActionListener{
 				System.out.println("vidljiv sam!");
 			}else
 				SpojnoScr.spojnoScr();
+		}
+		if (e.getActionCommand() == "Lista uredaja") {
+			
+			System.out.println(signali);
+			
 		}
 	}
 	

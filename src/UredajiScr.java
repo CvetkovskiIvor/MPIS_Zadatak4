@@ -95,13 +95,13 @@ public class UredajiScr extends StartScr implements ActionListener{
 
 		if(e.getActionCommand() == "") {
 	
-			sabirnickiRastavljacDPS2.uklop(sabirnickiRastavljacDPS1);
+			sabirnickiRastavljacDPS2.uklop(sabirnickiRastavljacDPS2);
 	
 		}
 
 		if(e.getActionCommand() == "") {
 	
-			sabirnickiRastavljacDPS2.isklop(sabirnickiRastavljacDPS1);
+			sabirnickiRastavljacDPS2.isklop(sabirnickiRastavljacDPS2);
 	
 		}
 		
@@ -119,13 +119,13 @@ public class UredajiScr extends StartScr implements ActionListener{
 
 		if(e.getActionCommand() == "") {
 	
-			sabirnickiRastavljacSPS2.uklop(sabirnickiRastavljacSPS1);
+			sabirnickiRastavljacSPS2.uklop(sabirnickiRastavljacSPS2);
 	
 		}
 
 		if(e.getActionCommand() == "") {
 	
-			sabirnickiRastavljacSPS2.isklop(sabirnickiRastavljacSPS1);
+			sabirnickiRastavljacSPS2.isklop(sabirnickiRastavljacSPS2);
 	
 		}
 		
