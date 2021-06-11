@@ -2,9 +2,11 @@
 public class SabirnickiRastavljacDP extends RastavljacDP{
 	
 	public SabirnickiRastavljacDP(String ID) {
+		
 		super(ID);
+		
 	}
-
+	
 	public void uklop(SabirnickiRastavljacDP rast) {
 		
 		rast.setStanje("ON");
