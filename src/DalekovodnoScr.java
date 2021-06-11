@@ -91,7 +91,7 @@ public class DalekovodnoScr extends StartScr implements ActionListener{
 			if(DalekovodnoPolje.provjeri(dp, distantnaZastita, prekidacDP, rastavljacUzemljenjaDP, napajanjeRastavljacDP, napajanjePrekidacDP)) {
 				
 				System.out.println("Polje se iskljucuje");
-				DalekovodnoPolje.isklop(rastavljacUzemljenjaDP, sabirnickiRastavljacDPS1, prekidacDP);
+				DalekovodnoPolje.isklop(rastavljacUzemljenjaDP, sabirnickiRastavljacDPS1, izlazniRastavljacDP, prekidacDP);
 				//System.out.println(sabirnickiRastavljac.stanje);
 				//System.out.println(sabirnickiRastavljacDPS1.getStanje());
 			
@@ -106,7 +106,7 @@ public class DalekovodnoScr extends StartScr implements ActionListener{
 			if(DalekovodnoPolje.provjeri(dp, distantnaZastita, prekidacDP, rastavljacUzemljenjaDP, napajanjeRastavljacDP, napajanjePrekidacDP)) {
 				
 				System.out.println("Polje se iskljucuje");
-				DalekovodnoPolje.isklop(rastavljacUzemljenjaDP, sabirnickiRastavljacDPS2, prekidacDP);
+				DalekovodnoPolje.isklop(rastavljacUzemljenjaDP, sabirnickiRastavljacDPS2, izlazniRastavljacDP, prekidacDP);
 				//System.out.println(sabirnickiRastavljac.stanje + sabirnickiRastavljac.sabirnica);
 				System.out.println(sabirnickiRastavljacDPS2.getStanje());
 			
@@ -120,7 +120,7 @@ public class DalekovodnoScr extends StartScr implements ActionListener{
 			if(DalekovodnoPolje.provjeri(dp, distantnaZastita, prekidacDP, rastavljacUzemljenjaDP, napajanjeRastavljacDP, napajanjePrekidacDP)) {
 				
 				System.out.println("Polje se ukljucuje");
-				DalekovodnoPolje.uklop(rastavljacUzemljenjaDP, sabirnickiRastavljacDPS1, prekidacDP);
+				DalekovodnoPolje.uklop(rastavljacUzemljenjaDP, sabirnickiRastavljacDPS1, izlazniRastavljacDP, prekidacDP);
 				System.out.println(sabirnickiRastavljacDPS1.getStanje());
 			
 			}else
@@ -132,7 +132,7 @@ public class DalekovodnoScr extends StartScr implements ActionListener{
 			
 			if(DalekovodnoPolje.provjeri(dp, distantnaZastita, prekidacDP, rastavljacUzemljenjaDP, napajanjeRastavljacDP, napajanjePrekidacDP)) {
 				System.out.println("Polje se ukljucuje");
-				DalekovodnoPolje.uklop(rastavljacUzemljenjaDP, sabirnickiRastavljacDPS2, prekidacDP);
+				DalekovodnoPolje.uklop(rastavljacUzemljenjaDP, sabirnickiRastavljacDPS2, izlazniRastavljacDP, prekidacDP);
 				System.out.println(sabirnickiRastavljacDPS2.getStanje());
 			
 			}else
@@ -148,8 +148,8 @@ public class DalekovodnoScr extends StartScr implements ActionListener{
 				
 				SpojnoPolje.uklop(sabirnickiRastavljacSPS1, sabirnickiRastavljacSPS2, prekidacSP);
 				
-				DalekovodnoPolje.uklop(rastavljacUzemljenjaDP, sabirnickiRastavljacDPS1, prekidacDP);
-				DalekovodnoPolje.isklop(rastavljacUzemljenjaDP, sabirnickiRastavljacDPS2, prekidacDP);
+				DalekovodnoPolje.uklop(rastavljacUzemljenjaDP, sabirnickiRastavljacDPS1, izlazniRastavljacDP, prekidacDP);
+				DalekovodnoPolje.isklop(rastavljacUzemljenjaDP, sabirnickiRastavljacDPS2, izlazniRastavljacDP, prekidacDP);
 				
 				SpojnoPolje.isklop(sabirnickiRastavljacSPS1, sabirnickiRastavljacSPS2, prekidacSP);
 			
@@ -166,8 +166,8 @@ public class DalekovodnoScr extends StartScr implements ActionListener{
 				
 				SpojnoPolje.uklop(sabirnickiRastavljacSPS1, sabirnickiRastavljacSPS2, prekidacSP);
 				
-				DalekovodnoPolje.uklop(rastavljacUzemljenjaDP, sabirnickiRastavljacDPS2, prekidacDP);
-				DalekovodnoPolje.isklop(rastavljacUzemljenjaDP, sabirnickiRastavljacDPS1, prekidacDP);
+				DalekovodnoPolje.uklop(rastavljacUzemljenjaDP, sabirnickiRastavljacDPS2, izlazniRastavljacDP, prekidacDP);
+				DalekovodnoPolje.isklop(rastavljacUzemljenjaDP, sabirnickiRastavljacDPS1, izlazniRastavljacDP, prekidacDP);
 				
 				SpojnoPolje.isklop(sabirnickiRastavljacSPS1, sabirnickiRastavljacSPS2, prekidacSP);
 			

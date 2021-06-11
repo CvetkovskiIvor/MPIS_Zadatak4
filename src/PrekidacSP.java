@@ -16,10 +16,6 @@ public class PrekidacSP extends SpojnoPolje{
 		
 	}
 	
-	public String provjera_stanja() {
-		return "";
-	}
-	
 	public PrekidacSP(String ID){
 		this.ID = ID;
 	}

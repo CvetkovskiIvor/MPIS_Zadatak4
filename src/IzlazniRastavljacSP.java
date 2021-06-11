@@ -6,11 +6,15 @@ public class IzlazniRastavljacSP extends RastavljacSP{
 		// TODO Auto-generated constructor stub
 	}
 
-	public void uklop() {
+	public void uklop(IzlazniRastavljacSP rast) {
+		
+		rast.setStanje("ON");
 		
 	}
 	
-	public void isklop() {
+	public void isklop(IzlazniRastavljacSP rast) {
+		
+		rast.setStanje("OFF");
 		
 	}
 }

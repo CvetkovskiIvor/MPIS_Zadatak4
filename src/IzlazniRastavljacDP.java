@@ -5,11 +5,15 @@ public class IzlazniRastavljacDP extends RastavljacDP{
 		// TODO Auto-generated constructor stub
 	}
 
-	public void uklop() {
+	public void uklop(IzlazniRastavljacDP rast) {
+		
+		rast.setStanje("ON");
 		
 	}
 	
-	public void isklop() {
+	public void isklop(IzlazniRastavljacDP rast) {
+		
+		rast.setStanje("ON");
 		
 	}
 }

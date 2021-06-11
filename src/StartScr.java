@@ -120,4 +120,12 @@ public class StartScr implements ActionListener{
 		}
 	}
 	
+	public void initialise() {
+		
+		//uključeno dalekovodno uključeno na S1 te isključeno spojno polje
+		DalekovodnoPolje.uklop(rastavljacUzemljenjaDP, sabirnickiRastavljacDPS1, izlazniRastavljacDP, prekidacDP);
+		SpojnoPolje.isklop(sabirnickiRastavljacSPS1, sabirnickiRastavljacSPS2, prekidacSP);
+		
+	}
+	
 }

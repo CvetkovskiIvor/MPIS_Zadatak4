@@ -16,8 +16,6 @@ public class PrekidacDP extends DalekovodnoPolje{
 		
 	}
 	
-	
-	
 	public PrekidacDP(String ID){
 		this.ID = ID;
 	}

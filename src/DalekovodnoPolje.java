@@ -28,31 +28,21 @@ public class DalekovodnoPolje {
     private boolean relej_kvar;
     private boolean alarm;
     
-    public static void uklop(RastavljacUzemljenjaDP rastUz, SabirnickiRastavljacDP rast, PrekidacDP prekidac) {
-		///
-		/// 
-		///
-    	
-    	rastUz.setStanje("off");
-    	rast.uklop(rast);
-    	
-    	// TODO linijski rastavljac
+    public static void uklop(RastavljacUzemljenjaDP rastUz, SabirnickiRastavljacDP rast, IzlazniRastavljacDP rastIz, PrekidacDP prekidac) {
 		
+    	rastUz.setStanje("OFF");
+    	rast.uklop(rast);
+    	rastIz.uklop(rastIz);
     	prekidac.uklop(prekidac);
 		
 	}
 	
-	public static void isklop(RastavljacUzemljenjaDP rastUz, SabirnickiRastavljacDP rast, PrekidacDP prekidac){
-		///
-		/// 
-		///
+	public static void isklop(RastavljacUzemljenjaDP rastUz, SabirnickiRastavljacDP rast, IzlazniRastavljacDP rastIz, PrekidacDP prekidac){
 		
 		prekidac.isklop(prekidac);
-		
-		// TODO linijski rastavljac
-		
+		rastIz.isklop(rastIz);
 		rast.isklop(rast);
-		rastUz.setStanje("on");
+		rastUz.setStanje("ON");
 		
 	}
 	

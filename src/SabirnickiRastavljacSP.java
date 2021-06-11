@@ -7,13 +7,13 @@ public class SabirnickiRastavljacSP extends RastavljacSP{
 
 	public void uklop(SabirnickiRastavljacSP rast) {
 		
-		rast.setStanje("on");
+		rast.setStanje("ON");
 		
 	}
 	
 	public void isklop(SabirnickiRastavljacSP rast) {
 		
-		rast.setStanje("off");
+		rast.setStanje("OFF");
 		
 	}
 }
