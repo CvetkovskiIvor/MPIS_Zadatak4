@@ -3,6 +3,14 @@ public class Napajanje {
 	private final String ID;
 	private String stanje;
 	
+	public Napajanje(String ID) {
+		
+		this.ID = ID;
+		setStanje("ON");
+		StartScr.signali.add("Napajanje: ON");
+		
+	}
+	
 	public String provjera_stanjaRastavljacDP(Napajanje napajanjeRastavljac) {
 		return napajanjeRastavljac.getStanje();
 	}
@@ -27,11 +35,6 @@ public class Napajanje {
 		return napajanjeZastita.getStanje();
 	}
 	
-	public Napajanje(String ID) {
-		this.ID = ID;
-		setStanje("ON");
-	}
-
 	public String getStanje() {
 		return stanje;
 	}

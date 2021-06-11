@@ -1,5 +1,6 @@
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 import java.awt.Color;
 
 import javax.swing.JButton;
@@ -13,6 +14,8 @@ public class StartScr implements ActionListener{
 	SpojnoPolje sp = new SpojnoPolje();
 	//DalekovodnoScr dalekovodnoScr = new DalekovodnoScr();
 	//SpojnoScr spojnoScr = new SpojnoScr();
+	
+	static ArrayList signali = new ArrayList();
 	
 	APU apu = new APU("APU");
 	Brojilo brojilo = new Brojilo("brojilo");
@@ -43,8 +46,6 @@ public class StartScr implements ActionListener{
 	Napajanje napajanjePrekidacSP = new Napajanje("napajanje prekidac SP");
 	Napajanje napajanjeVoltmetar = new Napajanje("napajanje voltmetar");
 	Napajanje napajanjeWatmetar = new Napajanje("napajanje watmetar");
-	
-	
 	
 	public void startScr() {
 		
@@ -95,8 +96,6 @@ public class StartScr implements ActionListener{
 		
 		
 		frame.setVisible(true);
-		
-		System.out.println(frame.isShowing());
 		
 	}
 

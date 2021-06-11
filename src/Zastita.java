@@ -5,7 +5,7 @@ public class Zastita {
 	
 	public void iskljuci(PrekidacDP prekidac) {
 		
-		prekidac.setStanje("OFF");
+		prekidac.isklop(prekidac);
 		
 	}
 	

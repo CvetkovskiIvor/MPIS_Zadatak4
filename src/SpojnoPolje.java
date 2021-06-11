@@ -89,5 +89,69 @@ public static boolean provjeri(SpojnoPolje sp, PrekidacSP prekidac, RastavljacUz
 	public void setGubitak_SF6_blokada(boolean gubitak_SF6_blokada) {
 		this.gubitak_SF6_blokada = gubitak_SF6_blokada;
 	}
+
+	public boolean isSF6_N2_ulje_blokada() {
+		return SF6_N2_ulje_blokada;
+	}
+
+	public void setSF6_N2_ulje_blokada(boolean sF6_N2_ulje_blokada) {
+		SF6_N2_ulje_blokada = sF6_N2_ulje_blokada;
+	}
+
+	public boolean isGubitak_N2_blokada() {
+		return gubitak_N2_blokada;
+	}
+
+	public void setGubitak_N2_blokada(boolean gubitak_N2_blokada) {
+		this.gubitak_N2_blokada = gubitak_N2_blokada;
+	}
+
+	public boolean isNesklad_polova_3P_isklop() {
+		return nesklad_polova_3P_isklop;
+	}
+
+	public void setNesklad_polova_3P_isklop(boolean nesklad_polova_3P_isklop) {
+		this.nesklad_polova_3P_isklop = nesklad_polova_3P_isklop;
+	}
+
+	public boolean isGubitak_N2_upozorenje() {
+		return gubitak_N2_upozorenje;
+	}
+
+	public void setGubitak_N2_upozorenje(boolean gubitak_N2_upozorenje) {
+		this.gubitak_N2_upozorenje = gubitak_N2_upozorenje;
+	}
+
+	public boolean isGubitak_ulje_blokadaUklop() {
+		return gubitak_ulje_blokadaUklop;
+	}
+
+	public void setGubitak_ulje_blokadaUklop(boolean gubitak_ulje_blokadaUklop) {
+		this.gubitak_ulje_blokadaUklop = gubitak_ulje_blokadaUklop;
+	}
+
+	public boolean isAPU_blokada() {
+		return APU_blokada;
+	}
+
+	public void setAPU_blokada(boolean aPU_blokada) {
+		APU_blokada = aPU_blokada;
+	}
+
+	public boolean isGubitak_ulje_blokada() {
+		return gubitak_ulje_blokada;
+	}
+
+	public void setGubitak_ulje_blokada(boolean gubitak_ulje_blokada) {
+		this.gubitak_ulje_blokada = gubitak_ulje_blokada;
+	}
+
+	public boolean isGrijanje_kvar() {
+		return grijanje_kvar;
+	}
+
+	public void setGrijanje_kvar(boolean grijanje_kvar) {
+		this.grijanje_kvar = grijanje_kvar;
+	}
 	
 }
