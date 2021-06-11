@@ -74,32 +74,6 @@ public static boolean provjeri(SpojnoPolje sp, PrekidacSP prekidac, RastavljacUz
 		
 	}
 	
-	/*public static boolean provjeriRastS1(SabirnickiRastavljacSP rastS1, Napajanje napajanjeRastS1) {
-		
-		if(rastS1.getStanje() == "nepoznato") {
-			return false;
-		}
-		
-		if(napajanjeRastS1.getStanje() == "OFF") {
-			return false;
-		}
-		
-		return true;
-	}
-	
-	public static boolean provjeriRastS2(SabirnickiRastavljacSP rastS2, Napajanje napajanjeRastS2) {
-		
-		if(rastS2.getStanje() == "nepoznato") {
-			return false;
-		}
-		
-		if(napajanjeRastS2.getStanje() == "OFF") {
-			return false;
-		}
-		
-		return true;
-	}*/
-
 	public boolean isGubitak_SF6_upozorenje() {
 		return gubitak_SF6_upozorenje;
 	}
