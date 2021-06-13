@@ -1,7 +1,7 @@
 
 public class Brojilo extends Mjerenje{
 	
-	private boolean alarm;
+	private boolean alarm = false;
 	private float radna_energija;
 	
 	public Brojilo(String ID) {

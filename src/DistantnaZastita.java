@@ -1,10 +1,10 @@
 
 public class DistantnaZastita extends Zastita{
 	
-	private boolean faza_L1_poticaj;
-	private boolean faza_L2_poticaj;
-	private boolean faza_L3_poticaj;
-	private boolean zemljospoj_poticaj;
+	private boolean faza_L1_poticaj = false;
+	private boolean faza_L2_poticaj = false;
+	private boolean faza_L3_poticaj = false;
+	private boolean zemljospoj_poticaj = false;
 	
 	public DistantnaZastita(String ID) {
 		super(ID);

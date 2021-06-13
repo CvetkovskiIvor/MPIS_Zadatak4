@@ -1,6 +1,7 @@
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.awt.Color;
 
 import javax.swing.JButton;
@@ -115,9 +116,17 @@ public class StartScr extends Zadatak4 implements ActionListener{
 		}
 		if (e.getActionCommand() == "Lista uredaja") {
 			
+			
+			Collections.sort(signali);
 			System.out.println(signali);
+			
+			Collections.sort(DalekovodnoScr.dalekovodnoSignali);
 			System.out.println(DalekovodnoScr.dalekovodnoSignali);
+			
+			Collections.sort(SpojnoScr.spojnoSignali);
 			System.out.println(SpojnoScr.spojnoSignali);
+			
+			Collections.sort(svi_Signali);
 			System.out.println(svi_Signali);
 			
 		}

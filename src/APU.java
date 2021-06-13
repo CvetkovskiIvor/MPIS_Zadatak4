@@ -1,5 +1,6 @@
  
 public class APU {
+	
 	private final String ID;
 	private String stanje;
 	private boolean APU_ukljucenje;
