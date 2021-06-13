@@ -25,7 +25,6 @@ public class PrekidacSP extends SpojnoPolje{
 			StartScr.signali.remove(ID + ": " + prek.getStanje());
 			StartScr.svi_Signali.remove(ID + ": " + prek.getStanje());
 			
-
 			SpojnoScr.spojnoSignali.remove(getID() + ": " + prek.getStanje());
 			prek.setStanje("OFF");
 			
