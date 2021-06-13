@@ -10,6 +10,8 @@ public class PrekidacSP extends SpojnoPolje{
 			
 			prek.setStanje("ON");
 			StartScr.signali.add(ID + ": " + prek.getStanje());
+			StartScr.svi_Signali.add(ID + ": " + prek.getStanje());
+
 			SpojnoScr.spojnoSignali.add(getID() + ": " + prek.getStanje());
 			
 		}
@@ -21,6 +23,9 @@ public class PrekidacSP extends SpojnoPolje{
 		if(prek.getStanje() != "OFF") {
 			
 			StartScr.signali.remove(ID + ": " + prek.getStanje());
+			StartScr.svi_Signali.remove(ID + ": " + prek.getStanje());
+			StartScr.svi_Signali.add(ID + ": " + prek.getStanje());
+
 			SpojnoScr.spojnoSignali.remove(getID() + ": " + prek.getStanje());
 			prek.setStanje("OFF");
 			
