@@ -6,18 +6,28 @@ public class IzlazniRastavljacSP extends RastavljacSP{
 		// TODO Auto-generated constructor stub
 	}
 
-	@SuppressWarnings("unchecked")
 	public void uklop(IzlazniRastavljacSP rast) {
 		
-		rast.setStanje("ON");
-		StartScr.signali.add(getID() + ": " + rast.getStanje());
+		if(rast.getStanje() != "ON") {
+			
+			rast.setStanje("ON");
+			StartScr.signali.add(getID() + ": " + rast.getStanje());
+			SpojnoScr.spojnoSignali.add(getID() + ": " + rast.getStanje());
+			
+		}
 		
 	}
 	
 	public void isklop(IzlazniRastavljacSP rast) {
 		
-		rast.setStanje("OFF");
-		StartScr.signali.remove(getID() + ": " + rast.getStanje());
+		if(rast.getStanje() != "OFF") {
+			
+			StartScr.signali.remove(getID() + ": " + rast.getStanje());
+			SpojnoScr.spojnoSignali.remove(getID() + ": " + rast.getStanje());
+			rast.setStanje("OFF");
+			
+		}
+		
 		
 	}
 }

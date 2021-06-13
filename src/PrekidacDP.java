@@ -4,18 +4,27 @@ public class PrekidacDP extends DalekovodnoPolje{
 	private String stanje;
 	private String upravljanje = "Daljinsko";
 	
-	@SuppressWarnings("unchecked")
 	public void uklop(PrekidacDP prek) {
 		
-		prek.setStanje("ON");
-		StartScr.signali.add(ID + ": " + prek.getStanje());
+		if(prek.getStanje() != "ON") {
+		
+			prek.setStanje("ON");
+			StartScr.signali.add(ID + ": " + prek.getStanje());
+			DalekovodnoScr.dalekovodnoSignali.add(getID() + ": " + prek.getStanje());
+			
+		}
 		
 	}
 	
 	public void isklop(PrekidacDP prek) {
 		
-		prek.setStanje("OFF");
-		StartScr.signali.remove(ID + ": " + prek.getStanje());
+		if(prek.getStanje() != "OFF") {
+			
+			StartScr.signali.remove(ID + ": " + prek.getStanje());
+			DalekovodnoScr.dalekovodnoSignali.remove(getID() + ": " + prek.getStanje());
+			prek.setStanje("OFF");
+			
+		}
 		
 	}
 	

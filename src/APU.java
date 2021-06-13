@@ -7,6 +7,8 @@ public class APU {
 	private boolean APU_3p;
 	private boolean APU_blokada;
 	
+	SabirnickiRastavljacSP sp = new SabirnickiRastavljacSP(null);
+	
 	public void ukljuci(PrekidacDP prekidac) {
 		
 		prekidac.uklop(prekidac);

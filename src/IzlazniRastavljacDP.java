@@ -5,18 +5,27 @@ public class IzlazniRastavljacDP extends RastavljacDP{
 		// TODO Auto-generated constructor stub
 	}
 
-	@SuppressWarnings("unchecked")
 	public void uklop(IzlazniRastavljacDP rast) {
 		
-		rast.setStanje("ON");
-		StartScr.signali.add(getID() + ": " + rast.getStanje());
+		if(rast.getStanje() != "ON") {
+			
+			rast.setStanje("ON");
+			StartScr.signali.add(getID() + ": " + rast.getStanje());
+			DalekovodnoScr.dalekovodnoSignali.add(getID() + ": " + rast.getStanje());
+			
+		}
 		
 	}
 	
 	public void isklop(IzlazniRastavljacDP rast) {
 		
-		rast.setStanje("OFF");
-		StartScr.signali.remove(getID() + ": " + rast.getStanje());
+		if(rast.getStanje() != "OFF") {
+			
+			StartScr.signali.remove(getID() + ": " + rast.getStanje());
+			DalekovodnoScr.dalekovodnoSignali.remove(getID() + ": " + rast.getStanje());
+			rast.setStanje("OFF");
+			
+		}
 		
 	}
 }

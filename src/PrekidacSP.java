@@ -4,18 +4,27 @@ public class PrekidacSP extends SpojnoPolje{
 	private String stanje;
 	private String upravljanje = "Daljinsko";
 	
-	@SuppressWarnings("unchecked")
 	public void uklop(PrekidacSP prek) {
 		
-		prek.setStanje("ON");
-		StartScr.signali.add(ID + ": " + prek.getStanje());
+		if(prek.getStanje() != "ON") {
+			
+			prek.setStanje("ON");
+			StartScr.signali.add(ID + ": " + prek.getStanje());
+			SpojnoScr.spojnoSignali.add(getID() + ": " + prek.getStanje());
+			
+		}
 		
 	}
 	
 	public void isklop(PrekidacSP prek) {
 		
-		prek.setStanje("OFF");
-		StartScr.signali.remove(ID + ": " + prek.getStanje());
+		if(prek.getStanje() != "OFF") {
+			
+			StartScr.signali.remove(ID + ": " + prek.getStanje());
+			SpojnoScr.spojnoSignali.remove(getID() + ": " + prek.getStanje());
+			prek.setStanje("OFF");
+			
+		}
 		
 	}
 	

@@ -6,4 +6,11 @@ public class RastavljacUzemljenjaDP extends RastavljacDP{
 		// TODO Auto-generated constructor stub
 	}
 
+	
+	public boolean posaljiZahtjev(String poruka) {
+		
+		return false;
+		
+	}
 }
+

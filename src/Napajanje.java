@@ -7,7 +7,7 @@ public class Napajanje {
 		
 		this.ID = ID;
 		setStanje("ON");
-		StartScr.signali.add(ID + this.getStanje());
+		//StartScr.signali.add(ID + this.getStanje());
 		
 	}
 	
@@ -21,14 +21,6 @@ public class Napajanje {
 	
 	public String provjera_stanjaAPU(Napajanje napajanjeAPU) {
 		return napajanjeAPU.getStanje();
-	}
-	
-	public String provjera_stanjaPrekidacDP(Napajanje napajanjePrekidac) {
-		return napajanjePrekidac.getStanje();
-	}
-	
-	public String provjera_stanjaPrekidacSP(Napajanje napajanjePrekidac) {
-		return napajanjePrekidac.getStanje();
 	}
 	
 	public String provjera_stanjaZastita(Napajanje napajanjeZastita) {

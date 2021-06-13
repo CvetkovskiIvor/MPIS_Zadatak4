@@ -34,11 +34,11 @@ public class SpojnoPolje {
 		
 	}
 	
-public static boolean provjeri(SpojnoPolje sp, PrekidacSP prekidac, RastavljacUzemljenjaSP rastUz, Napajanje rastNapajanje, Napajanje prekidacNapajanje) {
+public static boolean provjeri(SpojnoPolje sp, PrekidacSP prekidac, RastavljacUzemljenjaSP rastUz, Napajanje rastNapajanje) {
 		
 		// provjera napajanja
 		
-		if(rastNapajanje.provjera_stanjaRastavljacSP(rastNapajanje) == "OFF"  || prekidacNapajanje.provjera_stanjaPrekidacSP(prekidacNapajanje) == "OFF") {
+		if(rastNapajanje.provjera_stanjaRastavljacSP(rastNapajanje) == "OFF") {
 			
 			System.out.println("tu se dogodila greska");
 			return false;
@@ -64,7 +64,7 @@ public static boolean provjeri(SpojnoPolje sp, PrekidacSP prekidac, RastavljacUz
 		
 		// provjera stanja sklopnih uredaja
 		
-		if(prekidac.getStanje() == "nepoznato" || rastUz.getStanje() == "nepoznato") {
+		if(prekidac.getStanje() == "nepoznato" || rastUz.posaljiZahtjev("Provjeriti stanje rastavljaca")) {
 			
 			return false;
 			

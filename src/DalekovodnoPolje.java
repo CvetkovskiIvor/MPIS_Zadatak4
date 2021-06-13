@@ -1,6 +1,5 @@
 
-
-public class DalekovodnoPolje {
+public class DalekovodnoPolje{
 	
 	private boolean SF6_N2_ulje_blokada;
 	private boolean gubitak_N2_blokada;
@@ -30,10 +29,11 @@ public class DalekovodnoPolje {
     
     public static void uklop(RastavljacUzemljenjaDP rastUz, SabirnickiRastavljacDP rast, IzlazniRastavljacDP rastIz, PrekidacDP prekidac) {
 		
-    	rastUz.setStanje("OFF");
+    	rastUz.posaljiZahtjev("Promijeniti stanje u OFF");
     	rast.uklop(rast);
     	rastIz.uklop(rastIz);
     	prekidac.uklop(prekidac);
+    	
 		
 	}
 	
@@ -42,11 +42,11 @@ public class DalekovodnoPolje {
 		prekidac.isklop(prekidac);
 		rastIz.isklop(rastIz);
 		rast.isklop(rast);
-		rastUz.setStanje("ON");
+		rastUz.posaljiZahtjev("Promijeniti stanje u ON");
 		
 	}
 	
-	public static boolean provjeri(DalekovodnoPolje dp, Zastita zastita, PrekidacDP prekidac, RastavljacUzemljenjaDP rastUz, Napajanje rastNapajanje, Napajanje prekidacNapajanje) {
+	public static boolean provjeri(DalekovodnoPolje dp, Zastita zastita, PrekidacDP prekidac, RastavljacUzemljenjaDP rastUz, Napajanje rastNapajanje) {
 		
 		// provjera zastite
 		
@@ -58,9 +58,8 @@ public class DalekovodnoPolje {
 		
 		// provjera napajanja
 		
-		if(rastNapajanje.provjera_stanjaRastavljacDP(rastNapajanje) == "OFF"  || prekidacNapajanje.provjera_stanjaPrekidacDP(prekidacNapajanje) == "OFF") {
+		if(rastNapajanje.provjera_stanjaRastavljacDP(rastNapajanje) == "OFF") {
 			
-			System.out.println("tu se dogodila greska");
 			return false;
 			
 		}
@@ -83,7 +82,7 @@ public class DalekovodnoPolje {
 		
 		// provjera stanja sklopnih uredaja
 		
-		if(prekidac.getStanje() == "nepoznato" || rastUz.getStanje() == "nepoznato") {
+		if(prekidac.getStanje() == "nepoznato" || rastUz.posaljiZahtjev("Provjeriti stanje rastavljaca")) {
 			
 			return false;
 			

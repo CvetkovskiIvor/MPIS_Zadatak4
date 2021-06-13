@@ -8,14 +8,12 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-public class StartScr implements ActionListener{
+public class StartScr extends Zadatak4 implements ActionListener{
 	
 	DalekovodnoPolje dp = new DalekovodnoPolje();
 	SpojnoPolje sp = new SpojnoPolje();
-	//DalekovodnoScr dalekovodnoScr = new DalekovodnoScr();
-	//SpojnoScr spojnoScr = new SpojnoScr();
 	
-	static ArrayList signali = new ArrayList();
+	static ArrayList<String> signali = new ArrayList<String>();
 	
 	APU apu = new APU("APU");
 	Brojilo brojilo = new Brojilo("brojilo");
@@ -25,16 +23,16 @@ public class StartScr implements ActionListener{
 	Napajanje napajanje = new Napajanje("napajanje");
 	PrekidacDP prekidacDP = new PrekidacDP("prekidac");
 	RastavljacUzemljenjaDP rastavljacUzemljenjaDP = new RastavljacUzemljenjaDP("rastavljac uzemljenja");
-	SabirnickiRastavljacDP sabirnickiRastavljacDPS1 = new SabirnickiRastavljacDP("sabirnicki rastavljac S1");
-	SabirnickiRastavljacDP sabirnickiRastavljacDPS2 = new SabirnickiRastavljacDP("sabirnicki rastavljac S2");
+	SabirnickiRastavljacDP sabirnickiRastavljacDPS1 = new SabirnickiRastavljacDP("sabirnicki rastavljac DPS1");
+	SabirnickiRastavljacDP sabirnickiRastavljacDPS2 = new SabirnickiRastavljacDP("sabirnicki rastavljac DPS2");
 	Voltmetar voltmetar = new Voltmetar("voltmetar");
 	Watmetar watmetar = new Watmetar("watmetar");
 	
 	IzlazniRastavljacSP izlazniRastavljacSP = new IzlazniRastavljacSP("izlazni rastavljac");
 	PrekidacSP prekidacSP = new PrekidacSP("prekidac");
 	RastavljacUzemljenjaSP rastavljacUzemljenjaSP = new RastavljacUzemljenjaSP("rastavljac uzemljenja");
-	SabirnickiRastavljacSP sabirnickiRastavljacSPS1 = new SabirnickiRastavljacSP("sabirnicki rastavljac S1");
-	SabirnickiRastavljacSP sabirnickiRastavljacSPS2 = new SabirnickiRastavljacSP("sabirnicki rastavljac S2");
+	SabirnickiRastavljacSP sabirnickiRastavljacSPS1 = new SabirnickiRastavljacSP("sabirnicki rastavljac SPS1");
+	SabirnickiRastavljacSP sabirnickiRastavljacSPS2 = new SabirnickiRastavljacSP("sabirnicki rastavljac SPS2");
 	
 	Napajanje napajanjeAPU = new Napajanje("napajanje APU");
 	Napajanje napajanjeBrojilo = new Napajanje("napajanje brojilo");
@@ -42,8 +40,6 @@ public class StartScr implements ActionListener{
 	Napajanje napajanjeRastavljacDP = new Napajanje("napajanjerastavljac DP");
 	Napajanje napajanjeRastavljacSP = new Napajanje("napajanjerastavljac SP");
 	Napajanje napajanjeNadstrujnaZastita = new Napajanje("napajanje nadstrujna zastita");
-	Napajanje napajanjePrekidacDP = new Napajanje("napajanje prekidac DP");
-	Napajanje napajanjePrekidacSP = new Napajanje("napajanje prekidac SP");
 	Napajanje napajanjeVoltmetar = new Napajanje("napajanje voltmetar");
 	Napajanje napajanjeWatmetar = new Napajanje("napajanje watmetar");
 	
@@ -78,21 +74,20 @@ public class StartScr implements ActionListener{
 		JButton dalekovodnoBtn = new JButton("Dalekovodno");
 		dalekovodnoBtn.setBounds(230, 90, 80, 25);
 		dalekovodnoBtn.setSize(150, 30);
-		dalekovodnoBtn.addActionListener(new StartScr());
+		dalekovodnoBtn.addActionListener(start);
 		panel.add(dalekovodnoBtn);
 		
 		JButton spojnoBtn = new JButton("Spojno");
 		spojnoBtn.setBounds(420, 90, 80, 25);
 		spojnoBtn.setSize(150, 30);
-		spojnoBtn.addActionListener(new StartScr());
+		spojnoBtn.addActionListener(start);
 		panel.add(spojnoBtn);
 		
 		JButton uredajiBtn = new JButton("Lista uredaja");
 		uredajiBtn.setBounds(340, 230, 80, 25);
 		uredajiBtn.setSize(120, 30);
-		uredajiBtn.addActionListener(new StartScr());
+		uredajiBtn.addActionListener(start);
 		panel.add(uredajiBtn);
-		
 		
 		
 		frame.setVisible(true);
@@ -101,7 +96,6 @@ public class StartScr implements ActionListener{
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		// TODO Auto-generated method stub
 		
 		if (e.getActionCommand() == "Dalekovodno") {
 			if(DalekovodnoScr.vidljivost() == true) {
@@ -120,16 +114,11 @@ public class StartScr implements ActionListener{
 		if (e.getActionCommand() == "Lista uredaja") {
 			
 			System.out.println(signali);
+			System.out.println(DalekovodnoScr.dalekovodnoSignali);
+			System.out.println(SpojnoScr.spojnoSignali);
 			
 		}
 	}
 	
-	public void initialise() {
-		
-		//uključeno dalekovodno uključeno na S1 te isključeno spojno polje
-		DalekovodnoPolje.uklop(rastavljacUzemljenjaDP, sabirnickiRastavljacDPS1, izlazniRastavljacDP, prekidacDP);
-		SpojnoPolje.isklop(sabirnickiRastavljacSPS1, sabirnickiRastavljacSPS2, prekidacSP);
-		
-	}
 	
 }
