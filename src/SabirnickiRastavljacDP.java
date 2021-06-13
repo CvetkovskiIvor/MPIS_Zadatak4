@@ -14,7 +14,8 @@ public class SabirnickiRastavljacDP extends RastavljacDP{
 			rast.setStanje("ON");
 			StartScr.signali.add(getID() + ": " + rast.getStanje());
 			DalekovodnoScr.dalekovodnoSignali.add(getID() + ": " + rast.getStanje());
-			
+			StartScr.svi_Signali.add(getID() + ": " + rast.getStanje());
+
 		}
 		
 	}
@@ -24,6 +25,10 @@ public class SabirnickiRastavljacDP extends RastavljacDP{
 		if(rast.getStanje() != "OFF") {
 
 			StartScr.signali.remove(getID() + ": " + rast.getStanje());
+			StartScr.svi_Signali.remove(getID() + ": " + rast.getStanje());
+			StartScr.svi_Signali.add(getID() + ": " + rast.getStanje());
+
+
 			DalekovodnoScr.dalekovodnoSignali.remove(getID() + ": " + rast.getStanje());
 			rast.setStanje("OFF");
 			

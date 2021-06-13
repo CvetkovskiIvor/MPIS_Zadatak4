@@ -14,6 +14,8 @@ public class StartScr extends Zadatak4 implements ActionListener{
 	SpojnoPolje sp = new SpojnoPolje();
 	
 	static ArrayList<String> signali = new ArrayList<String>();
+	static ArrayList<String> svi_Signali = new ArrayList<String>();
+
 	
 	APU apu = new APU("APU");
 	Brojilo brojilo = new Brojilo("brojilo");
@@ -116,6 +118,7 @@ public class StartScr extends Zadatak4 implements ActionListener{
 			System.out.println(signali);
 			System.out.println(DalekovodnoScr.dalekovodnoSignali);
 			System.out.println(SpojnoScr.spojnoSignali);
+			System.out.println(svi_Signali);
 			
 		}
 	}

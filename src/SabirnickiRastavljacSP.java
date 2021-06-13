@@ -13,6 +13,8 @@ public class SabirnickiRastavljacSP extends RastavljacSP{
 			
 			rast.setStanje("ON");
 			StartScr.signali.add(getID() + ": " + getStanje());
+			StartScr.svi_Signali.add(getID() + ": " + getStanje());
+
 			SpojnoScr.spojnoSignali.add(getID() + ": " + getStanje());
 			
 		}
@@ -24,6 +26,10 @@ public class SabirnickiRastavljacSP extends RastavljacSP{
 		if(rast.getStanje() != "OFF") {
 			
 			StartScr.signali.remove(getID() + ": " + getStanje());
+			StartScr.svi_Signali.remove(getID() + ": " + getStanje());
+			StartScr.svi_Signali.add(getID() + ": " + getStanje());
+
+
 			SpojnoScr.spojnoSignali.remove(getID() + ": " + getStanje());
 			rast.setStanje("OFF");
 			
