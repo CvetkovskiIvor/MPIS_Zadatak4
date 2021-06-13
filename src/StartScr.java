@@ -14,23 +14,25 @@ public class StartScr extends Zadatak4 implements ActionListener{
 	SpojnoPolje sp = new SpojnoPolje();
 	
 	static ArrayList<String> signali = new ArrayList<String>();
+	static ArrayList<String> svi_Signali = new ArrayList<String>();
+
 	
 	APU apu = new APU("APU");
 	Brojilo brojilo = new Brojilo("brojilo");
 	DistantnaZastita distantnaZastita = new DistantnaZastita("distantna zastita");
-	IzlazniRastavljacDP izlazniRastavljacDP = new IzlazniRastavljacDP("izlazni rastavljac");
+	IzlazniRastavljacDP izlazniRastavljacDP = new IzlazniRastavljacDP("izlazni rastavljacDP");
 	NadstrujnaZastita nadstrujnaZastita = new NadstrujnaZastita("nadstrujna zastita");
 	Napajanje napajanje = new Napajanje("napajanje");
-	PrekidacDP prekidacDP = new PrekidacDP("prekidac");
-	RastavljacUzemljenjaDP rastavljacUzemljenjaDP = new RastavljacUzemljenjaDP("rastavljac uzemljenja");
+	PrekidacDP prekidacDP = new PrekidacDP("prekidacDP");
+	RastavljacUzemljenjaDP rastavljacUzemljenjaDP = new RastavljacUzemljenjaDP("rastavljac uzemljenjaDP");
 	SabirnickiRastavljacDP sabirnickiRastavljacDPS1 = new SabirnickiRastavljacDP("sabirnicki rastavljac DPS1");
 	SabirnickiRastavljacDP sabirnickiRastavljacDPS2 = new SabirnickiRastavljacDP("sabirnicki rastavljac DPS2");
 	Voltmetar voltmetar = new Voltmetar("voltmetar");
 	Watmetar watmetar = new Watmetar("watmetar");
 	
-	IzlazniRastavljacSP izlazniRastavljacSP = new IzlazniRastavljacSP("izlazni rastavljac");
-	PrekidacSP prekidacSP = new PrekidacSP("prekidac");
-	RastavljacUzemljenjaSP rastavljacUzemljenjaSP = new RastavljacUzemljenjaSP("rastavljac uzemljenja");
+	IzlazniRastavljacSP izlazniRastavljacSP = new IzlazniRastavljacSP("izlazni rastavljacSP");
+	PrekidacSP prekidacSP = new PrekidacSP("prekidacSP");
+	RastavljacUzemljenjaSP rastavljacUzemljenjaSP = new RastavljacUzemljenjaSP("rastavljac uzemljenjaSP");
 	SabirnickiRastavljacSP sabirnickiRastavljacSPS1 = new SabirnickiRastavljacSP("sabirnicki rastavljac SPS1");
 	SabirnickiRastavljacSP sabirnickiRastavljacSPS2 = new SabirnickiRastavljacSP("sabirnicki rastavljac SPS2");
 	
@@ -116,6 +118,7 @@ public class StartScr extends Zadatak4 implements ActionListener{
 			System.out.println(signali);
 			System.out.println(DalekovodnoScr.dalekovodnoSignali);
 			System.out.println(SpojnoScr.spojnoSignali);
+			System.out.println(svi_Signali);
 			
 		}
 	}

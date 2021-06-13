@@ -10,6 +10,7 @@ public class PrekidacDP extends DalekovodnoPolje{
 		
 			prek.setStanje("ON");
 			StartScr.signali.add(ID + ": " + prek.getStanje());
+			StartScr.svi_Signali.add(ID + ": " + prek.getStanje());
 			DalekovodnoScr.dalekovodnoSignali.add(getID() + ": " + prek.getStanje());
 			
 		}
@@ -21,8 +22,12 @@ public class PrekidacDP extends DalekovodnoPolje{
 		if(prek.getStanje() != "OFF") {
 			
 			StartScr.signali.remove(ID + ": " + prek.getStanje());
+			StartScr.svi_Signali.remove(ID + ": " + prek.getStanje());
+			
 			DalekovodnoScr.dalekovodnoSignali.remove(getID() + ": " + prek.getStanje());
 			prek.setStanje("OFF");
+			
+			StartScr.svi_Signali.add(ID + ": " + prek.getStanje());
 			
 		}
 		

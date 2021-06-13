@@ -12,6 +12,8 @@ public class IzlazniRastavljacSP extends RastavljacSP{
 			
 			rast.setStanje("ON");
 			StartScr.signali.add(getID() + ": " + rast.getStanje());
+			StartScr.svi_Signali.add(getID() + ": " + rast.getStanje());
+
 			SpojnoScr.spojnoSignali.add(getID() + ": " + rast.getStanje());
 			
 		}
@@ -23,8 +25,12 @@ public class IzlazniRastavljacSP extends RastavljacSP{
 		if(rast.getStanje() != "OFF") {
 			
 			StartScr.signali.remove(getID() + ": " + rast.getStanje());
+			StartScr.svi_Signali.remove(getID() + ": " + rast.getStanje());
+			
 			SpojnoScr.spojnoSignali.remove(getID() + ": " + rast.getStanje());
 			rast.setStanje("OFF");
+			
+			StartScr.svi_Signali.add(getID() + ": " + rast.getStanje());
 			
 		}
 		
