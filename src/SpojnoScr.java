@@ -23,16 +23,16 @@ public class SpojnoScr extends StartScr implements ActionListener{
 		
 		panel.setLayout(null);
 		
-		JLabel iskljuciLbl = new JLabel("Polje");
+		/*JLabel iskljuciLbl = new JLabel("Polje");
 		iskljuciLbl.setBounds(188, 20, 80, 25);
 		
-		panel.add(iskljuciLbl);
+		panel.add(iskljuciLbl);*/
 		
 		/*JLabel ukljuciLbl = new JLabel("ukljuci");
 		ukljuciLbl.setBounds(10, 60, 80, 25);
 		panel.add(ukljuciLbl); */
 		
-		JButton IskljuciBtn = new JButton("Iskljuci polje");
+		/*JButton IskljuciBtn = new JButton("Iskljuci polje");
 		IskljuciBtn.setBounds(55, 70, 80, 25);
 		IskljuciBtn.setSize(125, 30);
 		IskljuciBtn.addActionListener(spoj);
@@ -42,7 +42,7 @@ public class SpojnoScr extends StartScr implements ActionListener{
 		UkljuciBtn.setBounds(220, 70, 80, 25);
 		UkljuciBtn.setSize(125, 30);
 		UkljuciBtn.addActionListener(spoj);
-		panel.add(UkljuciBtn);
+		panel.add(UkljuciBtn);*/
 		
 		frame.setVisible(true);
 		

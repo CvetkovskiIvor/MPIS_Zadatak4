@@ -23,7 +23,7 @@ public class DalekovodnoScr extends StartScr implements ActionListener{
 		
 		panel.setLayout(null);
 		
-		JLabel dalekovodnoLbl = new JLabel("S1");
+		/*JLabel dalekovodnoLbl = new JLabel("S1");
 		dalekovodnoLbl.setBounds(250, 20, 80, 25);
 		panel.add(dalekovodnoLbl);
 		
@@ -65,7 +65,7 @@ public class DalekovodnoScr extends StartScr implements ActionListener{
 		prespojiS2Btn.setBounds(495, 180, 80, 25);
 		prespojiS2Btn.setSize(125, 30);
 		prespojiS2Btn.addActionListener(dalk);
-		panel.add(prespojiS2Btn);
+		panel.add(prespojiS2Btn);*/
 		
 		
 		frame.setVisible(true);
