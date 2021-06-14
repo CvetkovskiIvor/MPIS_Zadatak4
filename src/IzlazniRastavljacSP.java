@@ -1,9 +1,13 @@
+import java.util.ArrayList;
 
 public class IzlazniRastavljacSP extends RastavljacSP{
 	
+	ArrayList<String> izlazniRastavljacSPSignali = new ArrayList<String>();
+	
 	IzlazniRastavljacSP(String ID) {
+		
 		super(ID);
-		// TODO Auto-generated constructor stub
+		
 	}
 
 	public void uklop(IzlazniRastavljacSP rast) {
@@ -15,6 +19,7 @@ public class IzlazniRastavljacSP extends RastavljacSP{
 			StartScr.svi_Signali.add(getID() + ": " + rast.getStanje());
 
 			SpojnoScr.spojnoSignali.add(getID() + ": " + rast.getStanje());
+			izlazniRastavljacSPSignali.add(getID() + ": " + rast.getStanje());
 			
 		}
 		

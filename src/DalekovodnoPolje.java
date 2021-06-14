@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 
 public class DalekovodnoPolje{
 	
@@ -26,6 +27,39 @@ public class DalekovodnoPolje{
     private boolean preopterecenje_iskljucenje = false;
     private boolean relej_kvar = false;
     private boolean alarm = false;
+    
+    ArrayList<String> dalekovodnoPoljeSignali = new ArrayList<String>();
+    
+    public DalekovodnoPolje(){
+    	
+    	dalekovodnoPoljeSignali.add(Boolean.toString(SF6_N2_ulje_blokada));
+    	dalekovodnoPoljeSignali.add(Boolean.toString(gubitak_N2_blokada));
+    	dalekovodnoPoljeSignali.add(Boolean.toString(gubitak_SF6_upozorenje));
+    	dalekovodnoPoljeSignali.add(Boolean.toString(gubitak_SF6_blokada));
+    	dalekovodnoPoljeSignali.add(Boolean.toString(nesklad_polova_3P_isklop));
+    	dalekovodnoPoljeSignali.add(Boolean.toString(gubitak_N2_upozorenje));
+    	dalekovodnoPoljeSignali.add(Boolean.toString(gubitak_ulje_blokadaUklop));
+    	dalekovodnoPoljeSignali.add(Boolean.toString(APU_blokada));
+    	dalekovodnoPoljeSignali.add(Boolean.toString(gubitak_ulje_blokada));
+    	dalekovodnoPoljeSignali.add(Boolean.toString(grijanje_kvar));
+    	dalekovodnoPoljeSignali.add(Boolean.toString(iskljucenje));
+    	dalekovodnoPoljeSignali.add(Boolean.toString(stupanj2_iskljucenje));
+    	dalekovodnoPoljeSignali.add(Boolean.toString(stupanj3_iskljucenje));
+    	dalekovodnoPoljeSignali.add(Boolean.toString(stupanj4_iskljucenje));
+    	dalekovodnoPoljeSignali.add(Boolean.toString(njihanje_energije_blokada));
+    	dalekovodnoPoljeSignali.add(Boolean.toString(TKsignal_iskljucenje));
+    	dalekovodnoPoljeSignali.add(Boolean.toString(napajanje_nestanak));
+    	dalekovodnoPoljeSignali.add(Boolean.toString(uredaj_kvar));
+    	dalekovodnoPoljeSignali.add(Boolean.toString(NPC_iskljucenje));
+    	dalekovodnoPoljeSignali.add(Boolean.toString(VPC_iskljucenje));
+    	dalekovodnoPoljeSignali.add(Boolean.toString(zemljospojna_iskljucenje));
+    	dalekovodnoPoljeSignali.add(Boolean.toString(preopterecenje_upozorenje));
+    	dalekovodnoPoljeSignali.add(Boolean.toString(preopterecenje_iskljucenje));
+    	dalekovodnoPoljeSignali.add(Boolean.toString(relej_kvar));
+    	dalekovodnoPoljeSignali.add(Boolean.toString(alarm));
+    	
+    	
+    }
     
     public static void uklop(RastavljacUzemljenjaDP rastUz, SabirnickiRastavljacDP rast, IzlazniRastavljacDP rastIz, PrekidacDP prekidac) {
 		

@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 
 public class DistantnaZastita extends Zastita{
 	
@@ -6,9 +7,17 @@ public class DistantnaZastita extends Zastita{
 	private boolean faza_L3_poticaj = false;
 	private boolean zemljospoj_poticaj = false;
 	
+	ArrayList<String> distantnaZastitaSignali = new ArrayList<String>();
+	
 	public DistantnaZastita(String ID) {
+		
 		super(ID);
-		// TODO Auto-generated constructor stub
+		
+		distantnaZastitaSignali.add(Boolean.toString(faza_L1_poticaj));
+		distantnaZastitaSignali.add(Boolean.toString(faza_L2_poticaj));
+		distantnaZastitaSignali.add(Boolean.toString(faza_L3_poticaj));
+		distantnaZastitaSignali.add(Boolean.toString(zemljospoj_poticaj));
+		
 	}
 
 	public boolean isFaza_L1_poticaj() {

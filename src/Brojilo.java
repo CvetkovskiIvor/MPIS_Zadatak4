@@ -1,12 +1,17 @@
+import java.util.ArrayList;
 
 public class Brojilo extends Mjerenje{
 	
 	private boolean alarm = false;
 	private float radna_energija;
 	
+	ArrayList<String> brojiloSignali = new ArrayList<String>();
+	
 	public Brojilo(String ID) {
 		super(ID);
-		// TODO Auto-generated constructor stub
+		
+		brojiloSignali.add(getID() + ": " + Boolean.toString(alarm));
+		
 	}
 
 	public boolean isAlarm() {
