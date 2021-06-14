@@ -1,9 +1,36 @@
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+
 public class UredajiScr extends StartScr implements ActionListener{
 	
-	public void uredajiScr() {
+	static JFrame frame = new JFrame("Uredaji");
+	
+	public static void uredajiScr() {
+		
+		JPanel panel = new JPanel();
+		
+		frame.setSize(400, 200);
+		frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
+		frame.add(panel);
+		
+		panel.setLayout(null);
+		
+		JLabel uredaji = new JLabel("Polje");
+		uredaji.setBounds(188, 20, 80, 25);
+		
+		panel.add(uredaji);
+		
+		frame.setVisible(true);
+		
+	}
+	
+public static boolean vidljivost() {
+		
+		return frame.isShowing();
 		
 	}
 	
