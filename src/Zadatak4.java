@@ -8,9 +8,11 @@ public class Zadatak4 {
 	
 	public static void main(String[] args) {
 		
-		dalk.initialise();
-		spoj.initialise();
+		//dalk.initialise();
+		//spoj.initialise();
+		start.initialise();
 		start.startScr();
+		
 		
 	}
 

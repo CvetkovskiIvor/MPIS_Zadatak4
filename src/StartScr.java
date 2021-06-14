@@ -1,5 +1,8 @@
 import java.awt.event.ActionEvent;
+
 import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.awt.Color;
@@ -7,7 +10,9 @@ import java.awt.Color;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JMenuItem;
 import javax.swing.JPanel;
+import javax.swing.JPopupMenu;
 
 public class StartScr extends Zadatak4 implements ActionListener{
 	
@@ -45,6 +50,9 @@ public class StartScr extends Zadatak4 implements ActionListener{
 	Napajanje napajanjeNadstrujnaZastita = new Napajanje("napajanje nadstrujna zastita");
 	Napajanje napajanjeVoltmetar = new Napajanje("napajanje voltmetar");
 	Napajanje napajanjeWatmetar = new Napajanje("napajanje watmetar");
+	
+	JPopupMenu popupD = new JPopupMenu();
+	JPopupMenu popupS = new JPopupMenu();
 	
 	public void startScr() {
 		
@@ -90,9 +98,50 @@ public class StartScr extends Zadatak4 implements ActionListener{
 		uredajiBtn.setBounds(340, 230, 80, 25);
 		uredajiBtn.setSize(120, 30);
 		uredajiBtn.addActionListener(start);
+		
 		panel.add(uredajiBtn);
 		
+		JMenuItem uklj = new JMenuItem("Ukljuci");
+		JMenuItem isklj = new JMenuItem("Iskljuci");
+		uklj.addActionListener(start);
+		isklj.addActionListener(start);
+		popupS.add(uklj);
+	    popupS.add(isklj);
 		
+	    JMenuItem ukljS1 = new JMenuItem("Ukljuci S1");
+	    JMenuItem iskljS1 = new JMenuItem("Iskljuci S1");
+	    ukljS1.addActionListener(start);
+	    iskljS1.addActionListener(start);
+		popupD.add(ukljS1);
+	    popupD.add(iskljS1);
+	    popupD.addSeparator();
+	      
+	    JMenuItem ukljS2 = new JMenuItem("Ukljuci S2");
+	    JMenuItem iskljS2 = new JMenuItem("Iskljuci S2");
+	    ukljS2.addActionListener(start);
+	    iskljS2.addActionListener(start);
+	    popupD.add(ukljS2);
+	    popupD.add(iskljS2);
+	    popupD.addSeparator();
+	      
+	    JMenuItem prespS1 = new JMenuItem("Prespoji S1");
+	    JMenuItem prespS2 = new JMenuItem("Prespoji S2");
+	    prespS1.addActionListener(start);
+	    prespS2.addActionListener(start);
+	    popupD.add(prespS1);
+	    popupD.add(prespS2);
+	      
+	    panel.addMouseListener(new MouseAdapter() {
+	       public void mouseReleased(MouseEvent me) {
+	          showPopup(me); // showPopup() is our own user-defined method
+	       }
+	    }) ;
+	      
+	    dalekovodnoBtn.setComponentPopupMenu(popupD);
+	    spojnoBtn.setComponentPopupMenu(popupS);
+	    
+	    
+	    
 		frame.setVisible(true);
 		
 	}
@@ -130,7 +179,152 @@ public class StartScr extends Zadatak4 implements ActionListener{
 			System.out.println(svi_Signali);
 			
 		}
+		
+		if (e.getActionCommand() == "Iskljuci S1") {
+			
+			//napajanjeRastavljacUzemljenjaDP.setStanje("OFF");
+			//napajanjeSabirnickiRastavljacDPS1.setStanje("OFF");
+			
+			//iskljuciS1();
+			
+			if(DalekovodnoPolje.provjeri(dp, distantnaZastita, prekidacDP, rastavljacUzemljenjaDP, napajanjeRastavljacDP)) {
+				
+				System.out.println("Polje se iskljucuje");
+				DalekovodnoPolje.isklop(rastavljacUzemljenjaDP, sabirnickiRastavljacDPS1, izlazniRastavljacDP, prekidacDP);
+				//System.out.println(sabirnickiRastavljac.stanje);
+				//System.out.println(sabirnickiRastavljacDPS1.getStanje());
+				
+				System.out.println("Globalno stanje rastavljaca " + sabirnickiRastavljacDPS1.getStanje());
+			
+			}else
+				
+				System.out.println("dogodila se greska");
+			
+		}
+		
+		if (e.getActionCommand() == "Iskljuci S2") {
+			
+			if(DalekovodnoPolje.provjeri(dp, distantnaZastita, prekidacDP, rastavljacUzemljenjaDP, napajanjeRastavljacDP)) {
+				
+				System.out.println("Polje se iskljucuje");
+				DalekovodnoPolje.isklop(rastavljacUzemljenjaDP, sabirnickiRastavljacDPS2, izlazniRastavljacDP, prekidacDP);
+				//System.out.println(sabirnickiRastavljac.stanje + sabirnickiRastavljac.sabirnica);
+				System.out.println(sabirnickiRastavljacDPS2.getStanje());
+				
+			
+			}else
+				
+				System.out.println("dogodila se greska");
+		}
+		
+		if (e.getActionCommand() == "Ukljuci S1") {
+			
+			if(DalekovodnoPolje.provjeri(dp, distantnaZastita, prekidacDP, rastavljacUzemljenjaDP, napajanjeRastavljacDP)) {
+				
+				System.out.println("Polje se ukljucuje");
+				DalekovodnoPolje.uklop(rastavljacUzemljenjaDP, sabirnickiRastavljacDPS1, izlazniRastavljacDP, prekidacDP);
+				System.out.println("Globalno stanje rastavljaca " + sabirnickiRastavljacDPS1.getStanje());
+			
+			}else
+				
+				System.out.println("dogodila se greska");
+		}
+		
+		if (e.getActionCommand() == "Ukljuci S2") {
+			
+			if(DalekovodnoPolje.provjeri(dp, distantnaZastita, prekidacDP, rastavljacUzemljenjaDP, napajanjeRastavljacDP)) {
+				System.out.println("Polje se ukljucuje");
+				DalekovodnoPolje.uklop(rastavljacUzemljenjaDP, sabirnickiRastavljacDPS2, izlazniRastavljacDP, prekidacDP);
+				System.out.println(sabirnickiRastavljacDPS2.getStanje());
+			
+			}else
+				
+				System.out.println("dogodila se greska");
+		}
+		
+		if (e.getActionCommand() == "Prespoji S1") {
+			
+			if(DalekovodnoPolje.provjeri(dp, distantnaZastita, prekidacDP, rastavljacUzemljenjaDP, napajanjeRastavljacDP)) {
+				
+				System.out.println("Polje se prespaja na S1");
+				
+				SpojnoPolje.uklop(sabirnickiRastavljacSPS1, sabirnickiRastavljacSPS2, prekidacSP);
+				
+				DalekovodnoPolje.isklop(rastavljacUzemljenjaDP, sabirnickiRastavljacDPS2, izlazniRastavljacDP, prekidacDP);
+				DalekovodnoPolje.uklop(rastavljacUzemljenjaDP, sabirnickiRastavljacDPS1, izlazniRastavljacDP, prekidacDP);
+				
+				SpojnoPolje.isklop(sabirnickiRastavljacSPS1, sabirnickiRastavljacSPS2, prekidacSP);
+			
+			}else
+				
+				System.out.println("dogodila se greska");
+		}
+		
+		if (e.getActionCommand() == "Prespoji S2") {
+			
+			if(DalekovodnoPolje.provjeri(dp, distantnaZastita, prekidacDP, rastavljacUzemljenjaDP, napajanjeRastavljacDP)) {
+				
+				System.out.println("Polje se prespaja na S2");
+				
+				SpojnoPolje.uklop(sabirnickiRastavljacSPS1, sabirnickiRastavljacSPS2, prekidacSP);
+				
+				DalekovodnoPolje.isklop(rastavljacUzemljenjaDP, sabirnickiRastavljacDPS1, izlazniRastavljacDP, prekidacDP);
+				DalekovodnoPolje.uklop(rastavljacUzemljenjaDP, sabirnickiRastavljacDPS2, izlazniRastavljacDP, prekidacDP);
+			
+				SpojnoPolje.isklop(sabirnickiRastavljacSPS1, sabirnickiRastavljacSPS2, prekidacSP);
+			
+			}else
+				
+				System.out.println("dogodila se greska");
+			
+		}
+		
+		if (e.getActionCommand() == "Iskljuci") {
+			
+			
+			if(SpojnoPolje.provjeri(sp, prekidacSP, rastavljacUzemljenjaSP, napajanjeRastavljacSP)) {
+				
+				System.out.println("Polje se iskljucuje");
+				SpojnoPolje.isklop(sabirnickiRastavljacSPS1, sabirnickiRastavljacSPS2, prekidacSP);
+				
+			}else
+				
+				System.out.println("ups");
+			
+		}
+		
+		if (e.getActionCommand() == "Ukljuci") {
+			
+			if(SpojnoPolje.provjeri(sp, prekidacSP, rastavljacUzemljenjaSP, napajanjeRastavljacSP)) {
+				
+				System.out.println("Polje se ukljucuje");
+				SpojnoPolje.uklop(sabirnickiRastavljacSPS1, sabirnickiRastavljacSPS2, prekidacSP);
+				
+			}else 
+				
+				System.out.println("ups");
+			
+		}
+		
 	}
 	
+	void showPopup(MouseEvent me) {
+	      
+		if(me.isPopupTrigger()) {
+			
+	    	  popupD.show(me.getComponent(), me.getX(), me.getY());
+		      popupS.show(me.getComponent(), me.getX(), me.getY());
+		      
+	      }
+	      
+	   }
+	
+	public void initialise() {
+		
+		DalekovodnoPolje.uklop(rastavljacUzemljenjaDP, sabirnickiRastavljacDPS1, izlazniRastavljacDP, prekidacDP);
+		SpojnoPolje.isklop(sabirnickiRastavljacSPS1, sabirnickiRastavljacSPS2, prekidacSP);
+		System.out.println(sabirnickiRastavljacDPS1.getStanje());
+		
+	}
 	
 }

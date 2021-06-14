@@ -68,10 +68,8 @@ public class DalekovodnoScr extends StartScr implements ActionListener{
 		panel.add(prespojiS2Btn);
 		
 		
-		//System.out.println("ovdje sam prosao");
 		frame.setVisible(true);
 		
-		//System.out.println(frame.isShowing());
 	}
 	
 	public static boolean vidljivost() {
@@ -82,7 +80,7 @@ public class DalekovodnoScr extends StartScr implements ActionListener{
 	
 	public void actionPerformed(ActionEvent e) {
 		
-		if (e.getActionCommand() == "Iskljuci S1") {
+		/*if (e.getActionCommand() == "Iskljuci S1") {
 			
 			//napajanjeRastavljacUzemljenjaDP.setStanje("OFF");
 			//napajanjeSabirnickiRastavljacDPS1.setStanje("OFF");
@@ -179,33 +177,33 @@ public class DalekovodnoScr extends StartScr implements ActionListener{
 				
 				System.out.println("dogodila se greska");
 			
-		}
+		}*/
 		
 	}
 	
-	public void initialise() {
+	/*public void initialise() {
 		
 		DalekovodnoPolje.uklop(rastavljacUzemljenjaDP, sabirnickiRastavljacDPS1, izlazniRastavljacDP, prekidacDP);
 		
 		System.out.println(sabirnickiRastavljacDPS1.getStanje());
 		
-	}
+	}*/
 	
-	public void iskljuciS1() {
-		//System.out.println("Globalno stanje rastavljaca " + sabirnickiRastavljacDPS1.getStanje());
-		
-		if(DalekovodnoPolje.provjeri(dp, distantnaZastita, prekidacDP, rastavljacUzemljenjaDP, napajanjeRastavljacDP)) {
-			
-			System.out.println("Polje se iskljucuje");
-			DalekovodnoPolje.isklop(rastavljacUzemljenjaDP, sabirnickiRastavljacDPS1, izlazniRastavljacDP, prekidacDP);
-			//System.out.println(sabirnickiRastavljac.stanje);
-			//System.out.println(sabirnickiRastavljacDPS1.getStanje());
-			
-			System.out.println("Globalno stanje rastavljaca " + sabirnickiRastavljacDPS1.getStanje());
-		
-		}else
-			
-			System.out.println("dogodila se greska");
-	}
+//	public void iskljuciS1() {
+//		//System.out.println("Globalno stanje rastavljaca " + sabirnickiRastavljacDPS1.getStanje());
+//		
+//		if(DalekovodnoPolje.provjeri(dp, distantnaZastita, prekidacDP, rastavljacUzemljenjaDP, napajanjeRastavljacDP)) {
+//			
+//			System.out.println("Polje se iskljucuje");
+//			DalekovodnoPolje.isklop(rastavljacUzemljenjaDP, sabirnickiRastavljacDPS1, izlazniRastavljacDP, prekidacDP);
+//			//System.out.println(sabirnickiRastavljac.stanje);
+//			//System.out.println(sabirnickiRastavljacDPS1.getStanje());
+//			
+//			System.out.println("Globalno stanje rastavljaca " + sabirnickiRastavljacDPS1.getStanje());
+//		
+//		}else
+//			
+//			System.out.println("dogodila se greska");
+//	}
 
 }

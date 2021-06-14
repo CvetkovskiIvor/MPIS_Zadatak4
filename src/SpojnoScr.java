@@ -12,7 +12,6 @@ public class SpojnoScr extends StartScr implements ActionListener{
 	static JFrame frame = new JFrame("Spojno");
 	
 	static ArrayList<String> spojnoSignali = new ArrayList<String>();
-	String signal;
 	
 	public static void spojnoScr() {
 		
@@ -59,51 +58,51 @@ public class SpojnoScr extends StartScr implements ActionListener{
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		
-		if (e.getActionCommand() == "Iskljuci polje") {
-			
-			
-			if(SpojnoPolje.provjeri(sp, prekidacSP, rastavljacUzemljenjaSP, napajanjeRastavljacSP)) {
-				
-				System.out.println("Polje se iskljucuje");
-				
-				//System.out.println(sabirnickiRastavljacSPS1.getStanje());
-				
-				signal = sabirnickiRastavljacSPS1.getID() + ": " + sabirnickiRastavljacSPS1.getStanje();
-				
-				System.out.println(signal);
-				
-				StartScr.signali.remove(signal);
-				SpojnoScr.spojnoSignali.remove(sabirnickiRastavljacSPS1.getID() + ": " + "ON");
-				
-				SpojnoPolje.isklop(sabirnickiRastavljacSPS1, sabirnickiRastavljacSPS2, prekidacSP);
-				
-			}else
-				
-				System.out.println("ups");
-			
-		}
-		
-		if (e.getActionCommand() == "Ukljuci polje") {
-			
-			if(SpojnoPolje.provjeri(sp, prekidacSP, rastavljacUzemljenjaSP, napajanjeRastavljacSP)) {
-				
-				System.out.println("Polje se ukljucuje");
-				SpojnoPolje.uklop(sabirnickiRastavljacSPS1, sabirnickiRastavljacSPS2, prekidacSP);
-				//System.out.println(sabirnickiRastavljacSPS1.getStanje());
-				
-
-				
-				
-			}else 
-				
-				System.out.println("ups");
-			
-		}
+//		if (e.getActionCommand() == "Iskljuci") {
+//			
+//			
+//			if(SpojnoPolje.provjeri(sp, prekidacSP, rastavljacUzemljenjaSP, napajanjeRastavljacSP)) {
+//				
+//				System.out.println("Polje se iskljucuje");
+//				
+//				//System.out.println(sabirnickiRastavljacSPS1.getStanje());
+//				
+//				signal = sabirnickiRastavljacSPS1.getID() + ": " + sabirnickiRastavljacSPS1.getStanje();
+//				
+//				System.out.println(signal);
+//				
+//				StartScr.signali.remove(signal);
+//				SpojnoScr.spojnoSignali.remove(sabirnickiRastavljacSPS1.getID() + ": " + "ON");
+//				
+//				SpojnoPolje.isklop(sabirnickiRastavljacSPS1, sabirnickiRastavljacSPS2, prekidacSP);
+//				
+//			}else
+//				
+//				System.out.println("ups");
+//			
+//		}
+//		
+//		if (e.getActionCommand() == "Ukljuci") {
+//			
+//			if(SpojnoPolje.provjeri(sp, prekidacSP, rastavljacUzemljenjaSP, napajanjeRastavljacSP)) {
+//				
+//				System.out.println("Polje se ukljucuje");
+//				SpojnoPolje.uklop(sabirnickiRastavljacSPS1, sabirnickiRastavljacSPS2, prekidacSP);
+//				//System.out.println(sabirnickiRastavljacSPS1.getStanje());
+//				
+//
+//				
+//				
+//			}else 
+//				
+//				System.out.println("ups");
+//			
+//		}
 	}
 	
-	public void initialise() {
+	/*public void initialise() {
 		
 		SpojnoPolje.isklop(sabirnickiRastavljacSPS1, sabirnickiRastavljacSPS2, prekidacSP);
 		
-	}
+	}*/
 }

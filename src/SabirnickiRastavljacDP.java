@@ -11,6 +11,7 @@ public class SabirnickiRastavljacDP extends RastavljacDP{
 		
 		if(rast.getStanje() != "ON") {
 			
+			StartScr.svi_Signali.remove(getID() + ": " + rast.getStanje());
 			rast.setStanje("ON");
 			StartScr.signali.add(getID() + ": " + rast.getStanje());
 			DalekovodnoScr.dalekovodnoSignali.add(getID() + ": " + rast.getStanje());

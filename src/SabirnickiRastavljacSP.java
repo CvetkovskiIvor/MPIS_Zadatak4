@@ -11,6 +11,7 @@ public class SabirnickiRastavljacSP extends RastavljacSP{
 		
 		if(rast.getStanje() != "ON") {
 			
+			StartScr.svi_Signali.remove(getID() + ": " + rast.getStanje());
 			rast.setStanje("ON");
 			StartScr.signali.add(getID() + ": " + getStanje());
 			StartScr.svi_Signali.add(getID() + ": " + getStanje());

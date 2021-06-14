@@ -8,6 +8,7 @@ public class PrekidacSP extends SpojnoPolje{
 		
 		if(prek.getStanje() != "ON") {
 			
+			StartScr.svi_Signali.remove(getID() + ": " + prek.getStanje());
 			prek.setStanje("ON");
 			StartScr.signali.add(ID + ": " + prek.getStanje());
 			StartScr.svi_Signali.add(ID + ": " + prek.getStanje());
