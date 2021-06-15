@@ -8,24 +8,16 @@ public class SabirnickiRastavljacSP extends RastavljacSP{
 		
 		super(ID);
 		sabirnickiRastavljacSPSignali.add(ID + ": " + "OFF");
+		setStanje("OFF");
 		
 	}
 
 	public void uklop(SabirnickiRastavljacSP rast, PrekidacSP prekidac) {
 		
-		if(rast.provjera_stanja(prekidac) == "ON") {
-			
-			System.out.println("problem: pokusaj upravljanja rastavljacem dok je prekidac ukljucen");
-			return;
-			
-		}
-		
 		if(rast.getStanje() != "ON") {
 			
 			sabirnickiRastavljacSPSignali.remove(getID() + ": " + "OFF");
 			rast.setStanje("ON");
-			/*StartScr.signali.add(getID() + ": " + getStanje());
-			StartScr.svi_Signali.add(getID() + ": " + getStanje());*/
 			sabirnickiRastavljacSPSignali.add(getID() + ": " + getStanje());
 			
 		}
@@ -43,10 +35,7 @@ public class SabirnickiRastavljacSP extends RastavljacSP{
 		
 		if(rast.getStanje() != "OFF") {
 			
-			sabirnickiRastavljacSPSignali.remove(getID() + ": " + "OFF");
-			/*StartScr.svi_Signali.remove(getID() + ": " + getStanje());
-			
-			SpojnoScr.spojnoSignali.remove(getID() + ": " + getStanje());*/
+			sabirnickiRastavljacSPSignali.remove(getID() + ": " + getStanje());
 			rast.setStanje("OFF");
 			
 			sabirnickiRastavljacSPSignali.add(getID() + ": " + getStanje());
@@ -54,4 +43,5 @@ public class SabirnickiRastavljacSP extends RastavljacSP{
 		}
 		
 	}
+	
 }

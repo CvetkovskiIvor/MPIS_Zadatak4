@@ -35,7 +35,7 @@ public class IzlazniRastavljacDP extends RastavljacDP{
 			DalekovodnoScr.dalekovodnoSignali.remove(getID() + ": " + rast.getStanje());*/
 			
 			
-			izlazniRastavljacDPSignali.remove(getID() + ": " + "OFF");
+			izlazniRastavljacDPSignali.remove(getID() + ": " + "ON");
 			
 			rast.setStanje("OFF");
 			

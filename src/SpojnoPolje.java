@@ -41,7 +41,7 @@ public class SpojnoPolje {
 		
 	}
 	
-	public static void isklop(SabirnickiRastavljacSP rast1,SabirnickiRastavljacSP rast2, PrekidacSP prekidac){
+	public static void isklop(SabirnickiRastavljacSP rast1, SabirnickiRastavljacSP rast2, PrekidacSP prekidac){
 		///
 		/// iskljuciti prekidac, iskljuciti oba sab. rastavljaca
 		///

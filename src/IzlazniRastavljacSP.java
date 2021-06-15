@@ -34,7 +34,7 @@ public class IzlazniRastavljacSP extends RastavljacSP{
 			/*StartScr.signali.remove(getID() + ": " + rast.getStanje());
 			StartScr.svi_Signali.remove(getID() + ": " + rast.getStanje());*/
 			
-			izlazniRastavljacSPSignali.remove(getID() + ": " + "OFF");
+			izlazniRastavljacSPSignali.remove(getID() + ": " + "ON");
 			rast.setStanje("OFF");
 			
 			izlazniRastavljacSPSignali.add(getID() + ": " + rast.getStanje());
@@ -43,4 +43,5 @@ public class IzlazniRastavljacSP extends RastavljacSP{
 		
 		
 	}
+	
 }

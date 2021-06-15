@@ -10,7 +10,7 @@ public class Brojilo extends Mjerenje{
 	public Brojilo(String ID) {
 		super(ID);
 		
-		brojiloSignali.add(getID() + ": " + Boolean.toString(alarm));
+		brojiloSignali.add("alarm brojila: " + Boolean.toString(alarm));
 		
 	}
 
