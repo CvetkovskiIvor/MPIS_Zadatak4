@@ -1,38 +1,55 @@
+import java.util.ArrayList;
 
 public class SabirnickiRastavljacSP extends RastavljacSP{
 	
-	SabirnickiRastavljacSP(String ID) {
+	ArrayList<String> sabirnickiRastavljacSPSignali = new ArrayList<String>();
+	
+	public SabirnickiRastavljacSP(String ID) {
 		
 		super(ID);
+		sabirnickiRastavljacSPSignali.add(ID + ": " + "OFF");
 		
 	}
 
-	public void uklop(SabirnickiRastavljacSP rast) {
+	public void uklop(SabirnickiRastavljacSP rast, PrekidacSP prekidac) {
+		
+		if(rast.provjera_stanja(prekidac) == "ON") {
+			
+			System.out.println("problem: pokusaj upravljanja rastavljacem dok je prekidac ukljucen");
+			return;
+			
+		}
 		
 		if(rast.getStanje() != "ON") {
 			
-			StartScr.svi_Signali.remove(getID() + ": " + rast.getStanje());
+			sabirnickiRastavljacSPSignali.remove(getID() + ": " + "OFF");
 			rast.setStanje("ON");
-			StartScr.signali.add(getID() + ": " + getStanje());
-			StartScr.svi_Signali.add(getID() + ": " + getStanje());
-
-			SpojnoScr.spojnoSignali.add(getID() + ": " + getStanje());
+			/*StartScr.signali.add(getID() + ": " + getStanje());
+			StartScr.svi_Signali.add(getID() + ": " + getStanje());*/
+			sabirnickiRastavljacSPSignali.add(getID() + ": " + getStanje());
 			
 		}
 		
 	}
 	
-	public void isklop(SabirnickiRastavljacSP rast) {
+	public void isklop(SabirnickiRastavljacSP rast, PrekidacSP prekidac) {
+		
+		if(rast.provjera_stanja(prekidac) == "ON") {
+			
+			System.out.println("problem: pokusaj upravljanja rastavljacem dok je prekidac ukljucen");
+			return;
+			
+		}
 		
 		if(rast.getStanje() != "OFF") {
 			
-			StartScr.signali.remove(getID() + ": " + getStanje());
-			StartScr.svi_Signali.remove(getID() + ": " + getStanje());
+			sabirnickiRastavljacSPSignali.remove(getID() + ": " + "OFF");
+			/*StartScr.svi_Signali.remove(getID() + ": " + getStanje());
 			
-			SpojnoScr.spojnoSignali.remove(getID() + ": " + getStanje());
+			SpojnoScr.spojnoSignali.remove(getID() + ": " + getStanje());*/
 			rast.setStanje("OFF");
 			
-			StartScr.svi_Signali.add(getID() + ": " + getStanje());
+			sabirnickiRastavljacSPSignali.add(getID() + ": " + getStanje());
 			
 		}
 		

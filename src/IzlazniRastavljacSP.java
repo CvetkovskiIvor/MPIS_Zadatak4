@@ -7,6 +7,7 @@ public class IzlazniRastavljacSP extends RastavljacSP{
 	IzlazniRastavljacSP(String ID) {
 		
 		super(ID);
+		izlazniRastavljacSPSignali.add(ID + ": " + "OFF");
 		
 	}
 
@@ -14,12 +15,12 @@ public class IzlazniRastavljacSP extends RastavljacSP{
 		
 		if(rast.getStanje() != "ON") {
 			
-			StartScr.svi_Signali.remove(getID() + ": " + rast.getStanje());
+			izlazniRastavljacSPSignali.remove(getID() + ": " + "OFF");
 			rast.setStanje("ON");
-			StartScr.signali.add(getID() + ": " + rast.getStanje());
+			/*StartScr.signali.add(getID() + ": " + rast.getStanje());
 			StartScr.svi_Signali.add(getID() + ": " + rast.getStanje());
 
-			SpojnoScr.spojnoSignali.add(getID() + ": " + rast.getStanje());
+			SpojnoScr.spojnoSignali.add(getID() + ": " + rast.getStanje());*/
 			izlazniRastavljacSPSignali.add(getID() + ": " + rast.getStanje());
 			
 		}
@@ -30,13 +31,13 @@ public class IzlazniRastavljacSP extends RastavljacSP{
 		
 		if(rast.getStanje() != "OFF") {
 			
-			StartScr.signali.remove(getID() + ": " + rast.getStanje());
-			StartScr.svi_Signali.remove(getID() + ": " + rast.getStanje());
+			/*StartScr.signali.remove(getID() + ": " + rast.getStanje());
+			StartScr.svi_Signali.remove(getID() + ": " + rast.getStanje());*/
 			
-			SpojnoScr.spojnoSignali.remove(getID() + ": " + rast.getStanje());
+			izlazniRastavljacSPSignali.remove(getID() + ": " + "OFF");
 			rast.setStanje("OFF");
 			
-			StartScr.svi_Signali.add(getID() + ": " + rast.getStanje());
+			izlazniRastavljacSPSignali.add(getID() + ": " + rast.getStanje());
 			
 		}
 		

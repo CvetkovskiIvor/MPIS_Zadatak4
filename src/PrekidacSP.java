@@ -1,19 +1,22 @@
+import java.util.ArrayList;
 
 public class PrekidacSP extends SpojnoPolje{
 	private final String ID;
 	private String stanje;
 	private String upravljanje = "Daljinsko";
 	
+	ArrayList<String> prekidacSPSignali = new ArrayList<String>();
+	
 	public void uklop(PrekidacSP prek) {
 		
 		if(prek.getStanje() != "ON") {
 			
-			StartScr.svi_Signali.remove(getID() + ": " + prek.getStanje());
+			prekidacSPSignali.remove(getID() + ": " + prek.getStanje());
 			prek.setStanje("ON");
-			StartScr.signali.add(ID + ": " + prek.getStanje());
-			StartScr.svi_Signali.add(ID + ": " + prek.getStanje());
+			/*StartScr.signali.add(ID + ": " + prek.getStanje());
+			StartScr.svi_Signali.add(ID + ": " + prek.getStanje());*/
 
-			SpojnoScr.spojnoSignali.add(getID() + ": " + prek.getStanje());
+			prekidacSPSignali.add(getID() + ": " + prek.getStanje());
 			
 		}
 		
@@ -23,13 +26,13 @@ public class PrekidacSP extends SpojnoPolje{
 		
 		if(prek.getStanje() != "OFF") {
 			
-			StartScr.signali.remove(ID + ": " + prek.getStanje());
-			StartScr.svi_Signali.remove(ID + ": " + prek.getStanje());
+			prekidacSPSignali.remove(ID + ": " + prek.getStanje());
+			/*StartScr.svi_Signali.remove(ID + ": " + prek.getStanje());
 			
-			SpojnoScr.spojnoSignali.remove(getID() + ": " + prek.getStanje());
+			SpojnoScr.spojnoSignali.remove(getID() + ": " + prek.getStanje());*/
 			prek.setStanje("OFF");
 			
-			StartScr.svi_Signali.add(ID + ": " + prek.getStanje());
+			prekidacSPSignali.add(ID + ": " + prek.getStanje());
 			
 		}
 		

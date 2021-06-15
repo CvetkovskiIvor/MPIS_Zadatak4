@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 
 public class SpojnoPolje {
 	
@@ -12,13 +13,30 @@ public class SpojnoPolje {
 	private boolean gubitak_ulje_blokada  = false;
 	private boolean grijanje_kvar  = false; 
 	
+	ArrayList<String> spojnoPoljeSignali = new ArrayList<String>();
+	
+	SpojnoPolje() {
+		
+		spojnoPoljeSignali.add("SF6_N2_ulje_blokada: " + Boolean.toString(SF6_N2_ulje_blokada));
+		spojnoPoljeSignali.add("gubitak_N2_blokada: " + Boolean.toString(gubitak_N2_blokada));
+		spojnoPoljeSignali.add("gubitak_SF6_upozorenje: " + Boolean.toString(gubitak_SF6_upozorenje));
+		spojnoPoljeSignali.add("gubitak_SF6_blokada: " + Boolean.toString(gubitak_SF6_blokada));
+		spojnoPoljeSignali.add("nesklad_polova_3P_isklop: " + Boolean.toString(nesklad_polova_3P_isklop));
+		spojnoPoljeSignali.add("gubitak_N2_upozorenje: " + Boolean.toString(gubitak_N2_upozorenje));
+		spojnoPoljeSignali.add("gubitak_ulje_blokadaUklop: " + Boolean.toString(gubitak_ulje_blokadaUklop));
+		spojnoPoljeSignali.add("APU_blokada: " + Boolean.toString(APU_blokada));
+		spojnoPoljeSignali.add("gubitak_ulje_blokada: " + Boolean.toString(gubitak_ulje_blokada));
+		spojnoPoljeSignali.add("grijanje_kvar: " + Boolean.toString(grijanje_kvar));
+		
+	}
+	
 	public static void uklop(SabirnickiRastavljacSP rast1, SabirnickiRastavljacSP rast2, PrekidacSP prekidac) {
 		///
 		/// ukljuciti oba sab. rastavljaca, ukljuciti prekidac
 		///
 		
-		rast1.uklop(rast1);
-		rast2.uklop(rast2);
+		rast1.uklop(rast1, prekidac);
+		rast2.uklop(rast2, prekidac);
 		prekidac.uklop(prekidac);
 		
 	}
@@ -29,8 +47,8 @@ public class SpojnoPolje {
 		///
 		
 		prekidac.isklop(prekidac);
-		rast1.isklop(rast1);
-		rast2.isklop(rast2);
+		rast1.isklop(rast1, prekidac);
+		rast2.isklop(rast2, prekidac);
 		
 	}
 	

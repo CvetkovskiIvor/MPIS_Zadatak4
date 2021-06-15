@@ -62,73 +62,97 @@ public class UredajiScr extends StartScr implements ActionListener{
 
 		if(e.getActionCommand() == "") {
 	
-			izlazniRastavljacDP.uklop(izlazniRastavljacDP);
+			izlazniRastavljacDP.uklop(izlazniRastavljacDP, prekidacDP);
 	
 		}
 
 		if(e.getActionCommand() == "") {
 	
-			izlazniRastavljacDP.isklop(izlazniRastavljacDP);
+			izlazniRastavljacDP.isklop(izlazniRastavljacDP, prekidacDP);
 	
 		}
 
 		if(e.getActionCommand() == "") {
 	
-			izlazniRastavljacSP.uklop(izlazniRastavljacSP);
+			izlazniRastavljacSP.uklop(izlazniRastavljacSP, prekidacSP);
 	
 		}
 
 		if(e.getActionCommand() == "") {
 	
-			izlazniRastavljacSP.isklop(izlazniRastavljacSP);
+			izlazniRastavljacSP.isklop(izlazniRastavljacSP, prekidacSP);
+	
+		}
+
+		if(e.getActionCommand() == "") {
+	
+			//rastavljacUzemljenjaDP
+	
+		}
+
+		if(e.getActionCommand() == "") {
+	
+			//rastavljacUzemljenjaDP
+	
+		}
+
+		if(e.getActionCommand() == "") {
+	
+			//rastavljacUzemljenjaSP
+	
+		}
+
+		if(e.getActionCommand() == "") {
+	
+			//rastavljacUzemljenjaSP
 	
 		}
 		
 		if(e.getActionCommand() == "") {
 			
-			sabirnickiRastavljacDPS1.uklop(sabirnickiRastavljacDPS1, prekidacDP);
+			sabirnickiRastavljacDPS1.uklop(sabirnickiRastavljacDPS1);
 	
 		}
 
 		if(e.getActionCommand() == "") {
 	
-			sabirnickiRastavljacDPS1.isklop(sabirnickiRastavljacDPS1, prekidacDP);
+			sabirnickiRastavljacDPS1.isklop(sabirnickiRastavljacDPS1);
 	
 		}
 
 		if(e.getActionCommand() == "") {
 	
-			sabirnickiRastavljacDPS2.uklop(sabirnickiRastavljacDPS2, prekidacDP);
+			sabirnickiRastavljacDPS2.uklop(sabirnickiRastavljacDPS2);
 	
 		}
 
 		if(e.getActionCommand() == "") {
 	
-			sabirnickiRastavljacDPS2.isklop(sabirnickiRastavljacDPS2, prekidacDP);
+			sabirnickiRastavljacDPS2.isklop(sabirnickiRastavljacDPS2);
 	
 		}
 		
 		if(e.getActionCommand() == "") {
 			
-			sabirnickiRastavljacSPS1.uklop(sabirnickiRastavljacSPS1, prekidacSP);
+			sabirnickiRastavljacSPS1.uklop(sabirnickiRastavljacSPS1);
 	
 		}
 
 		if(e.getActionCommand() == "") {
 	
-			sabirnickiRastavljacSPS1.isklop(sabirnickiRastavljacSPS1, prekidacSP);
+			sabirnickiRastavljacSPS1.isklop(sabirnickiRastavljacSPS1);
 	
 		}
 
 		if(e.getActionCommand() == "") {
 	
-			sabirnickiRastavljacSPS2.uklop(sabirnickiRastavljacSPS2, prekidacSP);
+			sabirnickiRastavljacSPS2.uklop(sabirnickiRastavljacSPS2);
 	
 		}
 
 		if(e.getActionCommand() == "") {
 	
-			sabirnickiRastavljacSPS2.isklop(sabirnickiRastavljacSPS2, prekidacSP);
+			sabirnickiRastavljacSPS2.isklop(sabirnickiRastavljacSPS2);
 	
 		}
 		

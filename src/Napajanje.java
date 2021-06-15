@@ -1,13 +1,17 @@
+import java.util.ArrayList;
 
 public class Napajanje {
 	private final String ID;
 	private String stanje;
+	
+	ArrayList<String> napajanjeSignali = new ArrayList<String>();
 	
 	public Napajanje(String ID) {
 		
 		this.ID = ID;
 		setStanje("ON");
 		//StartScr.signali.add(ID + this.getStanje());
+		napajanjeSignali.add(ID + ": " + getStanje());
 		
 	}
 	

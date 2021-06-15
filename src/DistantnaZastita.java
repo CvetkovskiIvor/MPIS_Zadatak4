@@ -13,10 +13,10 @@ public class DistantnaZastita extends Zastita{
 		
 		super(ID);
 		
-		distantnaZastitaSignali.add(Boolean.toString(faza_L1_poticaj));
-		distantnaZastitaSignali.add(Boolean.toString(faza_L2_poticaj));
-		distantnaZastitaSignali.add(Boolean.toString(faza_L3_poticaj));
-		distantnaZastitaSignali.add(Boolean.toString(zemljospoj_poticaj));
+		distantnaZastitaSignali.add("faza_L1_poticaj: " + Boolean.toString(faza_L1_poticaj));
+		distantnaZastitaSignali.add("faza_L2_poticaj: " + Boolean.toString(faza_L2_poticaj));
+		distantnaZastitaSignali.add("faza_L3_poticaj: " + Boolean.toString(faza_L3_poticaj));
+		distantnaZastitaSignali.add("zemljospoj_poticaj: " + Boolean.toString(zemljospoj_poticaj));
 		
 	}
 
