@@ -63,6 +63,9 @@ public class StartScr extends Zadatak4 implements ActionListener{
 	JPopupMenu popupD = new JPopupMenu();
 	JPopupMenu popupS = new JPopupMenu();
 	
+	JLabel sys1 = new JLabel("Sabirnica I");
+	JLabel sys2 = new JLabel("Sabirnica II");
+	
 	JLabel sab1 = new JLabel();
 	JLabel sab2 = new JLabel();
 	JLabel koc1 = new JLabel();
@@ -117,62 +120,62 @@ public class StartScr extends Zadatak4 implements ActionListener{
 		
 		sab1.setBounds(100, 50, 600, 16);
 		//dlkhor.setForeground(Color.blue);
-		sab1.setBackground(Color.blue);
+		sab1.setBackground(Color.green);
 		sab1.setOpaque(true);
 		panel.add(sab1);
 
 
 		sab2.setBounds(100, 100, 600, 16);
 		//spjhor.setForeground(Color.blue);
-		sab2.setBackground(Color.green);
+		sab2.setBackground(Color.blue);
 		sab2.setOpaque(true);
 		panel.add(sab2);
 
 		koc1.setBounds(180, 94, 20, 28);
-		koc1.setForeground(Color.blue);
-		koc1.setBackground(Color.green);
+		//koc1.setForeground(Color.blue);
+		koc1.setBackground(Color.blue);
 		koc1.setOpaque(true);
 		panel.add(koc1);
 
 		koc2.setBounds(250, 44, 20, 28);
-		koc2.setForeground(Color.blue);
-		koc2.setBackground(Color.blue);
+		//koc2.setForeground(Color.blue);
+		koc2.setBackground(Color.green);
 		koc2.setOpaque(true);
 		panel.add(koc2);
 
 		koc3.setBounds(480, 94, 20, 28);
-		koc3.setForeground(Color.blue);
-		koc3.setBackground(Color.green);
+		//koc3.setForeground(Color.blue);
+		koc3.setBackground(Color.blue);
 		koc3.setOpaque(true);
 		panel.add(koc3);
 
 		koc4.setBounds(550, 44, 20, 28);
-		koc4.setForeground(Color.blue);
-		koc4.setBackground(Color.blue);
+		//koc4.setForeground(Color.blue);
+		koc4.setBackground(Color.green);
 		koc4.setOpaque(true);
 		panel.add(koc4);
 
 		vert1.setBounds(188, 94, 4, 180);
-		vert1.setForeground(Color.blue);
-		vert1.setBackground(Color.green);
+		//vert1.setForeground(Color.blue);
+		vert1.setBackground(Color.blue);
 		vert1.setOpaque(true);
 		panel.add(vert1);
 
 		vert2.setBounds(258, 44, 4, 230);
-		vert2.setForeground(Color.blue);
-		vert2.setBackground(Color.blue);
+		//vert2.setForeground(Color.blue);
+		vert2.setBackground(Color.green);
 		vert2.setOpaque(true);
 		panel.add(vert2);
 
 		vert3.setBounds(488, 94, 4, 180);
-		vert3.setForeground(Color.blue);
-		vert3.setBackground(Color.green);
+		//vert3.setForeground(Color.blue);
+		vert3.setBackground(Color.blue);
 		vert3.setOpaque(true);
 		panel.add(vert3);
 
 		vert4.setBounds(558, 44, 4, 230);
-		vert4.setForeground(Color.blue);
-		vert4.setBackground(Color.blue);
+		//vert4.setForeground(Color.blue);
+		vert4.setBackground(Color.green);
 		vert4.setOpaque(true);
 		panel.add(vert4);
 
@@ -205,24 +208,24 @@ public class StartScr extends Zadatak4 implements ActionListener{
 		vert6.setOpaque(true);
 		panel.add(vert6);
 
-		JLabel sys1 = new JLabel("Sabirnica I");
+		
 		sys1.setBounds(30, 45, 80, 25);
 		panel.add(sys1);
 
-		JLabel sys2 = new JLabel("Sabirnica II");
+		
 		sys2.setBounds(30, 95, 80, 25);
 		panel.add(sys2);
 
-		pow1.setText("0 kV");
-		pow1.setBounds(670, 30, 80, 25);
-		pow1.setForeground(Color.blue);
+		pow1.setText("220 kV");
+		pow1.setBounds(660, 30, 80, 25);
+		pow1.setForeground(Color.green);
 		//powoff.setBackground(Color.black);
 		pow1.setOpaque(true);
 		panel.add(pow1);
 
-		pow2.setText("220 kV");
-		pow2.setBounds(660, 80, 80, 25);
-		pow2.setForeground(Color.green);
+		pow2.setText("0 kV");
+		pow2.setBounds(670, 80, 80, 25);
+		pow2.setForeground(Color.blue);
 		//powon.setBackground(Color.black);
 		pow2.setOpaque(true);
 		panel.add(pow2);
@@ -371,7 +374,7 @@ public class StartScr extends Zadatak4 implements ActionListener{
 			DalekovodnoScr.sab1.setBackground(Color.blue);
 			DalekovodnoScr.pow1.setForeground(Color.blue);
 			DalekovodnoScr.pow1.setText("0 kV");
-			DalekovodnoScr.pow1.setBounds(1370, 30, 80, 25);
+			DalekovodnoScr.pow1.setBounds(870, 30, 80, 25);
 			sab1.setBackground(Color.blue);
 			koc2.setBackground(Color.blue);
 			koc4.setBackground(Color.blue);
@@ -399,7 +402,7 @@ public class StartScr extends Zadatak4 implements ActionListener{
 			DalekovodnoScr.sab2.setBackground(Color.blue);
 			DalekovodnoScr.pow2.setForeground(Color.blue);
 			DalekovodnoScr.pow2.setText("0 kV");
-			DalekovodnoScr.pow2.setBounds(1370, 80, 80, 25);
+			DalekovodnoScr.pow2.setBounds(870, 80, 80, 25);
 			sab2.setBackground(Color.blue);
 			koc1.setBackground(Color.blue);
 			koc3.setBackground(Color.blue);
@@ -426,7 +429,7 @@ public class StartScr extends Zadatak4 implements ActionListener{
 			DalekovodnoScr.sab1.setBackground(Color.green);
 			DalekovodnoScr.pow1.setForeground(Color.green);
 			DalekovodnoScr.pow1.setText("220 kV");
-			DalekovodnoScr.pow1.setBounds(1360, 30, 80, 25);
+			DalekovodnoScr.pow1.setBounds(860, 30, 80, 25);
 			sab1.setBackground(Color.green);
 			koc2.setBackground(Color.green);
 			koc4.setBackground(Color.green);
@@ -448,11 +451,12 @@ public class StartScr extends Zadatak4 implements ActionListener{
 				text.append("dogodila se greska" + "\n");
 		}
 		
+		
 		if (e.getActionCommand() == "Ukljuci S2") {
 			DalekovodnoScr.sab2.setBackground(Color.green);
 			DalekovodnoScr.pow2.setForeground(Color.green);
 			DalekovodnoScr.pow2.setText("220 kV");
-			DalekovodnoScr.pow2.setBounds(1360, 80, 80, 25);
+			DalekovodnoScr.pow2.setBounds(860, 80, 80, 25);
 			sab2.setBackground(Color.green);
 			koc1.setBackground(Color.green);
 			koc3.setBackground(Color.green);
@@ -474,6 +478,30 @@ public class StartScr extends Zadatak4 implements ActionListener{
 		}
 		
 		if (e.getActionCommand() == "Prespoji S1") {
+			if(vert2.getBackground() == Color.blue) {
+				DalekovodnoScr.sab1.setBackground(Color.green);
+				DalekovodnoScr.pow1.setForeground(Color.green);
+				DalekovodnoScr.pow1.setText("220 kV");
+				DalekovodnoScr.pow1.setBounds(860, 30, 80, 25);
+				vert1.setBackground(Color.blue);
+				sab2.setBackground(Color.blue);
+				koc1.setBackground(Color.blue);
+				koc3.setBackground(Color.blue);
+				vert3.setBackground(Color.blue);
+				pow2.setText("0 kV");
+				pow2.setForeground(Color.blue);
+				pow2.setBounds(670, 80, 80, 25);
+				
+				vert2.setBackground(Color.green);
+				sab1.setBackground(Color.green);
+				koc2.setBackground(Color.green);
+				koc4.setBackground(Color.green);
+				vert4.setBackground(Color.green);
+				pow1.setText("220 kV");
+				pow1.setForeground(Color.green);
+				pow1.setBounds(660, 30, 80, 25);
+				
+			}
 			
 			if(DalekovodnoPolje.provjeri(dp, distantnaZastita, prekidacDP, rastavljacUzemljenjaDP, napajanjeRastavljacDP)) {
 				
@@ -494,6 +522,36 @@ public class StartScr extends Zadatak4 implements ActionListener{
 		}
 		
 		if (e.getActionCommand() == "Prespoji S2") {
+			if(vert1.getBackground() == Color.blue) {
+				DalekovodnoScr.sab2.setBackground(Color.green);
+				DalekovodnoScr.pow2.setForeground(Color.green);
+				DalekovodnoScr.pow2.setText("220 kV");
+				DalekovodnoScr.pow2.setBounds(860, 80, 80, 25);
+				
+				vert2.setBackground(Color.blue);
+				sab1.setBackground(Color.blue);
+				koc2.setBackground(Color.blue);
+				koc4.setBackground(Color.blue);
+				vert4.setBackground(Color.blue);
+				pow1.setText("0 kV");
+				pow1.setForeground(Color.blue);
+				pow1.setBounds(670, 30, 80, 25);
+				
+				vert1.setBackground(Color.green);
+				sab2.setBackground(Color.green);
+				koc1.setBackground(Color.green);
+				koc3.setBackground(Color.green);
+				vert3.setBackground(Color.green);
+				pow2.setText("220 kV");
+				pow2.setForeground(Color.green);
+				pow2.setBounds(660, 80, 80, 25);
+				
+			
+				//sys1.setBounds(30, 95, 80, 25);
+				//sys2.setBounds(30, 45, 80, 25);
+			}
+			
+			
 			
 			if(DalekovodnoPolje.provjeri(dp, distantnaZastita, prekidacDP, rastavljacUzemljenjaDP, napajanjeRastavljacDP)) {
 				
@@ -556,6 +614,34 @@ public class StartScr extends Zadatak4 implements ActionListener{
 		} else {
 			dalekovodnoBtn.setForeground(Color.green);
 			vert5.setBackground(Color.green);
+		}
+		
+		if (sab2.getBackground() == Color.blue) {
+			DalekovodnoScr.sab2.setBackground(Color.blue);
+			DalekovodnoScr.pow2.setForeground(Color.blue);
+			DalekovodnoScr.pow2.setText("0 kV");
+			DalekovodnoScr.pow2.setBounds(870, 80, 80, 25);
+		}
+		
+		if (sab2.getBackground() == Color.green) {
+			DalekovodnoScr.sab2.setBackground(Color.green);
+			DalekovodnoScr.pow2.setForeground(Color.green);
+			DalekovodnoScr.pow2.setText("220 kV");
+			DalekovodnoScr.pow2.setBounds(860, 80, 80, 25);
+		}
+		
+		if (sab1.getBackground() == Color.green) {
+			DalekovodnoScr.sab1.setBackground(Color.green);
+			DalekovodnoScr.pow1.setForeground(Color.green);
+			DalekovodnoScr.pow1.setText("220 kV");
+			DalekovodnoScr.pow1.setBounds(860, 30, 80, 25);
+		}
+		
+		if (sab1.getBackground() == Color.blue) {
+			DalekovodnoScr.sab1.setBackground(Color.blue);
+			DalekovodnoScr.pow1.setForeground(Color.blue);
+			DalekovodnoScr.pow1.setText("0 kV");
+			DalekovodnoScr.pow1.setBounds(870, 30, 80, 25);
 		}
 		
 		
