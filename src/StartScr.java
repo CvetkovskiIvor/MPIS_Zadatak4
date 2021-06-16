@@ -5,6 +5,7 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.awt.BorderLayout;
 import java.awt.Color;
 
 import javax.swing.JButton;
@@ -13,6 +14,11 @@ import javax.swing.JLabel;
 import javax.swing.JMenuItem;
 import javax.swing.JPanel;
 import javax.swing.JPopupMenu;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
+import javax.swing.ScrollPaneConstants;
+import javax.swing.border.EtchedBorder;
+import javax.swing.border.TitledBorder;
 
 public class StartScr extends Zadatak4 implements ActionListener{
 	
@@ -57,8 +63,8 @@ public class StartScr extends Zadatak4 implements ActionListener{
 	JPopupMenu popupD = new JPopupMenu();
 	JPopupMenu popupS = new JPopupMenu();
 	
-	JLabel dlkhor = new JLabel();
-	JLabel spjhor = new JLabel();
+	JLabel sab1 = new JLabel();
+	JLabel sab2 = new JLabel();
 	JLabel koc1 = new JLabel();
 	JLabel koc2 = new JLabel();
 	JLabel koc3 = new JLabel();
@@ -70,35 +76,57 @@ public class StartScr extends Zadatak4 implements ActionListener{
 	JLabel vert5 = new JLabel();
 	JLabel vert6 = new JLabel();
 	
+	JTextArea text = new JTextArea();
+	
+	
 	JButton spojnoBtn = new JButton("Spojno");
 	JButton dalekovodnoBtn = new JButton("Dalekovodno");
 	
-	JLabel powoff = new JLabel("0 kV");
-	JLabel powon = new JLabel("220 kV");
+	JLabel pow1 = new JLabel();
+	JLabel pow2 = new JLabel();
 	
 	public void startScr() {
 		
 		JFrame frame = new JFrame("Start");
 		JPanel panel = new JPanel();
 		
-		frame.setSize(800, 600);
+		
+		frame.setSize(800, 800);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.add(panel);
+		frame.setLocationRelativeTo(null);
 		
 		panel.setLayout(null);
 		
-		dlkhor.setBounds(100, 50, 600, 16);
-		dlkhor.setForeground(Color.blue);
-		dlkhor.setBackground(Color.blue);
-		dlkhor.setOpaque(true);
-		panel.add(dlkhor);
+		
+		//text.setBounds(50, 530, 700, 200);
+		text.setLineWrap(true);
+		text.setWrapStyleWord(true);
+		text.setEditable(false);
+		text.setVisible(true);
+		
+		
+		JScrollPane scroll = new JScrollPane(text);
+		scroll.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
+		scroll.setBounds(50, 530, 700, 200);
+		panel.add(scroll);
+		
+		
+		
+		
+		
+		sab1.setBounds(100, 50, 600, 16);
+		//dlkhor.setForeground(Color.blue);
+		sab1.setBackground(Color.blue);
+		sab1.setOpaque(true);
+		panel.add(sab1);
 
 
-		spjhor.setBounds(100, 100, 600, 16);
-		spjhor.setForeground(Color.blue);
-		spjhor.setBackground(Color.green);
-		spjhor.setOpaque(true);
-		panel.add(spjhor);
+		sab2.setBounds(100, 100, 600, 16);
+		//spjhor.setForeground(Color.blue);
+		sab2.setBackground(Color.green);
+		sab2.setOpaque(true);
+		panel.add(sab2);
 
 		koc1.setBounds(180, 94, 20, 28);
 		koc1.setForeground(Color.blue);
@@ -185,17 +213,19 @@ public class StartScr extends Zadatak4 implements ActionListener{
 		sys2.setBounds(30, 95, 80, 25);
 		panel.add(sys2);
 
-		powoff.setBounds(670, 30, 80, 25);
-		powoff.setForeground(Color.blue);
+		pow1.setText("0 kV");
+		pow1.setBounds(670, 30, 80, 25);
+		pow1.setForeground(Color.blue);
 		//powoff.setBackground(Color.black);
-		powoff.setOpaque(true);
-		panel.add(powoff);
+		pow1.setOpaque(true);
+		panel.add(pow1);
 
-		powon.setBounds(660, 80, 80, 25);
-		powon.setForeground(Color.green);
+		pow2.setText("220 kV");
+		pow2.setBounds(660, 80, 80, 25);
+		pow2.setForeground(Color.green);
 		//powon.setBackground(Color.black);
-		powon.setOpaque(true);
-		panel.add(powon);
+		pow2.setOpaque(true);
+		panel.add(pow2);
 		
 		JMenuItem uklj = new JMenuItem("Ukljuci");
 		JMenuItem isklj = new JMenuItem("Iskljuci");
@@ -247,7 +277,8 @@ public class StartScr extends Zadatak4 implements ActionListener{
 		
 		if (e.getActionCommand() == "Dalekovodno") {
 			if(DalekovodnoScr.vidljivost() == true) {
-				System.out.println("vidljiv sam!");
+				//System.out.println("vidljiv sam!");
+				text.append("Prozor dalekovodnog polja je vec ukljucen." + "\n");
 			}else
 				DalekovodnoScr.dalekovodnoScr();
 		}
@@ -267,14 +298,16 @@ public class StartScr extends Zadatak4 implements ActionListener{
 			rastavljacSignali.addAll(izlazniRastavljacSP.izlazniRastavljacSPSignali);
 			
 			Collections.sort(rastavljacSignali);
-			System.out.println("Signali rastavljaca u svim poljima:\n" + rastavljacSignali + "\n");
+			//System.out.println("Signali rastavljaca u svim poljima:\n" + rastavljacSignali + "\n");
+			text.append("\n" + "Signali rastavljaca u svim poljima:\n" + rastavljacSignali + "\n" + "\n");
 			
 			prekidacSignali.clear();
 			prekidacSignali.addAll(prekidacDP.prekidacDPSignali);
 			prekidacSignali.addAll(prekidacSP.prekidacSPSignali);
 			
 			Collections.sort(prekidacSignali);
-			System.out.println("Signali prekidaca u svim poljima:\n" + prekidacSignali + "\n");
+			//System.out.println("Signali prekidaca u svim poljima:\n" + prekidacSignali + "\n");
+			text.append("Signali prekidaca u svim poljima:\n" + prekidacSignali + "\n" + "\n");
 			
 			// dodavanje svih pripadnih signala u listu signala dalekovodnog polja
 			DalekovodnoScr.dalekovodnoSignali.clear();
@@ -288,7 +321,8 @@ public class StartScr extends Zadatak4 implements ActionListener{
 			DalekovodnoScr.dalekovodnoSignali.addAll(brojilo.brojiloSignali);
 			
 			Collections.sort(DalekovodnoScr.dalekovodnoSignali);
-			System.out.println("Signali u dalekovodnom polju:\n" + DalekovodnoScr.dalekovodnoSignali + "\n");
+			//System.out.println("Signali u dalekovodnom polju:\n" + DalekovodnoScr.dalekovodnoSignali + "\n");
+			text.append("Signali u dalekovodnom polju:\n" + DalekovodnoScr.dalekovodnoSignali + "\n" + "\n");
 			
 			// dodavanje svih pripadnih signala u listu signala spojnog polja
 			SpojnoScr.spojnoSignali.clear();
@@ -298,14 +332,16 @@ public class StartScr extends Zadatak4 implements ActionListener{
 			SpojnoScr.spojnoSignali.addAll(izlazniRastavljacSP.izlazniRastavljacSPSignali);
 			
 			Collections.sort(SpojnoScr.spojnoSignali);
-			System.out.println("Signali u spojnom polju:\n" + SpojnoScr.spojnoSignali + "\n");
+			//System.out.println("Signali u spojnom polju:\n" + SpojnoScr.spojnoSignali + "\n");
+			text.append("Signali u spojnom polju:\n" + SpojnoScr.spojnoSignali + "\n" + "\n");
 			
 			// dodavanje svih pripadnih signala u listu svih signala
 			svi_Signali.clear();
 			svi_Signali.addAll(SpojnoScr.spojnoSignali);
 			svi_Signali.addAll(DalekovodnoScr.dalekovodnoSignali);
 			Collections.sort(svi_Signali);
-			System.out.println("Svi signali:\n" + svi_Signali + "\n");
+			//System.out.println("Svi signali:\n" + svi_Signali + "\n");
+			text.append("Svi signali:\n" + svi_Signali + "\n" + "\n");
 			
 			signali.clear();
 			for(String s : svi_Signali) {
@@ -317,7 +353,8 @@ public class StartScr extends Zadatak4 implements ActionListener{
 			}
 
 			Collections.sort(signali);
-			System.out.println("Svi trenutni signali:\n" + signali + "\n");
+			//System.out.println("Svi trenutni signali:\n" + signali + "\n");
+			text.append("Svi trenutni signali:\n" + signali + "\n" + "\n");
 			
 		}
 		/*if (e.getActionCommand() == "Lista uredaja") {
@@ -331,58 +368,117 @@ public class StartScr extends Zadatak4 implements ActionListener{
 		}*/
 		
 		if (e.getActionCommand() == "Iskljuci S1") {
+			DalekovodnoScr.sab1.setBackground(Color.blue);
+			DalekovodnoScr.pow1.setForeground(Color.blue);
+			DalekovodnoScr.pow1.setText("0 kV");
+			DalekovodnoScr.pow1.setBounds(1370, 30, 80, 25);
+			sab1.setBackground(Color.blue);
+			koc2.setBackground(Color.blue);
+			koc4.setBackground(Color.blue);
+			vert2.setBackground(Color.blue);
+			vert4.setBackground(Color.blue);
+			pow1.setText("0 kV");
+			pow1.setForeground(Color.blue);
+			pow1.setBounds(670, 30, 80, 25);
+			
 			
 			if(DalekovodnoPolje.provjeri(dp, distantnaZastita, prekidacDP, rastavljacUzemljenjaDP, napajanjeRastavljacDP)) {
 				
-				System.out.println("Iskljucujem dalekovodno polje sa S1... ");
+				//System.out.println("Iskljucujem dalekovodno polje sa S1... ");
+				text.append("Iskljucujem dalekovodno polje sa S1... " + "\n");
 				DalekovodnoPolje.isklop(rastavljacUzemljenjaDP, sabirnickiRastavljacDPS1, izlazniRastavljacDP, prekidacDP);
 				
 			}else
 				
-				System.out.println("dogodila se greska");
-			
+				//System.out.println("dogodila se greska");
+				text.append("dogodila se greska" + "\n");
+				
 		}
 		
 		if (e.getActionCommand() == "Iskljuci S2") {
+			DalekovodnoScr.sab2.setBackground(Color.blue);
+			DalekovodnoScr.pow2.setForeground(Color.blue);
+			DalekovodnoScr.pow2.setText("0 kV");
+			DalekovodnoScr.pow2.setBounds(1370, 80, 80, 25);
+			sab2.setBackground(Color.blue);
+			koc1.setBackground(Color.blue);
+			koc3.setBackground(Color.blue);
+			vert1.setBackground(Color.blue);
+			vert3.setBackground(Color.blue);
+			pow2.setText("0 kV");
+			pow2.setForeground(Color.blue);
+			pow2.setBounds(670, 80, 80, 25);
 			
 			if(DalekovodnoPolje.provjeri(dp, distantnaZastita, prekidacDP, rastavljacUzemljenjaDP, napajanjeRastavljacDP)) {
 				
-				System.out.println("Iskljucujem dalekovodno polje sa S2... ");
+				//System.out.println("Iskljucujem dalekovodno polje sa S2... ");
+				text.append("Iskljucujem dalekovodno polje sa S2... " + "\n");
 				DalekovodnoPolje.isklop(rastavljacUzemljenjaDP, sabirnickiRastavljacDPS2, izlazniRastavljacDP, prekidacDP);
 				
 			}else
 				
-				System.out.println("dogodila se greska");
+				//System.out.println("dogodila se greska");
+				text.append("dogodila se greska" + "\n");
 		}
 		
+		
 		if (e.getActionCommand() == "Ukljuci S1") {
+			DalekovodnoScr.sab1.setBackground(Color.green);
+			DalekovodnoScr.pow1.setForeground(Color.green);
+			DalekovodnoScr.pow1.setText("220 kV");
+			DalekovodnoScr.pow1.setBounds(1360, 30, 80, 25);
+			sab1.setBackground(Color.green);
+			koc2.setBackground(Color.green);
+			koc4.setBackground(Color.green);
+			vert2.setBackground(Color.green);
+			vert4.setBackground(Color.green);
+			pow1.setText("220 kV");
+			pow1.setForeground(Color.green);
+			pow1.setBounds(660, 30, 80, 25);
 			
 			if(DalekovodnoPolje.provjeri(dp, distantnaZastita, prekidacDP, rastavljacUzemljenjaDP, napajanjeRastavljacDP)) {
 				
-				System.out.println("Ukljucujem dalekovodno polje na S1... ");
+				//System.out.println("Ukljucujem dalekovodno polje na S1... ");
+				text.append("Ukljucujem dalekovodno polje na S1... " + "\n");
 				DalekovodnoPolje.uklop(rastavljacUzemljenjaDP, sabirnickiRastavljacDPS1, izlazniRastavljacDP, prekidacDP);
 				
 			}else
 				
-				System.out.println("dogodila se greska");
+				//System.out.println("dogodila se greska");
+				text.append("dogodila se greska" + "\n");
 		}
 		
 		if (e.getActionCommand() == "Ukljuci S2") {
+			DalekovodnoScr.sab2.setBackground(Color.green);
+			DalekovodnoScr.pow2.setForeground(Color.green);
+			DalekovodnoScr.pow2.setText("220 kV");
+			DalekovodnoScr.pow2.setBounds(1360, 80, 80, 25);
+			sab2.setBackground(Color.green);
+			koc1.setBackground(Color.green);
+			koc3.setBackground(Color.green);
+			vert1.setBackground(Color.green);
+			vert3.setBackground(Color.green);
+			pow2.setText("220 kV");
+			pow2.setForeground(Color.green);
+			pow2.setBounds(660, 80, 80, 25);
 			
 			if(DalekovodnoPolje.provjeri(dp, distantnaZastita, prekidacDP, rastavljacUzemljenjaDP, napajanjeRastavljacDP)) {
-				System.out.println("Ukljucujem dalekovodno polje na S2... ");
+				//System.out.println("Ukljucujem dalekovodno polje na S2... ");
+				text.append("Ukljucujem dalekovodno polje na S2... " + "\n");
 				DalekovodnoPolje.uklop(rastavljacUzemljenjaDP, sabirnickiRastavljacDPS2, izlazniRastavljacDP, prekidacDP);
 				
 			}else
 				
-				System.out.println("dogodila se greska");
+				//System.out.println("dogodila se greska");
+				text.append("dogodila se greska" + "\n");
 		}
 		
 		if (e.getActionCommand() == "Prespoji S1") {
 			
 			if(DalekovodnoPolje.provjeri(dp, distantnaZastita, prekidacDP, rastavljacUzemljenjaDP, napajanjeRastavljacDP)) {
 				
-				System.out.println("Polje se prespaja na S1... ");
+				//System.out.println("Polje se prespaja na S1... ");
+				text.append("Polje se prespaja na S1... " + "\n");
 				
 				SpojnoPolje.uklop(sabirnickiRastavljacSPS1, sabirnickiRastavljacSPS2, prekidacSP);
 				
@@ -393,14 +489,16 @@ public class StartScr extends Zadatak4 implements ActionListener{
 			
 			}else
 				
-				System.out.println("dogodila se greska");
+				//System.out.println("dogodila se greska");
+				text.append("dogodila se greska" + "\n");
 		}
 		
 		if (e.getActionCommand() == "Prespoji S2") {
 			
 			if(DalekovodnoPolje.provjeri(dp, distantnaZastita, prekidacDP, rastavljacUzemljenjaDP, napajanjeRastavljacDP)) {
 				
-				System.out.println("Polje se prespaja na S2... ");
+				//System.out.println("Polje se prespaja na S2... ");
+				text.append("Polje se prespaja na S2... " + "\n");
 				
 				SpojnoPolje.uklop(sabirnickiRastavljacSPS1, sabirnickiRastavljacSPS2, prekidacSP);
 				
@@ -411,36 +509,56 @@ public class StartScr extends Zadatak4 implements ActionListener{
 			
 			}else
 				
-				System.out.println("dogodila se greska");
+				//System.out.println("dogodila se greska");
+				text.append("dogodila se greska" + "\n");
 			
 		}
 		
 		if (e.getActionCommand() == "Iskljuci") {
-			
+				vert6.setBackground(Color.blue);
+				spojnoBtn.setForeground(Color.blue);
 			
 			if(SpojnoPolje.provjeri(sp, prekidacSP, rastavljacUzemljenjaSP, napajanjeRastavljacSP)) {
 				
-				System.out.println("Iskljucujem spojno polje");
+				//System.out.println("Iskljucujem spojno polje");
+				text.append("Iskljucujem spojno polje" + "\n");
 				SpojnoPolje.isklop(sabirnickiRastavljacSPS1, sabirnickiRastavljacSPS2, prekidacSP);
 				
 			}else
 				
-				System.out.println("ups");
+				//System.out.println("ups");
+				text.append("ups" + "\n");
 			
 		}
 		
 		if (e.getActionCommand() == "Ukljuci") {
+			vert6.setBackground(Color.green);
+			spojnoBtn.setForeground(Color.green);
 			
 			if(SpojnoPolje.provjeri(sp, prekidacSP, rastavljacUzemljenjaSP, napajanjeRastavljacSP)) {
 				
-				System.out.println("Ukljucujem spojno polje");
+				//System.out.println("Ukljucujem spojno polje");
+				text.append("Ukljucujem spojno polje" + "\n");
 				SpojnoPolje.uklop(sabirnickiRastavljacSPS1, sabirnickiRastavljacSPS2, prekidacSP);
 				
 			}else 
 				
-				System.out.println("ups");
+				//System.out.println("ups");
+				text.append("ups" + "\n");
 			
 		}
+		
+		if(vert1.getBackground() == Color.blue && vert2.getBackground() == Color.blue) {
+			dalekovodnoBtn.setForeground(Color.blue);
+			vert5.setBackground(Color.blue);
+			spojnoBtn.setForeground(Color.blue);
+			vert6.setBackground(Color.blue);
+		} else {
+			dalekovodnoBtn.setForeground(Color.green);
+			vert5.setBackground(Color.green);
+		}
+		
+		
 		
 	}
 	

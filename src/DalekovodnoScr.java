@@ -1,3 +1,4 @@
+import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
@@ -6,6 +7,9 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
+import javax.swing.ScrollPaneConstants;
 
 public class DalekovodnoScr extends StartScr implements ActionListener{
 	
@@ -13,59 +17,74 @@ public class DalekovodnoScr extends StartScr implements ActionListener{
 	
 	static ArrayList<String> dalekovodnoSignali = new ArrayList<String>();
 	
+	static JTextArea text2 = new JTextArea();
+	
+	static JLabel sab1 = new JLabel();
+	static JLabel sab2 = new JLabel();
+	
+	static JLabel pow1 = new JLabel();
+	static JLabel pow2 = new JLabel();
+	
 	public static void dalekovodnoScr() {
 		
 		JPanel panel = new JPanel();
 		
-		frame.setSize(800, 300);
+		frame.setSize(1500, 1000);
 		frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 		frame.add(panel);
 		
 		panel.setLayout(null);
 		
-		/*JLabel dalekovodnoLbl = new JLabel("S1");
-		dalekovodnoLbl.setBounds(250, 20, 80, 25);
-		panel.add(dalekovodnoLbl);
+		//text2.setBounds(50, 530, 700, 200);
+		text2.setLineWrap(true);
+		text2.setWrapStyleWord(true);
+		text2.setEditable(false);
+		text2.setVisible(true);
 		
-		JLabel spojnoLbl = new JLabel("S2");
-		spojnoLbl.setBounds(550, 20, 80, 25);
-		panel.add(spojnoLbl);
 		
-		JButton iskljuciS1Btn = new JButton("Iskljuci S1");
-		iskljuciS1Btn.setBounds(195, 80, 80, 25);
-		iskljuciS1Btn.setSize(125, 30);
-		iskljuciS1Btn.addActionListener(dalk);
-		panel.add(iskljuciS1Btn);
+		JScrollPane scroll = new JScrollPane(text2);
+		scroll.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
+		scroll.setBounds(750, 730, 700, 200);
+		panel.add(scroll);
 		
-		JButton iskljuciS2Btn = new JButton("Iskljuci S2");
-		iskljuciS2Btn.setBounds(495, 80, 80, 25);
-		iskljuciS2Btn.setSize(125, 30);
-		iskljuciS2Btn.addActionListener(dalk);
-		panel.add(iskljuciS2Btn);
+		sab1.setBounds(100, 50, 1300, 16);
+		//dlkhor.setForeground(Color.blue);
+		sab1.setBackground(Color.blue);
+		sab1.setOpaque(true);
+		panel.add(sab1);
+
+
+		sab2.setBounds(100, 100, 1300, 16);
+		//spjhor.setForeground(Color.blue);
+		sab2.setBackground(Color.green);
+		sab2.setOpaque(true);
+		panel.add(sab2);
 		
-		JButton ukljuciS1Btn = new JButton("Ukljuci S1");
-		ukljuciS1Btn.setBounds(195, 130, 80, 25);
-		ukljuciS1Btn.setSize(125, 30);
-		ukljuciS1Btn.addActionListener(dalk);
-		panel.add(ukljuciS1Btn);
+		JLabel sys1 = new JLabel("Sabirnica I");
+		sys1.setBounds(30, 45, 80, 25);
+		panel.add(sys1);
+
+		JLabel sys2 = new JLabel("Sabirnica II");
+		sys2.setBounds(30, 95, 80, 25);
+		panel.add(sys2);
+
+		pow1.setText("0 kV");
+		pow1.setBounds(1370, 30, 80, 25);
+		pow1.setForeground(Color.blue);
+		//powoff.setBackground(Color.black);
+		pow1.setOpaque(true);
+		panel.add(pow1);
+
+		pow2.setText("220 kV");
+		pow2.setBounds(1360, 80, 80, 25);
+		pow2.setForeground(Color.green);
+		//powon.setBackground(Color.black);
+		pow2.setOpaque(true);
+		panel.add(pow2);
 		
-		JButton ukljuciS2Btn = new JButton("Ukljuci S2");
-		ukljuciS2Btn.setBounds(495, 130, 80, 25);
-		ukljuciS2Btn.setSize(125, 30);
-		ukljuciS2Btn.addActionListener(dalk);
-		panel.add(ukljuciS2Btn);
 		
-		JButton prespojiS1Btn = new JButton("Prespoji S1");
-		prespojiS1Btn.setBounds(195, 180, 80, 25);
-		prespojiS1Btn.setSize(125, 30);
-		prespojiS1Btn.addActionListener(dalk);
-		panel.add(prespojiS1Btn);
 		
-		JButton prespojiS2Btn = new JButton("Prespoji S2");
-		prespojiS2Btn.setBounds(495, 180, 80, 25);
-		prespojiS2Btn.setSize(125, 30);
-		prespojiS2Btn.addActionListener(dalk);
-		panel.add(prespojiS2Btn);*/
+		
 		
 		
 		frame.setVisible(true);
