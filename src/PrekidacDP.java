@@ -5,13 +5,13 @@ public class PrekidacDP extends DalekovodnoPolje{
 	private String stanje;
 	private String upravljanje = "Daljinsko";
 	
-	ArrayList<String> prekidacDPSignali = new ArrayList<String>();
+	static ArrayList<String> prekidacDPSignali = new ArrayList<String>();
 	
 	public void uklop(PrekidacDP prek) {
 		
 		if(prek.getStanje() != "ON") {
 			
-			prekidacDPSignali.remove(getID() + ": " + prek.getStanje());
+			prekidacDPSignali.remove(getID() + ": " + "OFF");
 			prek.setStanje("ON");
 			/*StartScr.signali.add(ID + ": " + prek.getStanje());
 			StartScr.svi_Signali.add(ID + ": " + prek.getStanje());
@@ -26,7 +26,7 @@ public class PrekidacDP extends DalekovodnoPolje{
 		
 		if(prek.getStanje() != "OFF") {
 			
-			prekidacDPSignali.remove(ID + ": " + prek.getStanje());
+			prekidacDPSignali.remove(ID + ": " + "ON");
 			/*StartScr.svi_Signali.remove(ID + ": " + prek.getStanje());
 			
 			DalekovodnoScr.dalekovodnoSignali.remove(getID() + ": " + prek.getStanje());*/
