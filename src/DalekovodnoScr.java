@@ -4,6 +4,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.util.ArrayList;
+import java.util.Collections;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -274,6 +275,7 @@ public class DalekovodnoScr extends StartScr implements ActionListener{
 		
 		if (e.getActionCommand() == "Izlistaj signale: rastS1") {
 			
+			Collections.sort(SabirnickiRastavljacDP.sabirnickiRastavljacDPSignali);
 			text2.append(SabirnickiRastavljacDP.sabirnickiRastavljacDPSignali.toString());
 			
 		}
@@ -292,6 +294,7 @@ public class DalekovodnoScr extends StartScr implements ActionListener{
 		
 		if (e.getActionCommand() == "Izlistaj signale: rastS2") {
 			
+			Collections.sort(SabirnickiRastavljacDP.sabirnickiRastavljacDPSignali);
 			text2.append(SabirnickiRastavljacDP.sabirnickiRastavljacDPSignali.toString());
 			
 		}
@@ -310,6 +313,7 @@ public class DalekovodnoScr extends StartScr implements ActionListener{
 		
 		if (e.getActionCommand() == "Izlistaj signale: rastIz") {
 			
+			Collections.sort(IzlazniRastavljacDP.izlazniRastavljacDPSignali);
 			text2.append(IzlazniRastavljacDP.izlazniRastavljacDPSignali.toString());
 			
 		}
@@ -328,7 +332,7 @@ public class DalekovodnoScr extends StartScr implements ActionListener{
 		
 		if (e.getActionCommand() == "Izlistaj signale: rastUz") {
 			
-			//text2.append(rast);
+			text2.append("rastavljac uzemljenja: poslan zahtjev za provjerom stanja!");
 			
 		}
 
@@ -346,6 +350,7 @@ public class DalekovodnoScr extends StartScr implements ActionListener{
 		
 		if (e.getActionCommand() == "Izlistaj signale: prekidac") {
 			
+			Collections.sort(PrekidacDP.prekidacDPSignali);
 			text2.append(PrekidacDP.prekidacDPSignali.toString());
 			
 		}

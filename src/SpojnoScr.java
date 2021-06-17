@@ -4,6 +4,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.util.ArrayList;
+import java.util.Collections;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -205,6 +206,7 @@ public class SpojnoScr extends StartScr implements ActionListener{
 		
 		if (e.getActionCommand() == "Izlistaj signale: rastS1") {
 			
+			Collections.sort(SabirnickiRastavljacSP.sabirnickiRastavljacSPSignali);
 			text3.append(SabirnickiRastavljacSP.sabirnickiRastavljacSPSignali.toString());
 			
 		}
@@ -223,6 +225,7 @@ public class SpojnoScr extends StartScr implements ActionListener{
 		
 		if (e.getActionCommand() == "Izlistaj signale: rastS2") {
 			
+			Collections.sort(SabirnickiRastavljacSP.sabirnickiRastavljacSPSignali);
 			text3.append(SabirnickiRastavljacSP.sabirnickiRastavljacSPSignali.toString());
 			
 		}
@@ -241,6 +244,7 @@ public class SpojnoScr extends StartScr implements ActionListener{
 		
 		if (e.getActionCommand() == "Izlistaj signale: rastIz") {
 			
+			Collections.sort(IzlazniRastavljacSP.izlazniRastavljacSPSignali);
 			text3.append(IzlazniRastavljacSP.izlazniRastavljacSPSignali.toString());
 			
 		}
@@ -259,7 +263,7 @@ public class SpojnoScr extends StartScr implements ActionListener{
 		
 		if (e.getActionCommand() == "Izlistaj signale: rastUz") {
 			
-			//text2.append(rast);
+			text3.append("rastavljac uzemljenja: poslan zahtjev za provjerom stanja!");
 			
 		}
 
@@ -277,6 +281,7 @@ public class SpojnoScr extends StartScr implements ActionListener{
 		
 		if (e.getActionCommand() == "Izlistaj signale: prekidac") {
 			
+			Collections.sort(PrekidacSP.prekidacSPSignali);
 			text3.append(PrekidacSP.prekidacSPSignali.toString());
 			
 		}

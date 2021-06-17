@@ -7,9 +7,9 @@ public class SabirnickiRastavljacSP extends RastavljacSP{
 	public SabirnickiRastavljacSP(String ID) {
 		
 		super(ID);
-		sabirnickiRastavljacSPSignali.remove(ID + ": " + "OFF");
-		sabirnickiRastavljacSPSignali.add(ID + ": " + "OFF");
-		setStanje("OFF");
+//		sabirnickiRastavljacSPSignali.remove(ID + ": " + "OFF");
+//		sabirnickiRastavljacSPSignali.add(ID + ": " + "OFF");
+//		setStanje("OFF");
 		
 	}
 
@@ -36,7 +36,7 @@ public class SabirnickiRastavljacSP extends RastavljacSP{
 		
 		if(rast.getStanje() != "OFF") {
 			
-			sabirnickiRastavljacSPSignali.remove(getID() + ": " + getStanje());
+			sabirnickiRastavljacSPSignali.remove(getID() + ": " + "ON");
 			rast.setStanje("OFF");
 			
 			sabirnickiRastavljacSPSignali.add(getID() + ": " + getStanje());
