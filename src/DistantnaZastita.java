@@ -7,12 +7,13 @@ public class DistantnaZastita extends Zastita{
 	private boolean faza_L3_poticaj = false;
 	private boolean zemljospoj_poticaj = false;
 	
-	ArrayList<String> distantnaZastitaSignali = new ArrayList<String>();
+	static ArrayList<String> distantnaZastitaSignali = new ArrayList<String>();
 	
 	public DistantnaZastita(String ID) {
 		
 		super(ID);
 		
+		distantnaZastitaSignali.clear();
 		distantnaZastitaSignali.add("faza_L1_poticaj: " + Boolean.toString(faza_L1_poticaj));
 		distantnaZastitaSignali.add("faza_L2_poticaj: " + Boolean.toString(faza_L2_poticaj));
 		distantnaZastitaSignali.add("faza_L3_poticaj: " + Boolean.toString(faza_L3_poticaj));

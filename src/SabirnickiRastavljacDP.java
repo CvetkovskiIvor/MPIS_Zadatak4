@@ -2,11 +2,12 @@ import java.util.ArrayList;
 
 public class SabirnickiRastavljacDP extends RastavljacDP{
 	
-	ArrayList<String> sabirnickiRastavljacDPSignali = new ArrayList<String>();
+	static ArrayList<String> sabirnickiRastavljacDPSignali = new ArrayList<String>();
 	
 	public SabirnickiRastavljacDP(String ID) {
 		
 		super(ID);
+		sabirnickiRastavljacDPSignali.remove(ID + ": " + "OFF");
 		sabirnickiRastavljacDPSignali.add(ID + ": " + "OFF");
 		
 	}

@@ -2,11 +2,12 @@ import java.util.ArrayList;
 
 public class IzlazniRastavljacDP extends RastavljacDP{
 	
-	ArrayList<String> izlazniRastavljacDPSignali = new ArrayList<String>();
+	static ArrayList<String> izlazniRastavljacDPSignali = new ArrayList<String>();
 	
 	public IzlazniRastavljacDP(String ID) {
 		
 		super(ID);
+		izlazniRastavljacDPSignali.remove(ID + ": " + "OFF");
 		izlazniRastavljacDPSignali.add(ID + ": " + "OFF");
 		
 	}
