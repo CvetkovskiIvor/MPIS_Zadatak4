@@ -571,19 +571,17 @@ public class StartScr extends Zadatak4 implements ActionListener{
 		
 		if (e.getActionCommand() == "Izlistaj signale: dalekovodno polje") {
 			
-			
-			
 			Collections.sort(DalekovodnoScr.dalekovodnoSignali);
 			text.append("Signali u dalekovodnom polju:\n" + DalekovodnoScr.dalekovodnoSignali + "\n" + "\n");
 			
 		}
 		
 		if (e.getActionCommand() == "Iskljuci") {
-				vert6.setBackground(Color.blue);
-				spojnoBtn.setForeground(Color.blue);
-			
+				
 			if(SpojnoPolje.provjeri(sp, prekidacSP, rastavljacUzemljenjaSP, napajanjeRastavljacSP)) {
 				
+				vert6.setBackground(Color.blue);
+				spojnoBtn.setForeground(Color.blue);
 				text.append("Iskljucujem spojno polje" + "\n");
 				SpojnoPolje.isklop(sabirnickiRastavljacSPS1, sabirnickiRastavljacSPS2, prekidacSP);
 				
@@ -594,11 +592,11 @@ public class StartScr extends Zadatak4 implements ActionListener{
 		}
 		
 		if (e.getActionCommand() == "Ukljuci") {
-			vert6.setBackground(Color.green);
-			spojnoBtn.setForeground(Color.green);
 			
 			if(SpojnoPolje.provjeri(sp, prekidacSP, rastavljacUzemljenjaSP, napajanjeRastavljacSP)) {
 				
+				vert6.setBackground(Color.green);
+				spojnoBtn.setForeground(Color.green);
 				text.append("Ukljucujem spojno polje" + "\n");
 				SpojnoPolje.uklop(sabirnickiRastavljacSPS1, sabirnickiRastavljacSPS2, prekidacSP);
 				
