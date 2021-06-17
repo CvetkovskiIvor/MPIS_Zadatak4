@@ -1,12 +1,16 @@
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.util.ArrayList;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JMenuItem;
 import javax.swing.JPanel;
+import javax.swing.JPopupMenu;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.ScrollPaneConstants;
@@ -40,6 +44,12 @@ public class DalekovodnoScr extends StartScr implements ActionListener{
 	static JButton rastavljaciz = new JButton("Izlazni rastavljac");
 	static JButton prekidac = new JButton("Prekidac");
 	
+	static JPopupMenu popupS1 = new JPopupMenu();
+	static JPopupMenu popupS2 = new JPopupMenu();
+	static JPopupMenu popupIz = new JPopupMenu();
+	static JPopupMenu popupUz = new JPopupMenu();
+	static JPopupMenu popupPrek = new JPopupMenu();
+	
 	public static void dalekovodnoScr() {
 		
 		JPanel panel = new JPanel();
@@ -50,7 +60,6 @@ public class DalekovodnoScr extends StartScr implements ActionListener{
 		
 		panel.setLayout(null);
 		
-		//text2.setBounds(50, 530, 700, 200);
 		text2.setLineWrap(true);
 		text2.setWrapStyleWord(true);
 		text2.setEditable(false);
@@ -63,69 +72,58 @@ public class DalekovodnoScr extends StartScr implements ActionListener{
 		panel.add(scroll);
 		
 		koc1.setBounds(295, 44, 20, 28);
-		//dlkhor.setForeground(Color.blue);
 		koc1.setBackground(Color.blue);
 		koc1.setOpaque(true);
 		panel.add(koc1);
 		
-		koc2.setBounds(100, 50, 800, 16);
-		//dlkhor.setForeground(Color.blue);
-		koc2.setBackground(Color.blue);
-		koc2.setOpaque(true);
-		panel.add(koc2);
-		
-		koc3.setBounds(100, 50, 800, 16);
-		//dlkhor.setForeground(Color.blue);
-		koc3.setBackground(Color.blue);
-		koc3.setOpaque(true);
-		panel.add(koc3);
-		
-		koc4.setBounds(100, 50, 800, 16);
-		//dlkhor.setForeground(Color.blue);
-		koc4.setBackground(Color.blue);
-		koc4.setOpaque(true);
-		panel.add(koc4);
-		
-		vert1.setBounds(100, 50, 800, 16);
-		//dlkhor.setForeground(Color.blue);
-		vert1.setBackground(Color.blue);
-		vert1.setOpaque(true);
-		panel.add(vert1);
-		
-		vert2.setBounds(100, 50, 800, 16);
-		//dlkhor.setForeground(Color.blue);
-		vert2.setBackground(Color.blue);
-		vert2.setOpaque(true);
-		panel.add(vert2);
-		
-		vert3.setBounds(100, 50, 800, 16);
-		//dlkhor.setForeground(Color.blue);
-		vert3.setBackground(Color.blue);
-		vert3.setOpaque(true);
-		panel.add(vert3);
-		
-		vert4.setBounds(100, 50, 800, 16);
-		//dlkhor.setForeground(Color.blue);
-		vert4.setBackground(Color.blue);
-		vert4.setOpaque(true);
-		panel.add(vert4);
-		
-		vert5.setBounds(100, 50, 800, 16);
-		//dlkhor.setForeground(Color.blue);
-		vert5.setBackground(Color.blue);
-		vert5.setOpaque(true);
-		panel.add(vert5);
+//		koc2.setBounds(100, 50, 800, 16);
+//		koc2.setBackground(Color.blue);
+//		koc2.setOpaque(true);
+//		panel.add(koc2);
+//		
+//		koc3.setBounds(100, 50, 800, 16);
+//		koc3.setBackground(Color.blue);
+//		koc3.setOpaque(true);
+//		panel.add(koc3);
+//		
+//		koc4.setBounds(100, 50, 800, 16);
+//		koc4.setBackground(Color.blue);
+//		koc4.setOpaque(true);
+//		panel.add(koc4);
+//		
+//		vert1.setBounds(100, 50, 800, 16);
+//		vert1.setBackground(Color.blue);
+//		vert1.setOpaque(true);
+//		panel.add(vert1);
+//		
+//		vert2.setBounds(100, 50, 800, 16);
+//		vert2.setBackground(Color.blue);
+//		vert2.setOpaque(true);
+//		panel.add(vert2);
+//		
+//		vert3.setBounds(100, 50, 800, 16);
+//		vert3.setBackground(Color.blue);
+//		vert3.setOpaque(true);
+//		panel.add(vert3);
+//		
+//		vert4.setBounds(100, 50, 800, 16);
+//		vert4.setBackground(Color.blue);
+//		vert4.setOpaque(true);
+//		panel.add(vert4);
+//		
+//		vert5.setBounds(100, 50, 800, 16);
+//		vert5.setBackground(Color.blue);
+//		vert5.setOpaque(true);
+//		panel.add(vert5);
 		
 		sab1.setBounds(100, 50, 800, 16);
-		//dlkhor.setForeground(Color.blue);
-		sab1.setBackground(Color.blue);
+		//sab1.setBackground(Color.blue);
 		sab1.setOpaque(true);
 		panel.add(sab1);
 
 
 		sab2.setBounds(100, 100, 800, 16);
-		//spjhor.setForeground(Color.blue);
-		sab2.setBackground(Color.green);
+		//sab2.setBackground(Color.green);
 		sab2.setOpaque(true);
 		panel.add(sab2);
 		
@@ -137,68 +135,118 @@ public class DalekovodnoScr extends StartScr implements ActionListener{
 		sys2.setBounds(30, 95, 80, 25);
 		panel.add(sys2);
 
-		pow1.setText("0 kV");
+		//pow1.setText("0 kV");
 		pow1.setBounds(870, 30, 80, 25);
-		pow1.setForeground(Color.blue);
-		//powoff.setBackground(Color.black);
+		//pow1.setForeground(Color.blue);
 		pow1.setOpaque(true);
 		panel.add(pow1);
 
-		pow2.setText("220 kV");
+		//pow2.setText("220 kV");
 		pow2.setBounds(860, 80, 80, 25);
-		pow2.setForeground(Color.green);
-		//powon.setBackground(Color.black);
+		//pow2.setForeground(Color.green);
 		pow2.setOpaque(true);
 		panel.add(pow2);
 		
 		prekidac.setBounds(430, 350, 80, 25);
 		prekidac.setSize(150, 100);
-		prekidac.setForeground(Color.blue);
+		//prekidac.setForeground(Color.blue);
 		prekidac.setBackground(Color.lightGray);
 		prekidac.setOpaque(true);
-		prekidac.addActionListener(start);
 		panel.add(prekidac);
 
 		rastavljac1.setBounds(230, 180, 80, 25);
 		rastavljac1.setSize(150, 100);
-		rastavljac1.setForeground(Color.green);
+		//rastavljac1.setForeground(Color.green);
 		rastavljac1.setBackground(Color.lightGray);
 		rastavljac1.setBorderPainted(true);
 		rastavljac1.setOpaque(true);
-		rastavljac1.addActionListener(start);
 		panel.add(rastavljac1);
 		
 		rastavljac2.setBounds(630, 180, 80, 25);
 		rastavljac2.setSize(150, 100);
-		rastavljac2.setForeground(Color.green);
+		//rastavljac2.setForeground(Color.green);
 		rastavljac2.setBackground(Color.lightGray);
 		rastavljac2.setBorderPainted(true);
 		rastavljac2.setOpaque(true);
-		rastavljac2.addActionListener(start);
 		panel.add(rastavljac2);
 		
 		rastavljaciz.setBounds(430, 500, 80, 25);
 		rastavljaciz.setSize(150, 100);
-		rastavljaciz.setForeground(Color.green);
+		//rastavljaciz.setForeground(Color.green);
 		rastavljaciz.setBackground(Color.lightGray);
 		rastavljaciz.setBorderPainted(true);
 		rastavljaciz.setOpaque(true);
-		rastavljaciz.addActionListener(start);
 		panel.add(rastavljaciz);
 		
 		rastavljacuz.setBounds(250, 620, 80, 25);
 		rastavljacuz.setSize(150, 100);
-		rastavljacuz.setForeground(Color.green);
+		//rastavljacuz.setForeground(Color.green);
 		rastavljacuz.setBackground(Color.lightGray);
 		rastavljacuz.setBorderPainted(true);
 		rastavljacuz.setOpaque(true);
-		rastavljacuz.addActionListener(start);
 		panel.add(rastavljacuz);
 		
+		JMenuItem ukljS1 = new JMenuItem("Ukljuci rastS1");
+	    JMenuItem iskljS1 = new JMenuItem("Iskljuci rastS1");
+	    JMenuItem sigS1 = new JMenuItem("Izlistaj signale: rastS1");
+	    ukljS1.addActionListener(dalk);
+	    iskljS1.addActionListener(dalk);
+	    sigS1.addActionListener(dalk);
+	    popupS1.add(ukljS1);
+	    popupS1.add(iskljS1);
+	    popupS1.add(sigS1);
+
+	    JMenuItem ukljS2 = new JMenuItem("Ukljuci rastS2");
+	    JMenuItem iskljS2 = new JMenuItem("Iskljuci rastS2");
+	    JMenuItem sigS2 = new JMenuItem("Izlistaj signale: rastS2");
+	    ukljS2.addActionListener(dalk);
+	    iskljS2.addActionListener(dalk);
+	    sigS2.addActionListener(dalk);
+	    popupS2.add(ukljS2);
+	    popupS2.add(iskljS2);
+	    popupS2.add(sigS2);
+	    
+	    JMenuItem ukljIz = new JMenuItem("Ukljuci rastIz");
+	    JMenuItem iskljIz = new JMenuItem("Iskljuci rastIz");
+	    JMenuItem sigIz = new JMenuItem("Izlistaj signale: rastIz");
+	    ukljIz.addActionListener(dalk);
+	    iskljIz.addActionListener(dalk);
+	    sigIz.addActionListener(dalk);
+	    popupIz.add(ukljIz);
+	    popupIz.add(iskljIz);
+	    popupIz.add(sigIz);
+	    
+	    JMenuItem ukljUz = new JMenuItem("Ukljuci rastUz");
+	    JMenuItem iskljUz = new JMenuItem("Iskljuci rastUz");
+	    JMenuItem sigUz = new JMenuItem("Izlistaj signale: rastUz");
+	    ukljUz.addActionListener(dalk);
+	    iskljUz.addActionListener(dalk);
+	    sigUz.addActionListener(dalk);
+	    popupUz.add(ukljUz);
+	    popupUz.add(iskljUz);
+	    popupUz.add(sigUz);
+	    
+	    JMenuItem ukljPrek = new JMenuItem("Ukljuci prekidac");
+	    JMenuItem iskljPrek = new JMenuItem("Iskljuci prekidac");
+	    JMenuItem sigPrek = new JMenuItem("Izlistaj signale: prekidac");
+	    ukljPrek.addActionListener(dalk);
+	    iskljPrek.addActionListener(dalk);
+	    sigPrek.addActionListener(dalk);
+	    popupPrek.add(ukljPrek);
+	    popupPrek.add(iskljPrek);
+	    popupPrek.add(sigPrek);
+	    
+	    panel.addMouseListener(new MouseAdapter() {
+		       public void mouseReleased(MouseEvent me) {
+		          showPopupDalk(me);
+		       }
+		    }) ;
 		
-		
-		
-		
+	    rastavljac1.setComponentPopupMenu(popupS1);
+	    rastavljac2.setComponentPopupMenu(popupS2);
+	    rastavljaciz.setComponentPopupMenu(popupIz);
+	    rastavljacuz.setComponentPopupMenu(popupUz);
+	    prekidac.setComponentPopupMenu(popupPrek);
 		
 		frame.setVisible(true);
 		
@@ -212,130 +260,110 @@ public class DalekovodnoScr extends StartScr implements ActionListener{
 	
 	public void actionPerformed(ActionEvent e) {
 		
-		/*if (e.getActionCommand() == "Iskljuci S1") {
+		if (e.getActionCommand() == "Ukljuci rastS1") {
 			
-			//napajanjeRastavljacUzemljenjaDP.setStanje("OFF");
-			//napajanjeSabirnickiRastavljacDPS1.setStanje("OFF");
-			
-			//iskljuciS1();
-			
-			if(DalekovodnoPolje.provjeri(dp, distantnaZastita, prekidacDP, rastavljacUzemljenjaDP, napajanjeRastavljacDP)) {
-				
-				System.out.println("Polje se iskljucuje");
-				DalekovodnoPolje.isklop(rastavljacUzemljenjaDP, sabirnickiRastavljacDPS1, izlazniRastavljacDP, prekidacDP);
-				//System.out.println(sabirnickiRastavljac.stanje);
-				//System.out.println(sabirnickiRastavljacDPS1.getStanje());
-				
-				System.out.println("Globalno stanje rastavljaca " + sabirnickiRastavljacDPS1.getStanje());
-			
-			}else
-				
-				System.out.println("dogodila se greska");
+			sabirnickiRastavljacDPS1.uklop(sabirnickiRastavljacDPS1, prekidacDP);
 			
 		}
 		
-		if (e.getActionCommand() == "Iskljuci S2") {
+		if (e.getActionCommand() == "Iskljuci rastS1") {
 			
-			if(DalekovodnoPolje.provjeri(dp, distantnaZastita, prekidacDP, rastavljacUzemljenjaDP, napajanjeRastavljacDP)) {
-				
-				System.out.println("Polje se iskljucuje");
-				DalekovodnoPolje.isklop(rastavljacUzemljenjaDP, sabirnickiRastavljacDPS2, izlazniRastavljacDP, prekidacDP);
-				//System.out.println(sabirnickiRastavljac.stanje + sabirnickiRastavljac.sabirnica);
-				System.out.println(sabirnickiRastavljacDPS2.getStanje());
-				
+			sabirnickiRastavljacDPS1.isklop(sabirnickiRastavljacDPS1, prekidacDP);
 			
-			}else
-				
-				System.out.println("dogodila se greska");
 		}
 		
-		if (e.getActionCommand() == "Ukljuci S1") {
+		if (e.getActionCommand() == "Izlistaj signale: rastS1") {
 			
-			if(DalekovodnoPolje.provjeri(dp, distantnaZastita, prekidacDP, rastavljacUzemljenjaDP, napajanjeRastavljacDP)) {
-				
-				System.out.println("Polje se ukljucuje");
-				DalekovodnoPolje.uklop(rastavljacUzemljenjaDP, sabirnickiRastavljacDPS1, izlazniRastavljacDP, prekidacDP);
-				System.out.println("Globalno stanje rastavljaca " + sabirnickiRastavljacDPS1.getStanje());
+			text2.append(SabirnickiRastavljacDP.sabirnickiRastavljacDPSignali.toString());
 			
-			}else
-				
-				System.out.println("dogodila se greska");
+		}
+
+		if (e.getActionCommand() == "Ukljuci rastS2") {
+	
+			sabirnickiRastavljacDPS2.uklop(sabirnickiRastavljacDPS2, prekidacDP);
+	
+		}
+
+		if (e.getActionCommand() == "Iskljuci rastS2") {
+	
+			sabirnickiRastavljacDPS2.isklop(sabirnickiRastavljacDPS2, prekidacDP);
+			
 		}
 		
-		if (e.getActionCommand() == "Ukljuci S2") {
+		if (e.getActionCommand() == "Izlistaj signale: rastS2") {
 			
-			if(DalekovodnoPolje.provjeri(dp, distantnaZastita, prekidacDP, rastavljacUzemljenjaDP, napajanjeRastavljacDP)) {
-				System.out.println("Polje se ukljucuje");
-				DalekovodnoPolje.uklop(rastavljacUzemljenjaDP, sabirnickiRastavljacDPS2, izlazniRastavljacDP, prekidacDP);
-				System.out.println(sabirnickiRastavljacDPS2.getStanje());
+			text2.append(SabirnickiRastavljacDP.sabirnickiRastavljacDPSignali.toString());
 			
-			}else
-				
-				System.out.println("dogodila se greska");
+		}
+
+		if (e.getActionCommand() == "Ukljuci rastIz") {
+	
+			izlazniRastavljacDP.uklop(izlazniRastavljacDP);
+	
+		}
+
+		if (e.getActionCommand() == "Iskljuci rastIz") {
+	
+			izlazniRastavljacDP.uklop(izlazniRastavljacDP);
+			
 		}
 		
-		if (e.getActionCommand() == "Prespoji S1") {
+		if (e.getActionCommand() == "Izlistaj signale: rastIz") {
 			
-			if(DalekovodnoPolje.provjeri(dp, distantnaZastita, prekidacDP, rastavljacUzemljenjaDP, napajanjeRastavljacDP)) {
-				
-				System.out.println("Polje se prespaja na S1");
-				
-				SpojnoPolje.uklop(sabirnickiRastavljacSPS1, sabirnickiRastavljacSPS2, prekidacSP);
-				
-				DalekovodnoPolje.isklop(rastavljacUzemljenjaDP, sabirnickiRastavljacDPS2, izlazniRastavljacDP, prekidacDP);
-				DalekovodnoPolje.uklop(rastavljacUzemljenjaDP, sabirnickiRastavljacDPS1, izlazniRastavljacDP, prekidacDP);
-				
-				SpojnoPolje.isklop(sabirnickiRastavljacSPS1, sabirnickiRastavljacSPS2, prekidacSP);
+			text2.append(IzlazniRastavljacDP.izlazniRastavljacDPSignali.toString());
 			
-			}else
-				
-				System.out.println("dogodila se greska");
+		}
+
+		if (e.getActionCommand() == "Ukljuci rastUz") {
+	
+			rastavljacUzemljenjaDP.posaljiZahtjev("Ukljuci");
+	
+		}
+
+		if (e.getActionCommand() == "Iskljuci rastUz") {
+	
+			rastavljacUzemljenjaDP.posaljiZahtjev("Iskljuci");
+	
 		}
 		
-		if (e.getActionCommand() == "Prespoji S2") {
+		if (e.getActionCommand() == "Izlistaj signale: rastUz") {
 			
-			if(DalekovodnoPolje.provjeri(dp, distantnaZastita, prekidacDP, rastavljacUzemljenjaDP, napajanjeRastavljacDP)) {
-				
-				System.out.println("Polje se prespaja na S2");
-				
-				SpojnoPolje.uklop(sabirnickiRastavljacSPS1, sabirnickiRastavljacSPS2, prekidacSP);
-				
-				DalekovodnoPolje.isklop(rastavljacUzemljenjaDP, sabirnickiRastavljacDPS1, izlazniRastavljacDP, prekidacDP);
-				DalekovodnoPolje.uklop(rastavljacUzemljenjaDP, sabirnickiRastavljacDPS2, izlazniRastavljacDP, prekidacDP);
+			//text2.append(rast);
 			
-				SpojnoPolje.isklop(sabirnickiRastavljacSPS1, sabirnickiRastavljacSPS2, prekidacSP);
+		}
+
+		if (e.getActionCommand() == "Ukljuci prekidac") {
+	
+			prekidacDP.uklop(prekidacDP);
 			
-			}else
-				
-				System.out.println("dogodila se greska");
+		}
+
+		if (e.getActionCommand() == "Iskljuci prekidac") {
+	
+			prekidacDP.isklop(prekidacDP);
+	
+		}
+		
+		if (e.getActionCommand() == "Izlistaj signale: prekidac") {
 			
-		}*/
+			text2.append(PrekidacDP.prekidacDPSignali.toString());
+			
+		}
 		
 	}
 	
-	/*public void initialise() {
-		
-		DalekovodnoPolje.uklop(rastavljacUzemljenjaDP, sabirnickiRastavljacDPS1, izlazniRastavljacDP, prekidacDP);
-		
-		System.out.println(sabirnickiRastavljacDPS1.getStanje());
-		
-	}*/
+	static void showPopupDalk(MouseEvent me) {
+	      
+		if(me.isPopupTrigger()) {
+			
+	    	  popupS1.show(me.getComponent(), me.getX(), me.getY());
+		      popupS2.show(me.getComponent(), me.getX(), me.getY());
+		      popupIz.show(me.getComponent(), me.getX(), me.getY());
+		      popupUz.show(me.getComponent(), me.getX(), me.getY());
+		      popupPrek.show(me.getComponent(), me.getX(), me.getY());
+		      
+	      }
+	      
+	   }
 	
-//	public void iskljuciS1() {
-//		//System.out.println("Globalno stanje rastavljaca " + sabirnickiRastavljacDPS1.getStanje());
-//		
-//		if(DalekovodnoPolje.provjeri(dp, distantnaZastita, prekidacDP, rastavljacUzemljenjaDP, napajanjeRastavljacDP)) {
-//			
-//			System.out.println("Polje se iskljucuje");
-//			DalekovodnoPolje.isklop(rastavljacUzemljenjaDP, sabirnickiRastavljacDPS1, izlazniRastavljacDP, prekidacDP);
-//			//System.out.println(sabirnickiRastavljac.stanje);
-//			//System.out.println(sabirnickiRastavljacDPS1.getStanje());
-//			
-//			System.out.println("Globalno stanje rastavljaca " + sabirnickiRastavljacDPS1.getStanje());
-//		
-//		}else
-//			
-//			System.out.println("dogodila se greska");
-//	}
-
 }

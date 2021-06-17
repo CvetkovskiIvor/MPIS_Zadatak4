@@ -5,7 +5,7 @@ public class PrekidacSP extends SpojnoPolje{
 	private String stanje;
 	private String upravljanje = "Daljinsko";
 	
-	ArrayList<String> prekidacSPSignali = new ArrayList<String>();
+	static ArrayList<String> prekidacSPSignali = new ArrayList<String>();
 	
 	public void uklop(PrekidacSP prek) {
 		
