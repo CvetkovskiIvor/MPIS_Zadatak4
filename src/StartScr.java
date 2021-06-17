@@ -5,7 +5,6 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.awt.BorderLayout;
 import java.awt.Color;
 
 import javax.swing.JButton;
@@ -17,8 +16,6 @@ import javax.swing.JPopupMenu;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.ScrollPaneConstants;
-import javax.swing.border.EtchedBorder;
-import javax.swing.border.TitledBorder;
 
 public class StartScr extends Zadatak4 implements ActionListener{
 	
@@ -307,7 +304,7 @@ public class StartScr extends Zadatak4 implements ActionListener{
 		DalekovodnoScr.dalekovodnoSignali.addAll(SabirnickiRastavljacDP.sabirnickiRastavljacDPSignali);
 		DalekovodnoScr.dalekovodnoSignali.addAll(IzlazniRastavljacDP.izlazniRastavljacDPSignali);
 		DalekovodnoScr.dalekovodnoSignali.addAll(DistantnaZastita.distantnaZastitaSignali);
-		//DalekovodnoScr.dalekovodnoSignali.addAll(apu);
+		DalekovodnoScr.dalekovodnoSignali.addAll(apu.apuSignali);
 		DalekovodnoScr.dalekovodnoSignali.addAll(brojilo.brojiloSignali);
 		
 		// spojno
