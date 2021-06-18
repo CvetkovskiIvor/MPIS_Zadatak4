@@ -58,7 +58,6 @@ public static boolean provjeri(SpojnoPolje sp, PrekidacSP prekidac, RastavljacUz
 		
 		if(rastNapajanje.provjera_stanjaRastavljacSP(rastNapajanje) == "OFF") {
 			
-			System.out.println("tu se dogodila greska");
 			return false;
 			
 		}

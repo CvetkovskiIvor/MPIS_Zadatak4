@@ -7,8 +7,6 @@ public class IzlazniRastavljacDP extends RastavljacDP{
 	public IzlazniRastavljacDP(String ID) {
 		
 		super(ID);
-		izlazniRastavljacDPSignali.remove(ID + ": " + "OFF");
-		izlazniRastavljacDPSignali.add(ID + ": " + "OFF");
 		
 	}
 
@@ -18,9 +16,6 @@ public class IzlazniRastavljacDP extends RastavljacDP{
 			
 			izlazniRastavljacDPSignali.remove(getID() + ": " + "OFF");
 			rast.setStanje("ON");
-			/*StartScr.signali.add(getID() + ": " + rast.getStanje());
-			DalekovodnoScr.dalekovodnoSignali.add(getID() + ": " + rast.getStanje());
-			StartScr.svi_Signali.add(getID() + ": " + rast.getStanje());*/
 			izlazniRastavljacDPSignali.add(getID() + ": " + rast.getStanje());
 
 		}
@@ -30,11 +25,6 @@ public class IzlazniRastavljacDP extends RastavljacDP{
 	public void isklop(IzlazniRastavljacDP rast) {
 		
 		if(rast.getStanje() != "OFF") {
-			
-			/*StartScr.signali.remove(getID() + ": " + rast.getStanje());
-			StartScr.svi_Signali.remove(getID() + ": " + rast.getStanje());
-			DalekovodnoScr.dalekovodnoSignali.remove(getID() + ": " + rast.getStanje());*/
-			
 			
 			izlazniRastavljacDPSignali.remove(getID() + ": " + "ON");
 			

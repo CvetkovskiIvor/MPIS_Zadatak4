@@ -79,68 +79,55 @@ public class SpojnoScr extends StartScr implements ActionListener{
 		
 		
 		koc1.setBounds(295, 44, 20, 28);
-		//koc1.setBackground(Color.blue);
 		koc1.setOpaque(true);
 		panel.add(koc1);
 		
 		koc2.setBounds(695, 94, 20, 28);
-		koc2.setBackground(Color.blue);
 		koc2.setOpaque(true);
 		panel.add(koc2);
 		
 		koc3.setBounds(495, 219, 20, 28);
-		koc3.setBackground(Color.blue);
 		koc3.setOpaque(true);
 		panel.add(koc3);
 		
 		koc4.setBounds(495, 656, 20, 28);
-		//koc4.setBackground(Color.blue);
 		koc4.setOpaque(true);
 		panel.add(koc4);
 		
 		vert1.setBounds(303, 72, 5, 108);
-		vert1.setBackground(Color.blue);
 		vert1.setOpaque(true);
 		panel.add(vert1);
 		
 		vert2.setBounds(703, 122, 5, 58);
-		vert2.setBackground(Color.blue);
 		vert2.setOpaque(true);
 		panel.add(vert2);
 		
 		vert3.setBounds(380, 230, 250, 5);
-		vert3.setBackground(Color.blue);
 		vert3.setOpaque(true);
 		panel.add(vert3);
 		
 		vert4.setBounds(503, 225, 5, 125);
-		vert4.setBackground(Color.blue);
 		vert4.setOpaque(true);
 		panel.add(vert4);
 		
 		vert5.setBounds(503, 450, 5, 50);
-		vert5.setBackground(Color.blue);
 		vert5.setOpaque(true);
 		panel.add(vert5);
 		
 		vert6.setBounds(503, 600, 5, 120);
-		//vert6.setBackground(Color.blue);
 		vert6.setOpaque(true);
 		panel.add(vert6);
 		
 		vert7.setBounds(400, 668, 100, 5);
-		//vert7.setBackground(Color.blue);
 		vert7.setOpaque(true);
 		panel.add(vert7);
 		
 		sab1.setBounds(100, 50, 800, 16);
-		//sab1.setBackground(Color.blue);
 		sab1.setOpaque(true);
 		panel.add(sab1);
 
 
 		sab2.setBounds(100, 100, 800, 16);
-		//sab2.setBackground(Color.green);
 		sab2.setOpaque(true);
 		panel.add(sab2);
 		
@@ -152,21 +139,14 @@ public class SpojnoScr extends StartScr implements ActionListener{
 		sys2.setBounds(30, 95, 80, 25);
 		panel.add(sys2);
 
-		//pow1.setText("0 kV");
-		//pow1.setBounds(870, 30, 80, 25);
-		//pow1.setForeground(Color.blue);
 		pow1.setOpaque(true);
 		panel.add(pow1);
 
-		//pow2.setText("220 kV");
-		//pow2.setBounds(860, 80, 80, 25);
-		//pow2.setForeground(Color.green);
 		pow2.setOpaque(true);
 		panel.add(pow2);
 		
 		prekidac.setBounds(430, 350, 80, 25);
 		prekidac.setSize(150, 100);
-		//prekidac.setForeground(Color.blue);
 		prekidac.setBackground(Color.lightGray);
 		prekidac.setOpaque(true);
 		panel.add(prekidac);
@@ -181,7 +161,6 @@ public class SpojnoScr extends StartScr implements ActionListener{
 		
 		rastavljac2.setBounds(630, 180, 80, 25);
 		rastavljac2.setSize(150, 100);
-		//rastavljac2.setForeground(Color.green);
 		rastavljac2.setBackground(Color.lightGray);
 		rastavljac2.setBorderPainted(true);
 		rastavljac2.setOpaque(true);
@@ -189,7 +168,6 @@ public class SpojnoScr extends StartScr implements ActionListener{
 		
 		rastavljaciz.setBounds(430, 500, 80, 25);
 		rastavljaciz.setSize(150, 100);
-		//rastavljaciz.setForeground(Color.green);
 		rastavljaciz.setBackground(Color.lightGray);
 		rastavljaciz.setBorderPainted(true);
 		rastavljaciz.setOpaque(true);
@@ -197,32 +175,10 @@ public class SpojnoScr extends StartScr implements ActionListener{
 		
 		rastavljacuz.setBounds(250, 620, 80, 25);
 		rastavljacuz.setSize(150, 100);
-		//rastavljacuz.setForeground(Color.green);
 		rastavljacuz.setBackground(Color.lightGray);
 		rastavljacuz.setBorderPainted(true);
 		rastavljacuz.setOpaque(true);
 		panel.add(rastavljacuz);
-		
-		/*JLabel iskljuciLbl = new JLabel("Polje");
-		iskljuciLbl.setBounds(188, 20, 80, 25);
-		
-		panel.add(iskljuciLbl);*/
-		
-		/*JLabel ukljuciLbl = new JLabel("ukljuci");
-		ukljuciLbl.setBounds(10, 60, 80, 25);
-		panel.add(ukljuciLbl); */
-		
-		/*JButton IskljuciBtn = new JButton("Iskljuci polje");
-		IskljuciBtn.setBounds(55, 70, 80, 25);
-		IskljuciBtn.setSize(125, 30);
-		IskljuciBtn.addActionListener(spoj);
-		panel.add(IskljuciBtn);
-		
-		JButton UkljuciBtn = new JButton("Ukljuci polje");
-		UkljuciBtn.setBounds(220, 70, 80, 25);
-		UkljuciBtn.setSize(125, 30);
-		UkljuciBtn.addActionListener(spoj);
-		panel.add(UkljuciBtn);*/
 		
 		JMenuItem ukljS1 = new JMenuItem("Ukljuci rastS1");
 	    JMenuItem iskljS1 = new JMenuItem("Iskljuci rastS1");
@@ -296,23 +252,33 @@ public class SpojnoScr extends StartScr implements ActionListener{
 		return frame.isShowing();
 		
 	}
-
+	
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		
 		if (e.getActionCommand() == "Ukljuci rastS1") {
-			rastavljac1.setForeground(Color.green);
-			vert1.setBackground(Color.green);
 			
-			sabirnickiRastavljacSPS1.uklop(sabirnickiRastavljacSPS1, prekidacSP);
+			if(sabirnickiRastavljacSPS1.provjera_stanja(prekidacSP) == "OFF") {
+				
+				rastavljac1.setForeground(Color.green);
+				vert1.setBackground(Color.green);
+				
+				sabirnickiRastavljacSPS1.uklop(sabirnickiRastavljacSPS1, prekidacSP);
+				
+			}
 			
 		}
 		
 		if (e.getActionCommand() == "Iskljuci rastS1") {
-			rastavljac1.setForeground(Color.blue);
-			vert1.setBackground(Color.blue);
 			
-			sabirnickiRastavljacSPS1.isklop(sabirnickiRastavljacSPS1, prekidacSP);
+			if(sabirnickiRastavljacSPS1.provjera_stanja(prekidacSP) == "OFF") {
+				
+				rastavljac1.setForeground(Color.blue);
+				vert1.setBackground(Color.blue);
+				
+				sabirnickiRastavljacSPS1.isklop(sabirnickiRastavljacSPS1, prekidacSP);
+				
+			}
 			
 		}
 		
@@ -324,18 +290,29 @@ public class SpojnoScr extends StartScr implements ActionListener{
 		}
 
 		if (e.getActionCommand() == "Ukljuci rastS2") {
-			rastavljac2.setForeground(Color.green);
-			vert2.setBackground(Color.green);
-	
-			sabirnickiRastavljacSPS2.uklop(sabirnickiRastavljacSPS2, prekidacSP);
-	
+			
+			if(sabirnickiRastavljacSPS1.provjera_stanja(prekidacSP) == "OFF") {
+				
+				rastavljac2.setForeground(Color.green);
+				vert2.setBackground(Color.green);
+		
+				sabirnickiRastavljacSPS2.uklop(sabirnickiRastavljacSPS2, prekidacSP);
+				
+			}
+
 		}
 
 		if (e.getActionCommand() == "Iskljuci rastS2") {
-			rastavljac2.setForeground(Color.blue);
-			vert2.setBackground(Color.blue);
-	
-			sabirnickiRastavljacSPS2.isklop(sabirnickiRastavljacSPS2, prekidacSP);
+			
+			if(sabirnickiRastavljacSPS2.provjera_stanja(prekidacSP) == "OFF") {
+				
+				rastavljac2.setForeground(Color.blue);
+				vert2.setBackground(Color.blue);
+		
+				sabirnickiRastavljacSPS2.isklop(sabirnickiRastavljacSPS2, prekidacSP);
+				
+			}
+			
 			
 		}
 		
@@ -347,18 +324,28 @@ public class SpojnoScr extends StartScr implements ActionListener{
 		}
 
 		if (e.getActionCommand() == "Ukljuci rastIz") {
-			rastavljaciz.setForeground(Color.green);
-			vert5.setBackground(Color.green);
-	
-			izlazniRastavljacSP.uklop(izlazniRastavljacSP);
-	
+			
+			if(izlazniRastavljacSP.provjera_stanja(prekidacSP) == "OFF") {
+				
+				rastavljaciz.setForeground(Color.green);
+				vert5.setBackground(Color.green);
+		
+				izlazniRastavljacSP.uklop(izlazniRastavljacSP);
+				
+			}
+			
 		}
 
 		if (e.getActionCommand() == "Iskljuci rastIz") {
-			rastavljaciz.setForeground(Color.blue);
-			vert5.setBackground(Color.blue);
-	
-			izlazniRastavljacSP.uklop(izlazniRastavljacSP);
+			
+			if(izlazniRastavljacSP.provjera_stanja(prekidacSP) == "OFF") {
+				
+				rastavljaciz.setForeground(Color.blue);
+				vert5.setBackground(Color.blue);
+		
+				izlazniRastavljacSP.isklop(izlazniRastavljacSP);
+				
+			}
 			
 		}
 		

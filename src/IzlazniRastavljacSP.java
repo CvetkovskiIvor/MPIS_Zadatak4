@@ -7,8 +7,8 @@ public class IzlazniRastavljacSP extends RastavljacSP{
 	IzlazniRastavljacSP(String ID) {
 		
 		super(ID);
-		izlazniRastavljacSPSignali.remove(ID + ": " + "OFF");
-		izlazniRastavljacSPSignali.add(ID + ": " + "OFF");
+		izlazniRastavljacSPSignali.remove(ID + ": " + "ON");
+		izlazniRastavljacSPSignali.add(ID + ": " + "ON");
 		
 	}
 
@@ -18,10 +18,6 @@ public class IzlazniRastavljacSP extends RastavljacSP{
 			
 			izlazniRastavljacSPSignali.remove(getID() + ": " + "OFF");
 			rast.setStanje("ON");
-			/*StartScr.signali.add(getID() + ": " + rast.getStanje());
-			StartScr.svi_Signali.add(getID() + ": " + rast.getStanje());
-
-			SpojnoScr.spojnoSignali.add(getID() + ": " + rast.getStanje());*/
 			izlazniRastavljacSPSignali.add(getID() + ": " + rast.getStanje());
 			
 		}
@@ -31,9 +27,6 @@ public class IzlazniRastavljacSP extends RastavljacSP{
 	public void isklop(IzlazniRastavljacSP rast) {
 		
 		if(rast.getStanje() != "OFF") {
-			
-			/*StartScr.signali.remove(getID() + ": " + rast.getStanje());
-			StartScr.svi_Signali.remove(getID() + ": " + rast.getStanje());*/
 			
 			izlazniRastavljacSPSignali.remove(getID() + ": " + "ON");
 			rast.setStanje("OFF");

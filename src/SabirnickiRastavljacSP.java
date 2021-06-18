@@ -7,9 +7,6 @@ public class SabirnickiRastavljacSP extends RastavljacSP{
 	public SabirnickiRastavljacSP(String ID) {
 		
 		super(ID);
-//		sabirnickiRastavljacSPSignali.remove(ID + ": " + "OFF");
-//		sabirnickiRastavljacSPSignali.add(ID + ": " + "OFF");
-//		setStanje("OFF");
 		
 	}
 

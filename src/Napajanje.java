@@ -10,7 +10,6 @@ public class Napajanje {
 		
 		this.ID = ID;
 		setStanje("ON");
-		//StartScr.signali.add(ID + this.getStanje());
 		napajanjeSignali.add(ID + ": " + getStanje());
 		
 	}

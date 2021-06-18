@@ -7,14 +7,20 @@ public class PrekidacSP extends SpojnoPolje{
 	
 	static ArrayList<String> prekidacSPSignali = new ArrayList<String>();
 	
+	PrekidacSP(String ID) {
+		
+		this.ID = ID;
+//		prekidacSPSignali.remove(ID + ": " + "OFF");
+//		prekidacSPSignali.add(ID + ": " + "OFF");
+		
+	}
+	
 	public void uklop(PrekidacSP prek) {
 		
 		if(prek.getStanje() != "ON") {
 			
-			prekidacSPSignali.remove(getID() + ": " + prek.getStanje());
+			prekidacSPSignali.remove(getID() + ": " + "OFF");
 			prek.setStanje("ON");
-			/*StartScr.signali.add(ID + ": " + prek.getStanje());
-			StartScr.svi_Signali.add(ID + ": " + prek.getStanje());*/
 
 			prekidacSPSignali.add(getID() + ": " + prek.getStanje());
 			
@@ -26,21 +32,16 @@ public class PrekidacSP extends SpojnoPolje{
 		
 		if(prek.getStanje() != "OFF") {
 			
-			prekidacSPSignali.remove(ID + ": " + prek.getStanje());
-			/*StartScr.svi_Signali.remove(ID + ": " + prek.getStanje());
-			
-			SpojnoScr.spojnoSignali.remove(getID() + ": " + prek.getStanje());*/
+			prekidacSPSignali.remove(getID() + ": " + "ON");
 			prek.setStanje("OFF");
 			
-			prekidacSPSignali.add(ID + ": " + prek.getStanje());
+			prekidacSPSignali.add(getID() + ": " + prek.getStanje());
 			
 		}
 		
 	}
 	
-	public PrekidacSP(String ID){
-		this.ID = ID;
-	}
+	
 
 	public String getStanje() {
 		return stanje;
