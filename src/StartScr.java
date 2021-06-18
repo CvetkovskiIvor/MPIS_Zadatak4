@@ -91,7 +91,7 @@ public class StartScr extends Zadatak4 implements ActionListener{
 		JPanel panel = new JPanel();
 		
 		
-		frame.setSize(800, 800);
+		frame.setSize(800, 900);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.add(panel);
 		frame.setLocationRelativeTo(null);
@@ -99,25 +99,25 @@ public class StartScr extends Zadatak4 implements ActionListener{
 		panel.setLayout(null);
 		
 		JButton signaliBtn = new JButton("Svi signali");
-		signaliBtn.setBounds(605, 150, 80, 25);
+		signaliBtn.setBounds(300, 520, 80, 25);
 		signaliBtn.setSize(190, 30);
 		signaliBtn.addActionListener(start);
 		panel.add(signaliBtn);
 		
 		JButton trenutniSignaliBtn = new JButton("Svi trenutni signali");
-		trenutniSignaliBtn.setBounds(605, 200, 80, 25);
+		trenutniSignaliBtn.setBounds(50, 590, 80, 25);
 		trenutniSignaliBtn.setSize(190, 30);
 		trenutniSignaliBtn.addActionListener(start);
 		panel.add(trenutniSignaliBtn);
 		
 		JButton prekidacSignaliBtn = new JButton("Svi signali prekidaca");
-		prekidacSignaliBtn.setBounds(605, 250, 80, 25);
+		prekidacSignaliBtn.setBounds(300, 590, 80, 25);
 		prekidacSignaliBtn.setSize(190, 30);
 		prekidacSignaliBtn.addActionListener(start);
 		panel.add(prekidacSignaliBtn);
 		
 		JButton rastavljacSignaliBtn = new JButton("Svi signali rastavljaca");
-		rastavljacSignaliBtn.setBounds(605, 300, 80, 25);
+		rastavljacSignaliBtn.setBounds(560, 590, 80, 25);
 		rastavljacSignaliBtn.setSize(190, 30);
 		rastavljacSignaliBtn.addActionListener(start);
 		panel.add(rastavljacSignaliBtn);
@@ -130,7 +130,7 @@ public class StartScr extends Zadatak4 implements ActionListener{
 		
 		JScrollPane scroll = new JScrollPane(text);
 		scroll.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
-		scroll.setBounds(50, 530, 700, 200);
+		scroll.setBounds(50, 630, 700, 200);
 		panel.add(scroll);
 		
 		sab1.setBounds(100, 50, 600, 16);
@@ -358,6 +358,12 @@ public class StartScr extends Zadatak4 implements ActionListener{
 				DalekovodnoScr.rastavljac1.setForeground(Color.blue);
 				DalekovodnoScr.rastavljaciz.setForeground(Color.blue);
 				DalekovodnoScr.rastavljacuz.setForeground(Color.green);
+				DalekovodnoScr.koc1.setBackground(Color.blue);
+				DalekovodnoScr.koc3.setBackground(Color.blue);
+				DalekovodnoScr.vert1.setBackground(Color.blue);
+				DalekovodnoScr.vert3.setBackground(Color.blue);
+				DalekovodnoScr.vert4.setBackground(Color.blue);
+				DalekovodnoScr.vert5.setBackground(Color.blue);
 				sab1.setBackground(Color.blue);
 				koc2.setBackground(Color.blue);
 				koc4.setBackground(Color.blue);
@@ -366,6 +372,12 @@ public class StartScr extends Zadatak4 implements ActionListener{
 				pow1.setText("0 kV");
 				pow1.setForeground(Color.blue);
 				pow1.setBounds(670, 30, 80, 25);
+				
+				SpojnoScr.sab1.setBackground(Color.blue);
+				SpojnoScr.pow1.setForeground(Color.blue);
+				SpojnoScr.pow1.setText("0 kV");
+				SpojnoScr.pow1.setBounds(870, 30, 80, 25);
+				SpojnoScr.koc1.setBackground(Color.blue);
 				
 				text.append("Iskljucujem dalekovodno polje sa S1... " + "\n");
 				DalekovodnoPolje.isklop(rastavljacUzemljenjaDP, sabirnickiRastavljacDPS1, izlazniRastavljacDP, prekidacDP);
@@ -389,6 +401,12 @@ public class StartScr extends Zadatak4 implements ActionListener{
 				DalekovodnoScr.rastavljac2.setForeground(Color.blue);
 				DalekovodnoScr.rastavljaciz.setForeground(Color.blue);
 				DalekovodnoScr.rastavljacuz.setForeground(Color.green);
+				DalekovodnoScr.koc2.setBackground(Color.blue);
+				DalekovodnoScr.koc3.setBackground(Color.blue);
+				DalekovodnoScr.vert2.setBackground(Color.blue);
+				DalekovodnoScr.vert3.setBackground(Color.blue);
+				DalekovodnoScr.vert4.setBackground(Color.blue);
+				DalekovodnoScr.vert5.setBackground(Color.blue);
 				sab2.setBackground(Color.blue);
 				koc1.setBackground(Color.blue);
 				koc3.setBackground(Color.blue);
@@ -397,6 +415,12 @@ public class StartScr extends Zadatak4 implements ActionListener{
 				pow2.setText("0 kV");
 				pow2.setForeground(Color.blue);
 				pow2.setBounds(670, 80, 80, 25);
+				
+				SpojnoScr.sab2.setBackground(Color.blue);
+				SpojnoScr.pow2.setForeground(Color.blue);
+				SpojnoScr.pow2.setText("0 kV");
+				SpojnoScr.pow2.setBounds(870, 80, 80, 25);
+				SpojnoScr.koc2.setBackground(Color.blue);
 				
 				text.append("Iskljucujem dalekovodno polje sa S2... " + "\n");
 				DalekovodnoPolje.isklop(rastavljacUzemljenjaDP, sabirnickiRastavljacDPS2, izlazniRastavljacDP, prekidacDP);
@@ -419,6 +443,12 @@ public class StartScr extends Zadatak4 implements ActionListener{
 				DalekovodnoScr.rastavljac1.setForeground(Color.green);
 				DalekovodnoScr.rastavljaciz.setForeground(Color.green);
 				DalekovodnoScr.rastavljacuz.setForeground(Color.blue);
+				DalekovodnoScr.koc1.setBackground(Color.green);
+				DalekovodnoScr.koc3.setBackground(Color.green);
+				DalekovodnoScr.vert1.setBackground(Color.green);
+				DalekovodnoScr.vert3.setBackground(Color.green);
+				DalekovodnoScr.vert4.setBackground(Color.green);
+				DalekovodnoScr.vert5.setBackground(Color.green);
 				sab1.setBackground(Color.green);
 				koc2.setBackground(Color.green);
 				koc4.setBackground(Color.green);
@@ -427,6 +457,14 @@ public class StartScr extends Zadatak4 implements ActionListener{
 				pow1.setText("220 kV");
 				pow1.setForeground(Color.green);
 				pow1.setBounds(660, 30, 80, 25);
+				vert5.setBackground(Color.green);
+				dalekovodnoBtn.setForeground(Color.green);
+				
+				SpojnoScr.sab1.setBackground(Color.green);
+				SpojnoScr.pow1.setForeground(Color.green);
+				SpojnoScr.pow1.setText("220 kV");
+				SpojnoScr.pow1.setBounds(860, 30, 80, 25);
+				SpojnoScr.koc1.setBackground(Color.green);
 				
 				text.append("Ukljucujem dalekovodno polje na S1... " + "\n");
 				DalekovodnoPolje.uklop(rastavljacUzemljenjaDP, sabirnickiRastavljacDPS1, izlazniRastavljacDP, prekidacDP);
@@ -449,6 +487,12 @@ public class StartScr extends Zadatak4 implements ActionListener{
 				DalekovodnoScr.rastavljac2.setForeground(Color.green);
 				DalekovodnoScr.rastavljaciz.setForeground(Color.green);
 				DalekovodnoScr.rastavljacuz.setForeground(Color.blue);
+				DalekovodnoScr.koc2.setBackground(Color.green);
+				DalekovodnoScr.koc3.setBackground(Color.green);
+				DalekovodnoScr.vert2.setBackground(Color.green);
+				DalekovodnoScr.vert3.setBackground(Color.green);
+				DalekovodnoScr.vert4.setBackground(Color.green);
+				DalekovodnoScr.vert5.setBackground(Color.green);
 				sab2.setBackground(Color.green);
 				koc1.setBackground(Color.green);
 				koc3.setBackground(Color.green);
@@ -457,6 +501,14 @@ public class StartScr extends Zadatak4 implements ActionListener{
 				pow2.setText("220 kV");
 				pow2.setForeground(Color.green);
 				pow2.setBounds(660, 80, 80, 25);
+				vert5.setBackground(Color.green);
+				dalekovodnoBtn.setForeground(Color.green);
+				
+				SpojnoScr.sab2.setBackground(Color.green);
+				SpojnoScr.pow2.setForeground(Color.green);
+				SpojnoScr.pow2.setText("220 kV");
+				SpojnoScr.pow2.setBounds(860, 80, 80, 25);
+				SpojnoScr.koc2.setBackground(Color.green);
 				
 				text.append("Ukljucujem dalekovodno polje na S2... " + "\n");
 				DalekovodnoPolje.uklop(rastavljacUzemljenjaDP, sabirnickiRastavljacDPS2, izlazniRastavljacDP, prekidacDP);
@@ -482,6 +534,13 @@ public class StartScr extends Zadatak4 implements ActionListener{
 					DalekovodnoScr.rastavljac2.setForeground(Color.blue);
 					DalekovodnoScr.rastavljaciz.setForeground(Color.green);
 					DalekovodnoScr.rastavljacuz.setForeground(Color.blue);
+					DalekovodnoScr.vert1.setBackground(Color.green);
+					DalekovodnoScr.koc1.setBackground(Color.green);
+					DalekovodnoScr.vert2.setBackground(Color.blue);
+					DalekovodnoScr.koc2.setBackground(Color.blue);
+					DalekovodnoScr.pow2.setText("0 kV");
+					DalekovodnoScr.pow2.setBounds(870, 80, 80, 25);
+					DalekovodnoScr.pow2.setForeground(Color.blue);
 					vert1.setBackground(Color.blue);
 					sab2.setBackground(Color.blue);
 					koc1.setBackground(Color.blue);
@@ -490,6 +549,18 @@ public class StartScr extends Zadatak4 implements ActionListener{
 					pow2.setText("0 kV");
 					pow2.setForeground(Color.blue);
 					pow2.setBounds(670, 80, 80, 25);
+					
+					SpojnoScr.sab1.setBackground(Color.green);
+					SpojnoScr.pow1.setForeground(Color.green);
+					SpojnoScr.pow1.setText("220 kV");
+					SpojnoScr.pow1.setBounds(860, 30, 80, 25);
+					SpojnoScr.koc1.setBackground(Color.green);
+					
+					SpojnoScr.sab2.setBackground(Color.blue);
+					SpojnoScr.pow2.setForeground(Color.blue);
+					SpojnoScr.pow2.setText("0 kV");
+					SpojnoScr.pow2.setBounds(870, 80, 80, 25);
+					SpojnoScr.koc2.setBackground(Color.blue);
 					
 					vert2.setBackground(Color.green);
 					sab1.setBackground(Color.green);
@@ -533,6 +604,26 @@ public class StartScr extends Zadatak4 implements ActionListener{
 					DalekovodnoScr.rastavljac2.setForeground(Color.green);
 					DalekovodnoScr.rastavljaciz.setForeground(Color.green);
 					DalekovodnoScr.rastavljacuz.setForeground(Color.blue);
+					DalekovodnoScr.vert2.setBackground(Color.green);
+					DalekovodnoScr.koc2.setBackground(Color.green);
+					DalekovodnoScr.vert1.setBackground(Color.blue);
+					DalekovodnoScr.koc1.setBackground(Color.blue);
+					DalekovodnoScr.pow1.setText("0 kV");
+					DalekovodnoScr.pow1.setBounds(870, 30, 80, 25);
+					DalekovodnoScr.pow1.setForeground(Color.blue);
+					
+					SpojnoScr.sab1.setBackground(Color.blue);
+					SpojnoScr.pow1.setForeground(Color.blue);
+					SpojnoScr.pow1.setText("0 kV");
+					SpojnoScr.pow1.setBounds(870, 30, 80, 25);
+					SpojnoScr.koc1.setBackground(Color.blue);
+					
+					SpojnoScr.sab2.setBackground(Color.green);
+					SpojnoScr.pow2.setForeground(Color.green);
+					SpojnoScr.pow2.setText("220 kV");
+					SpojnoScr.pow2.setBounds(860, 80, 80, 25);
+					SpojnoScr.koc2.setBackground(Color.green);
+					
 					
 					vert2.setBackground(Color.blue);
 					sab1.setBackground(Color.blue);
@@ -577,8 +668,50 @@ public class StartScr extends Zadatak4 implements ActionListener{
 		}
 		
 		if (e.getActionCommand() == "Iskljuci") {
+			
+			
 				
 			if(SpojnoPolje.provjeri(sp, prekidacSP, rastavljacUzemljenjaSP, napajanjeRastavljacSP)) {
+				
+				//SpojnoScr.sab1.setBackground(Color.blue);
+				//SpojnoScr.sab2.setBackground(Color.blue);
+				//SpojnoScr.pow1.setForeground(Color.blue);
+				//SpojnoScr.pow1.setText("0 kV");
+				//SpojnoScr.pow1.setBounds(870, 30, 80, 25);
+				SpojnoScr.prekidac.setForeground(Color.blue);
+				SpojnoScr.rastavljac1.setForeground(Color.blue);
+				SpojnoScr.rastavljac2.setForeground(Color.blue);
+				SpojnoScr.rastavljaciz.setForeground(Color.blue);
+				SpojnoScr.rastavljacuz.setForeground(Color.green);
+				SpojnoScr.vert1.setBackground(Color.blue);
+				SpojnoScr.vert2.setBackground(Color.blue);
+				SpojnoScr.vert3.setBackground(Color.blue);
+				SpojnoScr.vert4.setBackground(Color.blue);
+				SpojnoScr.vert5.setBackground(Color.blue);
+				SpojnoScr.koc3.setBackground(Color.blue);
+				//SpojnoScr.koc1.setBackground(Color.blue);
+				//SpojnoScr.koc2.setBackground(Color.blue);
+				//SpojnoScr.pow2.setText("0 kV");
+				//SpojnoScr.pow2.setBounds(870, 80, 80, 25);
+				//SpojnoScr.pow2.setForeground(Color.blue);
+				vert3.setBackground(Color.blue);
+				vert4.setBackground(Color.blue);
+				
+				if(koc3.getBackground() == Color.green) {
+					vert3.setBackground(Color.green);
+				}
+				
+				if(koc4.getBackground() == Color.green) {
+					vert4.setBackground(Color.green);
+				}
+				
+				if(SpojnoScr.koc1.getBackground() == Color.green) {
+					vert4.setBackground(Color.green);
+				}
+				
+				if(SpojnoScr.koc2.getBackground() == Color.green) {
+					vert4.setBackground(Color.green);
+				}
 				
 				vert6.setBackground(Color.blue);
 				spojnoBtn.setForeground(Color.blue);
@@ -593,7 +726,33 @@ public class StartScr extends Zadatak4 implements ActionListener{
 		
 		if (e.getActionCommand() == "Ukljuci") {
 			
+			
+			
 			if(SpojnoPolje.provjeri(sp, prekidacSP, rastavljacUzemljenjaSP, napajanjeRastavljacSP)) {
+				
+				//SpojnoScr.sab1.setBackground(Color.green);
+				//SpojnoScr.sab2.setBackground(Color.green);
+				//SpojnoScr.pow1.setForeground(Color.green);
+				//SpojnoScr.pow1.setText("220 kV");
+				//SpojnoScr.pow1.setBounds(860, 30, 80, 25);
+				SpojnoScr.prekidac.setForeground(Color.green);
+				SpojnoScr.rastavljac1.setForeground(Color.green);
+				SpojnoScr.rastavljac2.setForeground(Color.green);
+				SpojnoScr.rastavljaciz.setForeground(Color.green);
+				SpojnoScr.rastavljacuz.setForeground(Color.blue);
+				SpojnoScr.vert1.setBackground(Color.green);
+				//SpojnoScr.koc1.setBackground(Color.green);
+				SpojnoScr.vert2.setBackground(Color.green);
+				SpojnoScr.vert3.setBackground(Color.green);
+				SpojnoScr.vert4.setBackground(Color.green);
+				SpojnoScr.vert5.setBackground(Color.green);
+				SpojnoScr.koc3.setBackground(Color.green);
+				//SpojnoScr.koc2.setBackground(Color.green);
+				//SpojnoScr.pow2.setText("220 kV");
+				//SpojnoScr.pow2.setBounds(860, 80, 80, 25);
+				//SpojnoScr.pow2.setForeground(Color.green);
+				vert3.setBackground(Color.green);
+				vert4.setBackground(Color.green);
 				
 				vert6.setBackground(Color.green);
 				spojnoBtn.setForeground(Color.green);
@@ -641,6 +800,11 @@ public class StartScr extends Zadatak4 implements ActionListener{
 	
 		}
 		
+		if (vert1.getBackground() == Color.blue && vert2.getBackground() == Color.blue) {
+			dalekovodnoBtn.setForeground(Color.blue);
+			vert5.setBackground(Color.blue);
+		}
+		
 	}
 	
 	void showPopup(MouseEvent me) {
@@ -669,9 +833,39 @@ public class StartScr extends Zadatak4 implements ActionListener{
 		DalekovodnoScr.rastavljacuz.setForeground(Color.blue);
 		DalekovodnoScr.pow2.setForeground(Color.blue);
 		DalekovodnoScr.pow2.setText("0 kV");
+		DalekovodnoScr.pow2.setBounds(870, 80, 80, 25);
+		DalekovodnoScr.vert1.setBackground(Color.green);
+		DalekovodnoScr.koc1.setBackground(Color.green);
+		DalekovodnoScr.vert2.setBackground(Color.blue);
+		DalekovodnoScr.koc2.setBackground(Color.blue);
+		DalekovodnoScr.vert3.setBackground(Color.green);
+		DalekovodnoScr.koc3.setBackground(Color.green);
+		DalekovodnoScr.vert4.setBackground(Color.green);
+		DalekovodnoScr.koc4.setBackground(Color.green);
+		DalekovodnoScr.vert5.setBackground(Color.green);
+		DalekovodnoScr.vert6.setBackground(Color.green);
+		DalekovodnoScr.vert7.setBackground(Color.green);
+		
 		
 		SpojnoPolje.isklop(sabirnickiRastavljacSPS1, sabirnickiRastavljacSPS2, prekidacSP);
 		
+		SpojnoScr.sab1.setBackground(Color.green);
+		SpojnoScr.sab2.setBackground(Color.blue);
+		SpojnoScr.pow1.setForeground(Color.green);
+		SpojnoScr.pow1.setText("220 kV");
+		SpojnoScr.pow1.setBounds(860, 30, 80, 25);
+		SpojnoScr.prekidac.setForeground(Color.blue);
+		SpojnoScr.rastavljac1.setForeground(Color.blue);
+		SpojnoScr.rastavljac2.setForeground(Color.blue);
+		SpojnoScr.rastavljaciz.setForeground(Color.blue);
+		SpojnoScr.rastavljacuz.setForeground(Color.green);
+		SpojnoScr.pow2.setForeground(Color.blue);
+		SpojnoScr.pow2.setText("0 kV");
+		SpojnoScr.pow2.setBounds(870, 80, 80, 25);
+		SpojnoScr.koc1.setBackground(Color.green);
+		SpojnoScr.vert6.setBackground(Color.green);
+		SpojnoScr.vert7.setBackground(Color.green);
+		SpojnoScr.koc4.setBackground(Color.green);
 	}
 	
 }
