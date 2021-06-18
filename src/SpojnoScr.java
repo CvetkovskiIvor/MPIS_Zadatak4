@@ -22,14 +22,31 @@ public class SpojnoScr extends StartScr implements ActionListener{
 	
 	static JTextArea text3 = new JTextArea();
 	
+	static JLabel sab1 = new JLabel();
+	static JLabel sab2 = new JLabel();
+	
+	static JLabel pow1 = new JLabel();
+	static JLabel pow2 = new JLabel();
+	static JLabel koc1 = new JLabel();
+	static JLabel koc2 = new JLabel();
+	static JLabel koc3 = new JLabel();
+	static JLabel koc4 = new JLabel();
+	static JLabel vert1 = new JLabel();
+	static JLabel vert2 = new JLabel();
+	static JLabel vert3 = new JLabel();
+	static JLabel vert4 = new JLabel();
+	static JLabel vert5 = new JLabel();
+	static JLabel vert6 = new JLabel();
+	static JLabel vert7 = new JLabel();
+	
 	static JPopupMenu popupS1 = new JPopupMenu();
 	static JPopupMenu popupS2 = new JPopupMenu();
 	static JPopupMenu popupIz = new JPopupMenu();
 	static JPopupMenu popupUz = new JPopupMenu();
 	static JPopupMenu popupPrek = new JPopupMenu();
 	
-	static JButton rastavljac1 = new JButton("RastavljacDPS1");
-	static JButton rastavljac2 = new JButton("RastavljacDPS2");
+	static JButton rastavljac1 = new JButton("RastavljacSPS1");
+	static JButton rastavljac2 = new JButton("RastavljacSPS2");
 	static JButton rastavljacuz = new JButton("Rastavljac uzemljenja");
 	static JButton rastavljaciz = new JButton("Izlazni rastavljac");
 	static JButton prekidac = new JButton("Prekidac");
@@ -39,6 +56,8 @@ public class SpojnoScr extends StartScr implements ActionListener{
 	public static void spojnoScr() {
 		
 		JPanel panel = new JPanel();
+		
+
 		
 		frame.setSize(1000, 1000);
 		frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
@@ -51,10 +70,99 @@ public class SpojnoScr extends StartScr implements ActionListener{
 		text3.setEditable(false);
 		text3.setVisible(true);
 		
+		
 		JScrollPane scroll = new JScrollPane(text3);
 		scroll.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
 		scroll.setBounds(100, 730, 800, 200);
 		panel.add(scroll);
+		
+		
+		
+		koc1.setBounds(295, 44, 20, 28);
+		//koc1.setBackground(Color.blue);
+		koc1.setOpaque(true);
+		panel.add(koc1);
+		
+		koc2.setBounds(695, 94, 20, 28);
+		koc2.setBackground(Color.blue);
+		koc2.setOpaque(true);
+		panel.add(koc2);
+		
+		koc3.setBounds(495, 219, 20, 28);
+		koc3.setBackground(Color.blue);
+		koc3.setOpaque(true);
+		panel.add(koc3);
+		
+		koc4.setBounds(495, 656, 20, 28);
+		//koc4.setBackground(Color.blue);
+		koc4.setOpaque(true);
+		panel.add(koc4);
+		
+		vert1.setBounds(303, 72, 5, 108);
+		vert1.setBackground(Color.blue);
+		vert1.setOpaque(true);
+		panel.add(vert1);
+		
+		vert2.setBounds(703, 122, 5, 58);
+		vert2.setBackground(Color.blue);
+		vert2.setOpaque(true);
+		panel.add(vert2);
+		
+		vert3.setBounds(380, 230, 250, 5);
+		vert3.setBackground(Color.blue);
+		vert3.setOpaque(true);
+		panel.add(vert3);
+		
+		vert4.setBounds(503, 225, 5, 125);
+		vert4.setBackground(Color.blue);
+		vert4.setOpaque(true);
+		panel.add(vert4);
+		
+		vert5.setBounds(503, 450, 5, 50);
+		vert5.setBackground(Color.blue);
+		vert5.setOpaque(true);
+		panel.add(vert5);
+		
+		vert6.setBounds(503, 600, 5, 120);
+		//vert6.setBackground(Color.blue);
+		vert6.setOpaque(true);
+		panel.add(vert6);
+		
+		vert7.setBounds(400, 668, 100, 5);
+		//vert7.setBackground(Color.blue);
+		vert7.setOpaque(true);
+		panel.add(vert7);
+		
+		sab1.setBounds(100, 50, 800, 16);
+		//sab1.setBackground(Color.blue);
+		sab1.setOpaque(true);
+		panel.add(sab1);
+
+
+		sab2.setBounds(100, 100, 800, 16);
+		//sab2.setBackground(Color.green);
+		sab2.setOpaque(true);
+		panel.add(sab2);
+		
+		JLabel sys1 = new JLabel("Sabirnica I");
+		sys1.setBounds(30, 45, 80, 25);
+		panel.add(sys1);
+
+		JLabel sys2 = new JLabel("Sabirnica II");
+		sys2.setBounds(30, 95, 80, 25);
+		panel.add(sys2);
+
+		//pow1.setText("0 kV");
+		//pow1.setBounds(870, 30, 80, 25);
+		//pow1.setForeground(Color.blue);
+		pow1.setOpaque(true);
+		panel.add(pow1);
+
+		//pow2.setText("220 kV");
+		//pow2.setBounds(860, 80, 80, 25);
+		//pow2.setForeground(Color.green);
+		pow2.setOpaque(true);
+		panel.add(pow2);
 		
 		prekidac.setBounds(430, 350, 80, 25);
 		prekidac.setSize(150, 100);
@@ -193,12 +301,16 @@ public class SpojnoScr extends StartScr implements ActionListener{
 	public void actionPerformed(ActionEvent e) {
 		
 		if (e.getActionCommand() == "Ukljuci rastS1") {
+			rastavljac1.setForeground(Color.green);
+			vert1.setBackground(Color.green);
 			
 			sabirnickiRastavljacSPS1.uklop(sabirnickiRastavljacSPS1, prekidacSP);
 			
 		}
 		
 		if (e.getActionCommand() == "Iskljuci rastS1") {
+			rastavljac1.setForeground(Color.blue);
+			vert1.setBackground(Color.blue);
 			
 			sabirnickiRastavljacSPS1.isklop(sabirnickiRastavljacSPS1, prekidacSP);
 			
@@ -212,12 +324,16 @@ public class SpojnoScr extends StartScr implements ActionListener{
 		}
 
 		if (e.getActionCommand() == "Ukljuci rastS2") {
+			rastavljac2.setForeground(Color.green);
+			vert2.setBackground(Color.green);
 	
 			sabirnickiRastavljacSPS2.uklop(sabirnickiRastavljacSPS2, prekidacSP);
 	
 		}
 
 		if (e.getActionCommand() == "Iskljuci rastS2") {
+			rastavljac2.setForeground(Color.blue);
+			vert2.setBackground(Color.blue);
 	
 			sabirnickiRastavljacSPS2.isklop(sabirnickiRastavljacSPS2, prekidacSP);
 			
@@ -231,12 +347,16 @@ public class SpojnoScr extends StartScr implements ActionListener{
 		}
 
 		if (e.getActionCommand() == "Ukljuci rastIz") {
+			rastavljaciz.setForeground(Color.green);
+			vert5.setBackground(Color.green);
 	
 			izlazniRastavljacSP.uklop(izlazniRastavljacSP);
 	
 		}
 
 		if (e.getActionCommand() == "Iskljuci rastIz") {
+			rastavljaciz.setForeground(Color.blue);
+			vert5.setBackground(Color.blue);
 	
 			izlazniRastavljacSP.uklop(izlazniRastavljacSP);
 			
@@ -250,12 +370,14 @@ public class SpojnoScr extends StartScr implements ActionListener{
 		}
 
 		if (e.getActionCommand() == "Ukljuci rastUz") {
+			rastavljacuz.setForeground(Color.green);
 	
 			rastavljacUzemljenjaSP.posaljiZahtjev("Ukljuci");
 	
 		}
 
 		if (e.getActionCommand() == "Iskljuci rastUz") {
+			rastavljacuz.setForeground(Color.blue);
 	
 			rastavljacUzemljenjaSP.posaljiZahtjev("Iskljuci");
 	
@@ -268,12 +390,20 @@ public class SpojnoScr extends StartScr implements ActionListener{
 		}
 
 		if (e.getActionCommand() == "Ukljuci prekidac") {
+			prekidac.setForeground(Color.green);
+			vert3.setBackground(Color.green);
+			vert4.setBackground(Color.green);
+			koc3.setBackground(Color.green);
 	
 			prekidacSP.uklop(prekidacSP);
 			
 		}
 
 		if (e.getActionCommand() == "Iskljuci prekidac") {
+			prekidac.setForeground(Color.blue);
+			vert3.setBackground(Color.blue);
+			vert4.setBackground(Color.blue);
+			koc3.setBackground(Color.blue);
 	
 			prekidacSP.isklop(prekidacSP);
 	
