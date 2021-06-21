@@ -32,10 +32,10 @@ public class PrekidacSP extends SpojnoPolje{
 		
 		if(prek.getStanje() != "OFF") {
 			
-			prekidacSPSignali.remove(getID() + ": " + "ON");
+			prekidacSPSignali.remove(ID + ": " + "ON");
 			prek.setStanje("OFF");
 			
-			prekidacSPSignali.add(getID() + ": " + prek.getStanje());
+			prekidacSPSignali.add(ID + ": " + prek.getStanje());
 			
 		}
 		

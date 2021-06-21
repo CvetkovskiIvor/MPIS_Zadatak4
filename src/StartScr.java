@@ -122,11 +122,19 @@ public class StartScr extends Zadatak4 implements ActionListener{
 		rastavljacSignaliBtn.addActionListener(start);
 		panel.add(rastavljacSignaliBtn);
 		
+		/*
+		JButton clear_scr = new JButton("Ocisti");
+		clear_scr.setBounds(105, 550, 80, 25);
+		clear_scr.setSize(80, 30);
+		clear_scr.addActionListener(start);
+		panel.add(clear_scr);
+		*/
 		
 		text.setLineWrap(true);
 		text.setWrapStyleWord(true);
 		text.setEditable(false);
 		text.setVisible(true);
+		
 		
 		JScrollPane scroll = new JScrollPane(text);
 		scroll.setVerticalScrollBarPolicy(ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
@@ -340,7 +348,7 @@ public class StartScr extends Zadatak4 implements ActionListener{
 		if (e.getActionCommand() == "Spojno") {
 			
 			if(SpojnoScr.vidljivost() == true) {
-				System.out.println("vidljiv sam!");
+				text.append("Prozor spojnog polja je vec ukljucen." + "\n");
 			}else
 				SpojnoScr.spojnoScr();
 			
@@ -681,7 +689,7 @@ public class StartScr extends Zadatak4 implements ActionListener{
 				SpojnoScr.vert2.setBackground(Color.blue);
 				SpojnoScr.vert3.setBackground(Color.blue);
 				SpojnoScr.vert4.setBackground(Color.blue);
-				SpojnoScr.koc3.setBackground(Color.blue);
+				//SpojnoScr.koc3.setBackground(Color.blue);
 				vert3.setBackground(Color.blue);
 				vert4.setBackground(Color.blue);
 				
@@ -699,6 +707,10 @@ public class StartScr extends Zadatak4 implements ActionListener{
 				
 				if(SpojnoScr.koc2.getBackground() == Color.green) {
 					vert4.setBackground(Color.green);
+				}
+				
+				if(koc4.getBackground() == Color.blue) {
+					vert4.setBackground(Color.blue);
 				}
 				
 				vert6.setBackground(Color.blue);
@@ -726,7 +738,7 @@ public class StartScr extends Zadatak4 implements ActionListener{
 				SpojnoScr.vert2.setBackground(Color.green);
 				SpojnoScr.vert3.setBackground(Color.green);
 				SpojnoScr.vert4.setBackground(Color.green);
-				SpojnoScr.koc3.setBackground(Color.green);
+				//SpojnoScr.koc3.setBackground(Color.green);
 				vert3.setBackground(Color.green);
 				vert4.setBackground(Color.green);
 				
@@ -849,7 +861,7 @@ public class StartScr extends Zadatak4 implements ActionListener{
 		SpojnoScr.vert3.setBackground(Color.blue);
 		SpojnoScr.vert4.setBackground(Color.blue);
 		SpojnoScr.vert5.setBackground(Color.green);
-		SpojnoScr.koc3.setBackground(Color.blue);
+		//SpojnoScr.koc3.setBackground(Color.blue);
 		SpojnoScr.koc2.setBackground(Color.blue);
 	}
 	

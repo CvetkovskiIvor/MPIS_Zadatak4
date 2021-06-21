@@ -29,7 +29,8 @@ public class SpojnoScr extends StartScr implements ActionListener{
 	static JLabel pow2 = new JLabel();
 	static JLabel koc1 = new JLabel();
 	static JLabel koc2 = new JLabel();
-	static JLabel koc3 = new JLabel();
+	static JLabel horiz3 = new JLabel();
+	static JLabel horiz4 = new JLabel();
 	static JLabel koc4 = new JLabel();
 	static JLabel vert1 = new JLabel();
 	static JLabel vert2 = new JLabel();
@@ -86,27 +87,33 @@ public class SpojnoScr extends StartScr implements ActionListener{
 		koc2.setOpaque(true);
 		panel.add(koc2);
 		
-		koc3.setBounds(495, 219, 20, 28);
+		/*koc3.setBounds(495, 219, 20, 28);
 		koc3.setOpaque(true);
 		panel.add(koc3);
 		
 		koc4.setBounds(495, 656, 20, 28);
 		koc4.setOpaque(true);
-		panel.add(koc4);
+		panel.add(koc4);*/
 		
-		vert1.setBounds(303, 72, 5, 108);
+		vert1.setBounds(303, 72, 5, 308);
 		vert1.setOpaque(true);
 		panel.add(vert1);
 		
-		vert2.setBounds(703, 122, 5, 58);
+		vert2.setBounds(703, 122, 5, 258);
 		vert2.setOpaque(true);
 		panel.add(vert2);
 		
-		vert3.setBounds(380, 230, 250, 5);
-		vert3.setOpaque(true);
-		panel.add(vert3);
+		horiz3.setBounds(380, 430, 50, 5);
+		horiz3.setOpaque(true);
+		horiz3.setBackground(Color.BLUE);
+		panel.add(horiz3);
 		
-		vert4.setBounds(503, 225, 5, 125);
+		horiz4.setBounds(580, 430, 50, 5);
+		horiz4.setOpaque(true);
+		horiz4.setBackground(Color.blue);
+		panel.add(horiz4);
+		
+		/*vert4.setBounds(503, 225, 5, 125);
 		vert4.setOpaque(true);
 		panel.add(vert4);
 		
@@ -120,7 +127,7 @@ public class SpojnoScr extends StartScr implements ActionListener{
 		
 		vert7.setBounds(400, 668, 100, 5);
 		vert7.setOpaque(true);
-		panel.add(vert7);
+		panel.add(vert7);*/
 		
 		sab1.setBounds(100, 50, 800, 16);
 		sab1.setOpaque(true);
@@ -145,13 +152,13 @@ public class SpojnoScr extends StartScr implements ActionListener{
 		pow2.setOpaque(true);
 		panel.add(pow2);
 		
-		prekidac.setBounds(430, 350, 80, 25);
+		prekidac.setBounds(430, 380, 80, 25);
 		prekidac.setSize(150, 100);
 		prekidac.setBackground(Color.lightGray);
 		prekidac.setOpaque(true);
 		panel.add(prekidac);
 
-		rastavljac1.setBounds(230, 180, 80, 25);
+		rastavljac1.setBounds(230, 380, 80, 25);
 		rastavljac1.setSize(150, 100);
 		//rastavljac1.setForeground(Color.green);
 		rastavljac1.setBackground(Color.lightGray);
@@ -159,14 +166,14 @@ public class SpojnoScr extends StartScr implements ActionListener{
 		rastavljac1.setOpaque(true);
 		panel.add(rastavljac1);
 		
-		rastavljac2.setBounds(630, 180, 80, 25);
+		rastavljac2.setBounds(630, 380, 80, 25);
 		rastavljac2.setSize(150, 100);
 		rastavljac2.setBackground(Color.lightGray);
 		rastavljac2.setBorderPainted(true);
 		rastavljac2.setOpaque(true);
 		panel.add(rastavljac2);
 		
-		rastavljaciz.setBounds(430, 500, 80, 25);
+		/*rastavljaciz.setBounds(430, 500, 80, 25);
 		rastavljaciz.setSize(150, 100);
 		rastavljaciz.setBackground(Color.lightGray);
 		rastavljaciz.setBorderPainted(true);
@@ -178,7 +185,7 @@ public class SpojnoScr extends StartScr implements ActionListener{
 		rastavljacuz.setBackground(Color.lightGray);
 		rastavljacuz.setBorderPainted(true);
 		rastavljacuz.setOpaque(true);
-		panel.add(rastavljacuz);
+		panel.add(rastavljacuz);*/
 		
 		JMenuItem ukljS1 = new JMenuItem("Ukljuci rastS1");
 	    JMenuItem iskljS1 = new JMenuItem("Iskljuci rastS1");
@@ -200,7 +207,7 @@ public class SpojnoScr extends StartScr implements ActionListener{
 	    popupS2.add(iskljS2);
 	    popupS2.add(sigS2);
 	    
-	    JMenuItem ukljIz = new JMenuItem("Ukljuci rastIz");
+	    /*JMenuItem ukljIz = new JMenuItem("Ukljuci rastIz");
 	    JMenuItem iskljIz = new JMenuItem("Iskljuci rastIz");
 	    JMenuItem sigIz = new JMenuItem("Izlistaj signale: rastIz");
 	    ukljIz.addActionListener(spoj);
@@ -218,7 +225,7 @@ public class SpojnoScr extends StartScr implements ActionListener{
 	    sigUz.addActionListener(spoj);
 	    popupUz.add(ukljUz);
 	    popupUz.add(iskljUz);
-	    popupUz.add(sigUz);
+	    popupUz.add(sigUz);*/
 	    
 	    JMenuItem ukljPrek = new JMenuItem("Ukljuci prekidac");
 	    JMenuItem iskljPrek = new JMenuItem("Iskljuci prekidac");
@@ -285,7 +292,7 @@ public class SpojnoScr extends StartScr implements ActionListener{
 		if (e.getActionCommand() == "Izlistaj signale: rastS1") {
 			
 			Collections.sort(SabirnickiRastavljacSP.sabirnickiRastavljacSPSignali);
-			text3.append(SabirnickiRastavljacSP.sabirnickiRastavljacSPSignali.toString());
+			text3.append(SabirnickiRastavljacSP.sabirnickiRastavljacSPSignali.toString() + "\n");
 			
 		}
 
@@ -319,7 +326,7 @@ public class SpojnoScr extends StartScr implements ActionListener{
 		if (e.getActionCommand() == "Izlistaj signale: rastS2") {
 			
 			Collections.sort(SabirnickiRastavljacSP.sabirnickiRastavljacSPSignali);
-			text3.append(SabirnickiRastavljacSP.sabirnickiRastavljacSPSignali.toString());
+			text3.append(SabirnickiRastavljacSP.sabirnickiRastavljacSPSignali.toString() + "\n");
 			
 		}
 
@@ -352,7 +359,7 @@ public class SpojnoScr extends StartScr implements ActionListener{
 		if (e.getActionCommand() == "Izlistaj signale: rastIz") {
 			
 			Collections.sort(IzlazniRastavljacSP.izlazniRastavljacSPSignali);
-			text3.append(IzlazniRastavljacSP.izlazniRastavljacSPSignali.toString());
+			text3.append(IzlazniRastavljacSP.izlazniRastavljacSPSignali.toString() + "\n");
 			
 		}
 
@@ -372,14 +379,14 @@ public class SpojnoScr extends StartScr implements ActionListener{
 		
 		if (e.getActionCommand() == "Izlistaj signale: rastUz") {
 			
-			text3.append("rastavljac uzemljenja: poslan zahtjev za provjerom stanja!");
+			text3.append("rastavljac uzemljenja: poslan zahtjev za provjerom stanja!\n");
 			
 		}
 
 		if (e.getActionCommand() == "Ukljuci prekidac") {
 			prekidac.setForeground(Color.green);
-			vert3.setBackground(Color.green);
-			vert4.setBackground(Color.green);
+			horiz3.setBackground(Color.green);
+			horiz4.setBackground(Color.green);
 			koc3.setBackground(Color.green);
 	
 			prekidacSP.uklop(prekidacSP);
@@ -388,8 +395,8 @@ public class SpojnoScr extends StartScr implements ActionListener{
 
 		if (e.getActionCommand() == "Iskljuci prekidac") {
 			prekidac.setForeground(Color.blue);
-			vert3.setBackground(Color.blue);
-			vert4.setBackground(Color.blue);
+			horiz3.setBackground(Color.blue);
+			horiz4.setBackground(Color.blue);
 			koc3.setBackground(Color.blue);
 	
 			prekidacSP.isklop(prekidacSP);
@@ -399,7 +406,7 @@ public class SpojnoScr extends StartScr implements ActionListener{
 		if (e.getActionCommand() == "Izlistaj signale: prekidac") {
 			
 			Collections.sort(PrekidacSP.prekidacSPSignali);
-			text3.append(PrekidacSP.prekidacSPSignali.toString());
+			text3.append(PrekidacSP.prekidacSPSignali.toString() + "\n");
 			
 		}
 	}

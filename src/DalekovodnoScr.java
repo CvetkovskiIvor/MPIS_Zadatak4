@@ -341,7 +341,7 @@ public class DalekovodnoScr extends StartScr implements ActionListener{
 		if (e.getActionCommand() == "Izlistaj signale: rastS1") {
 			
 			Collections.sort(SabirnickiRastavljacDP.sabirnickiRastavljacDPSignali);
-			text2.append(SabirnickiRastavljacDP.sabirnickiRastavljacDPSignali.toString());
+			text2.append(SabirnickiRastavljacDP.sabirnickiRastavljacDPSignali.toString() + "\n");
 			
 		}
 
@@ -415,7 +415,7 @@ public class DalekovodnoScr extends StartScr implements ActionListener{
 		if (e.getActionCommand() == "Izlistaj signale: rastS2") {
 			
 			Collections.sort(SabirnickiRastavljacDP.sabirnickiRastavljacDPSignali);
-			text2.append(SabirnickiRastavljacDP.sabirnickiRastavljacDPSignali.toString());
+			text2.append(SabirnickiRastavljacDP.sabirnickiRastavljacDPSignali.toString() + "\n");
 			
 		}
 
@@ -448,7 +448,7 @@ public class DalekovodnoScr extends StartScr implements ActionListener{
 		if (e.getActionCommand() == "Izlistaj signale: rastIz") {
 			
 			Collections.sort(IzlazniRastavljacDP.izlazniRastavljacDPSignali);
-			text2.append(IzlazniRastavljacDP.izlazniRastavljacDPSignali.toString());
+			text2.append(IzlazniRastavljacDP.izlazniRastavljacDPSignali.toString() + "\n");
 			
 		}
 
@@ -495,7 +495,7 @@ public class DalekovodnoScr extends StartScr implements ActionListener{
 		if (e.getActionCommand() == "Izlistaj signale: prekidac") {
 			
 			Collections.sort(PrekidacDP.prekidacDPSignali);
-			text2.append(PrekidacDP.prekidacDPSignali.toString());
+			text2.append(PrekidacDP.prekidacDPSignali.toString() + "\n");
 			
 		}
 		
